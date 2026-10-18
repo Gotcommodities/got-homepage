@@ -1,0 +1,77 @@
+{
+  "edition": {
+    "date": "Sunday, October 18, 2026",
+    "statusDate": "SUN 18 OCT 2026 · SETUP",
+    "sessionCovered": "Awaiting first update",
+    "note": "Closing prices for NSE/BSE names; crypto as of the update time (IST)."
+  },
+  "overview": [
+    "This page is being set up. The first full edition with closing prices and session notes for every market below will appear after the next Indian market close."
+  ],
+  "watchItems": [],
+  "groups": [
+    {
+      "id": "indices",
+      "name": "Indian Indices",
+      "items": [
+        {"id": "nifty50", "name": "NIFTY 50", "ticker": "NIFTY 50", "exch": "NSE", "v": "—", "u": "", "day": null, "m": "", "tag": "Pending", "sum": "Awaiting first update.", "src": "", "srcUrl": ""},
+        {"id": "niftyit", "name": "NIFTY IT", "ticker": "NIFTY IT", "exch": "NSE", "v": "—", "u": "", "day": null, "m": "", "tag": "Pending", "sum": "Awaiting first update.", "src": "", "srcUrl": ""}
+      ]
+    },
+    {
+      "id": "metals-mining",
+      "name": "Metals & Mining",
+      "items": [
+        {"id": "hindzinc", "name": "Hindustan Zinc", "ticker": "HINDZINC", "exch": "NSE", "v": "—", "u": "₹", "day": null, "m": "", "tag": "Pending", "sum": "Awaiting first update.", "src": "", "srcUrl": ""},
+        {"id": "deccangold", "name": "Deccan Gold Mines", "ticker": "DECCANGOLD", "exch": "BSE", "v": "—", "u": "₹", "day": null, "m": "", "tag": "Pending", "sum": "Awaiting first update.", "src": "", "srcUrl": ""},
+        {"id": "vedanta-group", "name": "Vedanta demerged entities", "ticker": "VEDL group", "exch": "NSE", "v": "—", "u": "", "day": null, "m": "", "tag": "Pending", "sum": "Awaiting first update.", "src": "", "srcUrl": ""}
+      ]
+    },
+    {
+      "id": "energy-power",
+      "name": "Energy & Power",
+      "items": [
+        {"id": "oilindia", "name": "Oil India", "ticker": "OIL", "exch": "NSE", "v": "—", "u": "₹", "day": null, "m": "", "tag": "Pending", "sum": "Awaiting first update.", "src": "", "srcUrl": ""},
+        {"id": "selan", "name": "Antelopus Selan Energy", "ticker": "SELAN", "exch": "NSE", "v": "—", "u": "₹", "day": null, "m": "", "tag": "Pending", "sum": "Awaiting first update.", "src": "", "srcUrl": ""},
+        {"id": "tnpetro", "name": "Tamilnadu Petroproducts", "ticker": "TNPETRO", "exch": "NSE", "v": "—", "u": "₹", "day": null, "m": "", "tag": "Pending", "sum": "Awaiting first update.", "src": "", "srcUrl": ""},
+        {"id": "iex", "name": "Indian Energy Exchange", "ticker": "IEX", "exch": "NSE", "v": "—", "u": "₹", "day": null, "m": "", "tag": "Pending", "sum": "Awaiting first update.", "src": "", "srcUrl": ""},
+        {"id": "indigrid", "name": "IndiGrid InvIT", "ticker": "INDIGRID", "exch": "NSE", "v": "—", "u": "₹", "day": null, "m": "", "tag": "Pending", "sum": "Awaiting first update.", "src": "", "srcUrl": ""}
+      ]
+    },
+    {
+      "id": "chemicals-materials",
+      "name": "Chemicals, Fertilisers & Materials",
+      "items": [
+        {"id": "spic", "name": "SPIC", "ticker": "SPIC", "exch": "NSE", "v": "—", "u": "₹", "day": null, "m": "", "tag": "Pending", "sum": "Awaiting first update.", "src": "", "srcUrl": ""},
+        {"id": "tirumalchm", "name": "Thirumalai Chemicals", "ticker": "TIRUMALCHM", "exch": "NSE", "v": "—", "u": "₹", "day": null, "m": "", "tag": "Pending", "sum": "Awaiting first update.", "src": "", "srcUrl": ""},
+        {"id": "kamdhenu", "name": "Kamdhenu", "ticker": "KAMDHENU", "exch": "NSE", "v": "—", "u": "₹", "day": null, "m": "", "tag": "Pending", "sum": "Awaiting first update.", "src": "", "srcUrl": ""}
+      ]
+    },
+    {
+      "id": "tech-industrials",
+      "name": "Technology & Industrials",
+      "items": [
+        {"id": "netweb", "name": "Netweb Technologies", "ticker": "NETWEB", "exch": "NSE", "v": "—", "u": "₹", "day": null, "m": "", "tag": "Pending", "sum": "Awaiting first update.", "src": "", "srcUrl": ""},
+        {"id": "avenuesai", "name": "AvenuesAI (CCAvenue)", "ticker": "AVENUESAI", "exch": "NSE", "v": "—", "u": "₹", "day": null, "m": "", "tag": "Pending", "sum": "Awaiting first update.", "src": "", "srcUrl": ""},
+        {"id": "aerpace", "name": "Aerpace Industries", "ticker": "AERPACE", "exch": "BSE", "v": "—", "u": "₹", "day": null, "m": "", "tag": "Pending", "sum": "Awaiting first update.", "src": "", "srcUrl": ""},
+        {"id": "kirloskar", "name": "Kirloskar group", "ticker": "KOEL · KIRLOSBROS · KIRLFER · KIRLPNU", "exch": "NSE", "v": "—", "u": "", "day": null, "m": "", "tag": "Pending", "sum": "Awaiting first update.", "src": "", "srcUrl": ""}
+      ]
+    },
+    {
+      "id": "consumer",
+      "name": "Consumer",
+      "items": [
+        {"id": "dmart", "name": "Avenue Supermarts (DMart)", "ticker": "DMART", "exch": "NSE", "v": "—", "u": "₹", "day": null, "m": "", "tag": "Pending", "sum": "Awaiting first update.", "src": "", "srcUrl": ""}
+      ]
+    },
+    {
+      "id": "digital-assets",
+      "name": "Digital Assets",
+      "items": [
+        {"id": "xrp", "name": "XRP", "ticker": "XRP", "exch": "Crypto", "v": "—", "u": "$", "day": null, "m": "", "tag": "Pending", "sum": "Awaiting first update.", "src": "", "srcUrl": "", "page": "https://www.gotcommodities.com/cryptocurrencies"},
+        {"id": "xlm", "name": "Stellar Lumens", "ticker": "XLM", "exch": "Crypto", "v": "—", "u": "$", "day": null, "m": "", "tag": "Pending", "sum": "Awaiting first update.", "src": "", "srcUrl": "", "page": "https://www.gotcommodities.com/cryptocurrencies"}
+      ]
+    }
+  ],
+  "faq": []
+}
