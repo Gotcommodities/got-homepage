@@ -316,31 +316,21 @@ body{max-width:1200px;margin:0 auto;padding:0 16px 60px}
   </div>
 </div>
 
-<!-- LIVE COMMODITY NEWS (TradingView Timeline) -->
+<!-- WAR NEWS (from data.json) -->
 <div class="section">
-  <div class="section-head">Commodity Market News <span class="live-tag">LIVE</span></div>
-  <div class="desc">Real-time market news from TradingView. Auto-updating.</div>
-  <div class="card" style="padding:0;overflow:hidden;height:460px">
-    <div class="tradingview-widget-container" style="height:100%">
-      <div class="tradingview-widget-container__widget" style="height:100%"></div>
-      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>
-      {"feedMode":"market","market":"commodity","colorTheme":"dark","isTransparent":true,"displayMode":"regular","width":"100%","height":"100%","locale":"en"}
-      </script>
-    </div>
+  <div class="section-head">Hormuz War Headlines</div>
+  <div class="desc">Curated conflict news — updated daily by the GOT desk.</div>
+  <div class="card" id="war-news">
+    <div class="news-loading">⏳ Loading headlines...</div>
   </div>
 </div>
 
-<!-- LIVE GENERAL NEWS (TradingView Timeline) -->
+<!-- COMMODITY NEWS (from data.json) -->
 <div class="section">
-  <div class="section-head">General Market News <span class="live-tag">LIVE</span></div>
-  <div class="desc">Broader market headlines. Auto-updating.</div>
-  <div class="card" style="padding:0;overflow:hidden;height:360px">
-    <div class="tradingview-widget-container" style="height:100%">
-      <div class="tradingview-widget-container__widget" style="height:100%"></div>
-      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>
-      {"feedMode":"all_symbols","colorTheme":"dark","isTransparent":true,"displayMode":"regular","width":"100%","height":"100%","locale":"en"}
-      </script>
-    </div>
+  <div class="section-head">Commodity & Market News</div>
+  <div class="desc">Key market moves tied to the Hormuz disruption — updated daily.</div>
+  <div class="card" id="commodity-news">
+    <div class="news-loading">⏳ Loading headlines...</div>
   </div>
 </div>
 
@@ -375,17 +365,12 @@ body{max-width:1200px;margin:0 auto;padding:0 16px 60px}
   <div class="card" id="supply-chain"></div>
 </div>
 
-<!-- SUPPLY CHAIN NEWS (TradingView Symbol-Specific) -->
+<!-- SUPPLY CHAIN NEWS (from data.json) -->
 <div class="section">
-  <div class="section-head">Oil & Energy News <span class="live-tag">LIVE</span></div>
-  <div class="desc">Symbol-specific news for Brent crude. Auto-updating.</div>
-  <div class="card" style="padding:0;overflow:hidden;height:360px">
-    <div class="tradingview-widget-container" style="height:100%">
-      <div class="tradingview-widget-container__widget" style="height:100%"></div>
-      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>
-      {"feedMode":"symbol","symbol":"TVC:UKOIL","colorTheme":"dark","isTransparent":true,"displayMode":"regular","width":"100%","height":"100%","locale":"en"}
-      </script>
-    </div>
+  <div class="section-head">Supply Chain Disruption News</div>
+  <div class="desc">Sulfur, fertilizer, LNG and petrochemical cascade — updated daily.</div>
+  <div class="card" id="supply-chain-news">
+    <div class="news-loading">⏳ Loading headlines...</div>
   </div>
 </div>
 
@@ -514,6 +499,23 @@ fetch('data.json').then(r=>{if(!r.ok)throw new Error(r.status);return r.json()})
       `<div class="timeline-item"><span class="tl-date">${esc(t.date)}</span><span class="tl-event">${esc(t.event)}</span></div>`
     ).join('');
   }
+
+  // News rendering helper
+  function renderNews(containerId, items){
+    const el=document.getElementById(containerId);
+    if(!items||!items.length){el.innerHTML='<div class="news-loading">No headlines available.</div>';return;}
+    el.innerHTML=items.map(n=>{
+      const link=n.url?`<a href="${esc(n.url)}" target="_top" rel="noopener">${esc(n.title)}</a>`:`<span style="color:var(--text)">${esc(n.title)}</span>`;
+      return `<div class="news-item">${link}<div class="news-meta">${esc(n.source)} · ${esc(n.date)}</div></div>`;
+    }).join('');
+  }
+
+  // War news
+  renderNews('war-news', D.warNews);
+  // Commodity news
+  renderNews('commodity-news', D.commodityNews);
+  // Supply chain news
+  renderNews('supply-chain-news', D.supplyChainNews);
 
   // Scenarios
   if(D.scenarios){

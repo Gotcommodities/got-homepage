@@ -89,6 +89,32 @@
       "SPR: ~90 days of net imports"
     ]}
   ],
+  "warNews": [
+    { "title": "UKMTO issues 4 attack alerts in single day; Iran claims ADNOC tanker strike", "source": "Seatrade Maritime", "date": "Oct 13", "url": "https://seatrade-maritime.com/security/ukmto-issues-four-hormuz-attack-reports-iran-claims-adnoc-tanker-strike" },
+    { "title": "Iran reports tanker fire amid escalating Hormuz attacks — 10 vessels hit in 3 days", "source": "Shafaq News", "date": "Oct 15", "url": "https://shafaq.com/en/Middle-East/Iran-reports-tanker-fire-amid-escalating-Hormuz-attacks" },
+    { "title": "Container ship sinks after hitting naval mine in unauthorized route — IRGC", "source": "Shafaq News", "date": "Oct 15", "url": "https://shafaq.com/en/Middle-East/Iran-reports-tanker-fire-amid-escalating-Hormuz-attacks" },
+    { "title": "VLCC Kazimah III catches fire after projectile strike — first October attack", "source": "Seatrade Maritime", "date": "Oct 2", "url": "https://www.seatrade-maritime.com/security/tanker-catches-fire-after-first-hormuz-attack-in-october" },
+    { "title": "Supertanker hits mine in southern passage; explosion and engine fire — IRGC", "source": "Shafaq News", "date": "Oct 11", "url": "https://shafaq.com/en/Middle-East/Projectile-strikes-tanker-in-Hormuz-as-attacks-rise" },
+    { "title": "Two oil tankers hit by projectiles near Strait of Hormuz", "source": "Kuwait Times", "date": "Oct 11", "url": "https://kuwaittimes.com/article/50835/world/2-oil-tankers-hit-by-projectiles-near-strait-of-hormuz/" },
+    { "title": "Iranian gunboats open fire on tanker transiting Strait of Hormuz", "source": "Ship & Bunker", "date": "Oct 9", "url": "https://shipandbunker.com/news/world/327755-iranian-gunboats-open-fire-on-tanker-in-strait-of-hormuz" },
+    { "title": "Iran turns back three oil tankers in Strait of Hormuz amid conflict", "source": "CryptoBriefing", "date": "Oct 8", "url": "https://cryptobriefing.com/iran-turns-back-three-oil-tankers-in-strait-of-hormuz-amid-2026-conflict/" }
+  ],
+  "commodityNews": [
+    { "title": "Brent crude surges past $100 as Middle East turmoil deepens", "source": "Times of Oman", "date": "Oct 16", "url": "https://timesofoman.com/article/176768-brent-crude-surges-past-100-as-middle-east-turmoil-deepens" },
+    { "title": "VLCC day rates exceed $1.3M — war premium at historic high", "source": "Seatrade Maritime", "date": "Oct 13", "url": "https://seatrade-maritime.com/security/ukmto-issues-four-hormuz-attack-reports-iran-claims-adnoc-tanker-strike" },
+    { "title": "Newcastle coal hits 3-year high at $150/t as Asian buyers switch from LNG", "source": "Market Data", "date": "Oct 14", "url": "" },
+    { "title": "Oil can hit $91/bbl in late 2026 on Iran disruption — BNEF forecast", "source": "BloombergNEF", "date": "Oct 10", "url": "https://about.bnef.com/insights/commodities/oil-can-hit-91-a-barrel-in-late-2026-on-iran-disruption/" },
+    { "title": "Gold steady at $4,166/oz as safe-haven demand persists", "source": "Market Data", "date": "Oct 16", "url": "" },
+    { "title": "Philippines and India press over seafarer safety as casualties rise", "source": "Seatrade Maritime", "date": "Oct 2", "url": "https://www.seatrade-maritime.com/security/tanker-catches-fire-after-first-hormuz-attack-in-october" }
+  ],
+  "supplyChainNews": [
+    { "title": "Strait of Hormuz crisis keeps global fertilizer trade near standstill", "source": "Global Agriculture", "date": "Oct 12", "url": "https://www.global-agriculture.com/crop-nutrition/strait-of-hormuz-crisis-keeps-global-fertilizer-trade-near-standstill/" },
+    { "title": "Fertilizer markets shift from price to supply access after Hormuz disruption", "source": "Processing Magazine", "date": "Oct 8", "url": "https://www.processingmagazine.com/news-notes/news/55385083/fertilizer-markets-shift-from-price-to-supply-access-after-hormuz-disruption" },
+    { "title": "Hormuz toll on fertilizer drives food ingredient costs higher", "source": "Food Ingredients First", "date": "Oct 6", "url": "https://www.foodingredientsfirst.com/news/hormuz-toll-fertilizer-food-costs.html" },
+    { "title": "Sulfur supply disruption hits Indonesia MHP costs — SMM Insight", "source": "SMM", "date": "Oct 4", "url": "https://news.metal.com/newscontent/103784759-smm-insight-strait-of-hormuz-closure-sulfur-supply-disruption-indonesia-mhp-cost-impact" },
+    { "title": "Sulfur shortage raises phosphate supply alarm — AFI warning", "source": "Fertilizer Daily", "date": "Sep 28", "url": "https://www.fertilizerdaily.com/20260818-sulfur-shortage-phosphate-supply-afi-hormuz-warning/md/" },
+    { "title": "Houthi-Saudi blockade adds Red Sea layer to fertilizer disruption", "source": "Fertilizer Daily", "date": "Sep 24", "url": "https://www.fertilizerdaily.com/20260824-houthi-saudi-blockade-red-sea-fertilizer-2026/" }
+  ],
   "scenarios": {
     "bull": {
       "title": "Ceasefire / Partial Reopening",
