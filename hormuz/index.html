@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Hormuz Terminal | Live Strait of Hormuz War Tracker | GOT Commodities</title>
+<meta name="description" content="Live Strait of Hormuz war terminal: real-time oil prices, crude flow data, ship attack tracker, supply chain cascades, tanker rates. Updated daily.">
+<meta name="keywords" content="Strait of Hormuz, Iran war, oil prices, crude oil flows, tanker rates, VLCC, Kpler, supply chain, sulfur, fertilizer, GOT Commodities">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0A0A0F;--card:#111118;--border:#1E1E2A;
+  --amber:#FFB800;--red:#FF3B3B;--green:#00E676;--cyan:#00E5FF;--magenta:#FF00E5;
+  --dim:#5A5A6A;--text:#c8ccd4;
+  --font:'JetBrains Mono','Fira Code','Courier New',monospace;
+  --serif:'Source Serif 4',Georgia,serif;
+}
+html{background:var(--bg);color:var(--text);font-family:var(--font);font-size:13px;line-height:1.55;-webkit-font-smoothing:antialiased}
+body{max-width:1200px;margin:0 auto;padding:0 16px 60px}
+
+/* ── TOP BAR ── */
+.top-bar{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--border);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim)}
+.logo{display:flex;align-items:center;gap:8px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--red);animation:pulse 1.5s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.brand{color:var(--amber);font-weight:700;font-size:12px}
+.top-sub{color:var(--dim)}
+.live-tag{background:var(--green);color:#000;padding:1px 6px;border-radius:2px;font-weight:700;font-size:9px}
+.clock{text-align:right;font-size:10px}
+.clock .utc{color:var(--cyan)}
+
+/* ── HEADER ── */
+.header{display:flex;align-items:center;gap:16px;padding:20px 0 14px}
+.flag{font-size:40px}
+.title{font-family:var(--serif);font-size:28px;font-weight:700;color:#fff;line-height:1.15}
+.hdr-meta{font-size:10px;color:var(--dim);letter-spacing:.06em;margin-top:4px}
+.alert-banner{background:rgba(255,59,59,.12);border:1px solid var(--red);border-radius:4px;padding:10px 14px;margin:0 0 16px;font-size:11px;color:var(--red);font-weight:500}
+.alert-banner .level{font-weight:800;letter-spacing:.1em}
+
+/* ── SECTION ── */
+.section{margin:24px 0 0}
+.section-head{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--amber);margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.section-head .live-tag{font-size:8px;padding:1px 5px}
+.desc{font-size:10px;color:var(--dim);margin:-6px 0 10px;line-height:1.5}
+
+/* ── CARDS / GRID ── */
+.card{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:14px;margin-bottom:12px}
+.grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:12px}
+.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.grid-4{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}
+
+/* ── STAT BOXES ── */
+.stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:16px}
+.stat-box{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:12px;text-align:center}
+.stat-val{font-size:22px;font-weight:800;color:#fff}
+.stat-val.red{color:var(--red)}.stat-val.green{color:var(--green)}.stat-val.amber{color:var(--amber)}.stat-val.cyan{color:var(--cyan)}
+.stat-label{font-size:9px;color:var(--dim);text-transform:uppercase;letter-spacing:.1em;margin-top:4px}
+.stat-sub{font-size:9px;color:var(--dim);margin-top:2px}
+
+/* ── SITUATION TEXT ── */
+.situation p{margin-bottom:10px;font-size:12px;line-height:1.65;color:var(--text)}
+
+/* ── TRADINGVIEW ── */
+.w-cell{background:var(--card);border:1px solid var(--border);border-radius:6px;overflow:hidden;position:relative}
+.w-cell-lg{height:360px}.w-cell-md{height:180px}.w-cell-sm{height:160px}
+.tv-label{font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);padding:8px 10px 0;display:flex;align-items:center;gap:6px}
+.proxy{background:var(--amber);color:#000;padding:0 4px;border-radius:2px;font-size:8px;font-weight:800}
+
+/* ── NEWS ── */
+.news-tabs{display:flex;gap:4px;margin-bottom:10px;flex-wrap:wrap}
+.news-tab{background:transparent;border:1px solid var(--border);color:var(--dim);font-family:var(--font);font-size:9px;padding:4px 10px;border-radius:3px;cursor:pointer;text-transform:uppercase;letter-spacing:.08em}
+.news-tab.active{background:var(--amber);color:#000;border-color:var(--amber);font-weight:700}
+.news-container{min-height:120px}
+.news-item{padding:8px 0;border-bottom:1px solid var(--border)}
+.news-item:last-child{border-bottom:none}
+.news-item a{color:var(--text);text-decoration:none;font-size:11px;line-height:1.45}
+.news-item a:hover{color:var(--cyan)}
+.news-meta{font-size:9px;color:var(--dim);margin-top:3px}
+.news-loading{color:var(--dim);font-size:11px;padding:20px 0}
+
+/* ── MAP ── */
+.map-wrap{position:relative;border-radius:6px;overflow:hidden;border:1px solid var(--border);margin-bottom:12px}
+.map-wrap iframe{width:100%;height:400px;border:none}
+.map-overlay{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(10,10,15,.95));padding:20px 14px 12px;font-size:10px;color:var(--dim)}
+
+/* ── PIPELINE TABLE ── */
+.pipeline-row{display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid var(--border);font-size:11px;flex-wrap:wrap}
+.pipeline-row:last-child{border-bottom:none}
+.pipeline-name{flex:1 1 160px;color:var(--text)}
+.pipeline-cap{flex:0 0 90px;text-align:right;color:var(--cyan);font-weight:500}
+.pipeline-status{flex:0 0 100px;text-align:right;font-weight:700;font-size:9px;letter-spacing:.08em}
+.pipeline-note{flex:0 0 120px;text-align:right;font-size:9px;color:var(--dim)}
+.status-online{color:var(--green)}.status-partial{color:var(--amber)}.status-max{color:var(--red)}.status-gap{color:var(--magenta)}
+
+/* ── BAR CHARTS ── */
+.bar-row{margin-bottom:8px}
+.bar-label{display:flex;justify-content:space-between;font-size:11px;margin-bottom:3px}
+.bar-label .name{color:var(--text)}.bar-label .val{color:var(--red);font-weight:700}
+.bar-track{height:8px;background:var(--border);border-radius:4px;overflow:hidden}
+.bar-fill{height:100%;border-radius:4px;transition:width .6s ease}
+
+/* ── CASCADE ── */
+.cascade-item{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px solid var(--border)}
+.cascade-item:last-child{border-bottom:none}
+.cascade-dot{width:8px;height:8px;border-radius:50%;margin-top:4px;flex-shrink:0}
+.cascade-name{font-weight:700;font-size:11px;min-width:90px;flex-shrink:0}
+.cascade-desc{font-size:11px;color:var(--dim);line-height:1.5}
+
+/* ── REGION TABS ── */
+.region-tabs{display:flex;gap:4px;margin-bottom:10px;flex-wrap:wrap}
+.region-tab{background:transparent;border:1px solid var(--border);color:var(--dim);font-family:var(--font);font-size:10px;padding:5px 12px;border-radius:3px;cursor:pointer}
+.region-tab.active{background:var(--amber);color:#000;border-color:var(--amber);font-weight:700}
+.region-panel{display:none}.region-panel.active{display:block}
+.ei{font-size:11px;padding:4px 0;line-height:1.55}
+
+/* ── TIMELINE ── */
+.timeline-item{display:flex;gap:12px;padding:6px 0;border-bottom:1px solid var(--border);font-size:11px}
+.timeline-item:last-child{border-bottom:none}
+.tl-date{color:var(--cyan);font-weight:700;min-width:60px;flex-shrink:0}
+.tl-event{color:var(--text);line-height:1.5}
+
+/* ── SCENARIO ── */
+.scenario-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.scenario-bull,.scenario-bear{padding:14px;border-radius:6px}
+.scenario-bull{background:rgba(0,230,118,.06);border:1px solid rgba(0,230,118,.2)}
+.scenario-bear{background:rgba(255,59,59,.06);border:1px solid rgba(255,59,59,.2)}
+.scenario-title{font-weight:700;font-size:12px;margin-bottom:8px}
+.scenario-list{font-size:11px;line-height:1.7;color:var(--dim)}
+.catalyst{margin-top:12px;padding:10px 14px;background:rgba(255,184,0,.08);border:1px solid rgba(255,184,0,.25);border-radius:4px;font-size:11px;color:var(--amber)}
+
+/* ── SOURCE / REF ── */
+.ref{color:var(--cyan);font-size:9px;letter-spacing:.05em}
+.source-note{font-size:9px;color:var(--dim);margin-top:8px;padding-top:6px;border-top:1px solid var(--border)}
+
+/* ── FOOTER ── */
+.footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--border);font-size:9px;color:var(--dim);text-align:center;line-height:1.7}
+.footer a{color:var(--cyan);text-decoration:none}
+.footer .brand-foot{color:var(--amber);font-weight:700;font-size:11px}
+
+/* ── ERROR ── */
+.error-msg{text-align:center;padding:60px 20px;color:var(--red)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:700px){
+  .title{font-size:20px}
+  .flag{font-size:28px}
+  .header{padding:14px 0 10px}
+  .stat-grid{grid-template-columns:repeat(auto-fit,minmax(120px,1fr))}
+  .stat-val{font-size:18px}
+  .w-cell-lg{height:300px}.w-cell-md{height:160px}.w-cell-sm{height:140px}
+  .scenario-grid{grid-template-columns:1fr}
+  .grid-2{grid-template-columns:1fr}
+  .pipeline-row{font-size:10px}
+  .map-wrap iframe{height:280px}
+}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="logo">
+    <div class="dot"></div>
+    <span class="brand">GOT COMMODITIES</span>
+    <span class="top-sub">│ HORMUZ TERMINAL</span>
+    <span class="live-tag">LIVE</span>
+  </div>
+  <div class="clock">
+    <div id="clock-utc" class="utc"></div>
+    <div>DAY <span id="day-count" style="color:var(--red);font-weight:700"></span> OF WAR</div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<div class="header">
+  <span class="flag">⚓</span>
+  <div>
+    <div class="title">Hormuz War Terminal</div>
+    <div class="hdr-meta" id="hdr-meta"></div>
+  </div>
+</div>
+
+<!-- ALERT BANNER -->
+<div class="alert-banner" id="alert-banner"></div>
+
+<!-- STAT SCOREBOARD -->
+<div class="stat-grid" id="stat-grid"></div>
+
+<!-- SITUATION REPORT -->
+<div class="section">
+  <div class="section-head">Situation Report</div>
+  <div class="desc" id="sit-meta"></div>
+  <div class="card situation" id="situation"></div>
+</div>
+
+<!-- ENERGY PRICES (LIVE) -->
+<div class="section">
+  <div class="section-head">Energy Prices <span class="live-tag">LIVE</span></div>
+  <div class="desc">Auto-updating TradingView widgets. Prices update in real time.</div>
+  <div class="grid-2">
+    <div class="w-cell w-cell-lg">
+      <div class="tv-label">BRENT CRUDE (ICE)</div>
+      <div class="tradingview-widget-container" style="height:calc(100% - 20px)">
+        <div class="tradingview-widget-container__widget"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+        {"symbol":"TVC:UKOIL","width":"100%","height":"100%","locale":"en","dateRange":"3M","colorTheme":"dark","isTransparent":true,"autosize":true,"largeChartUrl":""}
+        </script>
+      </div>
+    </div>
+    <div class="w-cell w-cell-lg">
+      <div class="tv-label">WTI CRUDE (NYMEX)</div>
+      <div class="tradingview-widget-container" style="height:calc(100% - 20px)">
+        <div class="tradingview-widget-container__widget"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+        {"symbol":"TVC:USOIL","width":"100%","height":"100%","locale":"en","dateRange":"3M","colorTheme":"dark","isTransparent":true,"autosize":true,"largeChartUrl":""}
+        </script>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SAFE HAVENS & FOREX (LIVE) -->
+<div class="section">
+  <div class="section-head">Safe Havens & Forex <span class="live-tag">LIVE</span></div>
+  <div class="grid-3">
+    <div class="w-cell w-cell-md">
+      <div class="tv-label">GOLD</div>
+      <div class="tradingview-widget-container" style="height:calc(100% - 20px)">
+        <div class="tradingview-widget-container__widget"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+        {"symbol":"TVC:GOLD","width":"100%","height":"100%","locale":"en","dateRange":"3M","colorTheme":"dark","isTransparent":true,"autosize":true,"largeChartUrl":""}
+        </script>
+      </div>
+    </div>
+    <div class="w-cell w-cell-md">
+      <div class="tv-label">USD / INR</div>
+      <div class="tradingview-widget-container" style="height:calc(100% - 20px)">
+        <div class="tradingview-widget-container__widget"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+        {"symbol":"FX:USDINR","width":"100%","height":"100%","locale":"en","dateRange":"3M","colorTheme":"dark","isTransparent":true,"autosize":true,"largeChartUrl":""}
+        </script>
+      </div>
+    </div>
+    <div class="w-cell w-cell-md">
+      <div class="tv-label">USD / JPY</div>
+      <div class="tradingview-widget-container" style="height:calc(100% - 20px)">
+        <div class="tradingview-widget-container__widget"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+        {"symbol":"FX:USDJPY","width":"100%","height":"100%","locale":"en","dateRange":"3M","colorTheme":"dark","isTransparent":true,"autosize":true,"largeChartUrl":""}
+        </script>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SHIPPING & TANKER PROXIES (LIVE) -->
+<div class="section">
+  <div class="section-head">Shipping & Supply Chain Proxies <span class="live-tag">LIVE</span></div>
+  <div class="desc">Stock proxies track correlated equities, not raw commodity prices.</div>
+  <div class="grid-4">
+    <div class="w-cell w-cell-sm">
+      <div class="tv-label">VLCC TANKERS — FRONTLINE <span class="proxy">PROXY</span></div>
+      <div class="tradingview-widget-container" style="height:calc(100% - 20px)">
+        <div class="tradingview-widget-container__widget"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+        {"symbol":"NYSE:FRO","width":"100%","height":"100%","locale":"en","dateRange":"3M","colorTheme":"dark","isTransparent":true,"autosize":true,"largeChartUrl":""}
+        </script>
+      </div>
+    </div>
+    <div class="w-cell w-cell-sm">
+      <div class="tv-label">TANKERS — SCORPIO <span class="proxy">PROXY</span></div>
+      <div class="tradingview-widget-container" style="height:calc(100% - 20px)">
+        <div class="tradingview-widget-container__widget"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+        {"symbol":"NYSE:STNG","width":"100%","height":"100%","locale":"en","dateRange":"3M","colorTheme":"dark","isTransparent":true,"autosize":true,"largeChartUrl":""}
+        </script>
+      </div>
+    </div>
+    <div class="w-cell w-cell-sm">
+      <div class="tv-label">SHIPPING — ZIM <span class="proxy">PROXY</span></div>
+      <div class="tradingview-widget-container" style="height:calc(100% - 20px)">
+        <div class="tradingview-widget-container__widget"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+        {"symbol":"NYSE:ZIM","width":"100%","height":"100%","locale":"en","dateRange":"3M","colorTheme":"dark","isTransparent":true,"autosize":true,"largeChartUrl":""}
+        </script>
+      </div>
+    </div>
+    <div class="w-cell w-cell-sm">
+      <div class="tv-label">FERTILIZER — CF IND. <span class="proxy">PROXY</span></div>
+      <div class="tradingview-widget-container" style="height:calc(100% - 20px)">
+        <div class="tradingview-widget-container__widget"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+        {"symbol":"NYSE:CF","width":"100%","height":"100%","locale":"en","dateRange":"3M","colorTheme":"dark","isTransparent":true,"autosize":true,"largeChartUrl":""}
+        </script>
+      </div>
+    </div>
+    <div class="w-cell w-cell-sm">
+      <div class="tv-label">LNG — CHENIERE <span class="proxy">PROXY</span></div>
+      <div class="tradingview-widget-container" style="height:calc(100% - 20px)">
+        <div class="tradingview-widget-container__widget"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+        {"symbol":"NYSE:LNG","width":"100%","height":"100%","locale":"en","dateRange":"3M","colorTheme":"dark","isTransparent":true,"autosize":true,"largeChartUrl":""}
+        </script>
+      </div>
+    </div>
+    <div class="w-cell w-cell-sm">
+      <div class="tv-label">COPPER — FCX <span class="proxy">PROXY</span></div>
+      <div class="tradingview-widget-container" style="height:calc(100% - 20px)">
+        <div class="tradingview-widget-container__widget"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+        {"symbol":"NYSE:FCX","width":"100%","height":"100%","locale":"en","dateRange":"3M","colorTheme":"dark","isTransparent":true,"autosize":true,"largeChartUrl":""}
+        </script>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- LIVE NEWS -->
+<div class="section">
+  <div class="section-head">Live News <span class="live-tag">LIVE</span></div>
+  <div class="desc">Auto-refreshes every 5 minutes from Google News RSS.</div>
+  <div class="card">
+    <div class="news-tabs" id="war-news-tabs">
+      <button class="news-tab active" onclick="switchWarNews('hormuz',this)">Hormuz</button>
+      <button class="news-tab" onclick="switchWarNews('iran',this)">Iran War</button>
+      <button class="news-tab" onclick="switchWarNews('oil',this)">Oil Markets</button>
+      <button class="news-tab" onclick="switchWarNews('shipping',this)">Shipping</button>
+    </div>
+    <div class="news-container" id="war-news">
+      <div class="news-loading">Loading headlines...</div>
+    </div>
+  </div>
+</div>
+
+<!-- VESSEL TRACKING -->
+<div class="section">
+  <div class="section-head">Strait of Hormuz — Vessel Tracking <span class="live-tag">LIVE</span></div>
+  <div class="desc">MarineTraffic AIS data. Green = cargo, red = tanker, blue = passenger.</div>
+  <div class="map-wrap">
+    <iframe src="https://www.marinetraffic.com/en/ais/embed/zoom:7/centery:26.2/centerx:55.5/maptype:4/shownames:false/mmsi:0/shipid:0/port:0/showall:0/fleet:0/map_style:4" loading="lazy" referrerpolicy="no-referrer"></iframe>
+    <div class="map-overlay">Pre-war: ~80 ships/day transiting the strait │ Current: UKMTO reports 125 outbound, 129 inbound this week │ Most traffic is dry bulk, not tanker</div>
+  </div>
+</div>
+
+<!-- PRODUCTION OFFLINE -->
+<div class="section">
+  <div class="section-head">Gulf Production Offline</div>
+  <div class="desc" id="offline-desc"></div>
+  <div id="offline-bars"></div>
+</div>
+
+<!-- BYPASS PIPELINES -->
+<div class="section">
+  <div class="section-head">Bypass Routes & Pipeline Capacity</div>
+  <div class="alert-banner" id="bypass-alert" style="margin-bottom:12px"></div>
+  <div class="card" id="pipeline-table"></div>
+</div>
+
+<!-- SUPPLY CHAIN CASCADE -->
+<div class="section">
+  <div class="section-head">Supply Chain Cascade</div>
+  <div class="desc">Second-order disruptions rippling from the Hormuz closure.</div>
+  <div class="card" id="supply-chain"></div>
+</div>
+
+<!-- SUPPLY CHAIN NEWS -->
+<div class="section">
+  <div class="section-head">Supply Chain News <span class="live-tag">LIVE</span></div>
+  <div class="card">
+    <div class="news-tabs" id="chain-news-tabs">
+      <button class="news-tab active" onclick="switchChainNews('sulfur',this)">Sulfur</button>
+      <button class="news-tab" onclick="switchChainNews('fertilizer',this)">Fertilizer</button>
+      <button class="news-tab" onclick="switchChainNews('lng',this)">LNG</button>
+      <button class="news-tab" onclick="switchChainNews('tanker',this)">Tanker Rates</button>
+    </div>
+    <div class="news-container" id="chain-news">
+      <div class="news-loading">Loading headlines...</div>
+    </div>
+  </div>
+</div>
+
+<!-- REGIONAL EXPOSURE -->
+<div class="section">
+  <div class="section-head">Regional Exposure</div>
+  <div class="desc">Import dependency and strategic reserve cover by country. <span style="color:var(--amber)">EDITORIAL — Updated from data.json</span></div>
+  <div class="region-tabs" id="region-tabs"></div>
+  <div id="region-panels"></div>
+</div>
+
+<!-- WAR TIMELINE -->
+<div class="section">
+  <div class="section-head">War Timeline</div>
+  <div class="desc">Key events since February 28, 2026.</div>
+  <div class="card" id="timeline"></div>
+</div>
+
+<!-- SCENARIO MATRIX -->
+<div class="section">
+  <div class="section-head">Scenario Matrix</div>
+  <div id="scenarios"></div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="brand-foot">GOT COMMODITIES</div>
+  <div style="margin:6px 0">Hormuz Terminal │ <a href="https://www.gotcommodities.com" target="_top">gotcommodities.com</a></div>
+  <div>Data: Kpler, CENTCOM, UKMTO, Kpler, Al Jazeera, CNBC, Wikipedia. Prices: TradingView. News: Google News RSS. Vessel tracking: MarineTraffic.</div>
+  <div style="margin-top:4px">This terminal is for informational purposes only. Not financial advice.</div>
+</div>
+
+<script>
+/* ── CLOCK & DAY COUNTER ── */
+let WAR_START;
+function updateClock(){
+  const n=new Date();
+  document.getElementById('clock-utc').textContent=n.toUTCString().replace('GMT','UTC');
+  if(WAR_START){
+    document.getElementById('day-count').textContent=Math.floor((n-WAR_START)/864e5);
+  }
+}
+updateClock();setInterval(updateClock,1000);
+
+/* ── HTML ESCAPE ── */
+function esc(t){const d=document.createElement('div');d.textContent=t;return d.innerHTML}
+
+/* ── TIME AGO ── */
+function timeAgo(d){
+  const s=Math.floor((new Date()-d)/1000);
+  if(isNaN(s)||s<0)return '';
+  if(s<60)return 'Just now';
+  if(s<3600)return Math.floor(s/60)+'m ago';
+  if(s<86400)return Math.floor(s/3600)+'h ago';
+  return Math.floor(s/86400)+'d ago';
+}
+
+/* ── NEWS FEEDS ── */
+const warQueries={
+  hormuz:'Strait+of+Hormuz+shipping+attacks',
+  iran:'Iran+war+US+military+2026',
+  oil:'oil+prices+Brent+crude+Iran',
+  shipping:'tanker+rates+shipping+Hormuz+VLCC'
+};
+const chainQueries={
+  sulfur:'sulfur+supply+shortage+Hormuz',
+  fertilizer:'fertilizer+prices+shortage+2026',
+  lng:'LNG+Qatar+natural+gas+prices',
+  tanker:'VLCC+tanker+rates+supertanker'
+};
+let activeWarTab='hormuz',activeChainTab='sulfur';
+
+function switchWarNews(tab,btn){
+  activeWarTab=tab;
+  document.querySelectorAll('#war-news-tabs .news-tab').forEach(t=>t.classList.remove('active'));
+  btn.classList.add('active');
+  fetchNewsFeed('war-news',warQueries[tab]);
+}
+function switchChainNews(tab,btn){
+  activeChainTab=tab;
+  document.querySelectorAll('#chain-news-tabs .news-tab').forEach(t=>t.classList.remove('active'));
+  btn.classList.add('active');
+  fetchNewsFeed('chain-news',chainQueries[tab]);
+}
+
+async function fetchNewsFeed(containerId,q){
+  const el=document.getElementById(containerId);
+  el.innerHTML='<div class="news-loading">Loading...</div>';
+  const rssUrl='https://news.google.com/rss/search?q='+q+'&hl=en-US&gl=US&ceid=US:en';
+
+  // Try 1: rss2json
+  try{
+    const r=await fetch('https://api.rss2json.com/v1/api.json?rss_url='+encodeURIComponent(rssUrl));
+    if(r.ok){const d=await r.json();if(d.items&&d.items.length){renderNews(el,d.items.slice(0,12).map(i=>({title:i.title,link:i.link,source:i.author||'',date:i.pubDate})));return;}}
+  }catch(e){}
+
+  // Try 2: allorigins
+  try{
+    const r=await fetch('https://api.allorigins.win/raw?url='+encodeURIComponent(rssUrl));
+    if(r.ok){const txt=await r.text();const doc=new DOMParser().parseFromString(txt,'text/xml');const items=doc.querySelectorAll('item');
+    if(items.length){const arr=[];items.forEach((it,i)=>{if(i<12)arr.push({title:it.querySelector('title')?.textContent||'',link:it.querySelector('link')?.textContent||'',source:it.querySelector('source')?.textContent||'',date:it.querySelector('pubDate')?.textContent||''})});renderNews(el,arr);return;}}
+  }catch(e){}
+
+  // Try 3: gnews
+  try{
+    const r=await fetch('https://gnews.io/api/v4/search?q='+q.replace(/\+/g,' ')+'&lang=en&max=12&apikey=demo');
+    if(r.ok){const d=await r.json();if(d.articles&&d.articles.length){renderNews(el,d.articles.map(a=>({title:a.title,link:a.url,source:a.source?.name||'',date:a.publishedAt})));return;}}
+  }catch(e){}
+
+  el.innerHTML='<div class="news-loading" style="color:var(--red)">Could not load headlines. Try refreshing.</div>';
+}
+
+function renderNews(el,items){
+  el.innerHTML=items.map(i=>{
+    const t=i.date?timeAgo(new Date(i.date)):'';
+    return `<div class="news-item"><a href="${esc(i.link)}" target="_blank" rel="noopener">${esc(i.title)}</a><div class="news-meta">${esc(i.source)}${t?' · '+t:''}</div></div>`;
+  }).join('');
+}
+
+function refreshAllNews(){
+  fetchNewsFeed('war-news',warQueries[activeWarTab]);
+  fetchNewsFeed('chain-news',chainQueries[activeChainTab]);
+}
+refreshAllNews();
+setInterval(refreshAllNews,300000);
+
+/* ── LOAD DATA ── */
+fetch('data.json').then(r=>{if(!r.ok)throw new Error(r.status);return r.json()}).then(D=>{
+  // War start date
+  WAR_START=new Date(D.edition.warStartDate);
+  updateClock();
+
+  // Header meta
+  document.getElementById('hdr-meta').textContent=
+    'WAR BEGAN '+D.edition.warStartDate.replace(/-/g,'/')+' │ DATA AS OF '+D.edition.sessionCovered+' │ PRICES AUTO-UPDATING';
+
+  // Alert banner
+  const ab=document.getElementById('alert-banner');
+  ab.innerHTML='<span class="level">'+esc(D.edition.alertLevel)+'</span> — '+esc(D.edition.alertText);
+
+  // Situation meta
+  document.getElementById('sit-meta').textContent='Covering session: '+D.edition.sessionCovered+' │ Updated '+D.edition.statusDate;
+
+  // Stat scoreboard
+  const sg=document.getElementById('stat-grid');
+  const stats=[
+    {val:D.flows.crude.value,label:'Crude Flow (Kpler)',sub:D.flows.crude.pctPreWar+'% of pre-war',cls:'amber'},
+    {val:D.attacks.thisWeek,label:'Ships Attacked This Week',sub:'Total war: '+D.attacks.totalWar,cls:'red'},
+    {val:D.tankerRates.vlcc,label:'VLCC Day Rate',sub:D.tankerRates.note,cls:'cyan'},
+    {val:D.prices.brent.v,label:'Brent Crude',sub:(D.prices.brent.day>0?'+':'')+D.prices.brent.day+'% day',cls:D.prices.brent.day>=0?'green':'red'},
+    {val:D.attacks.sunk,label:'Ships Sunk (Total War)',sub:D.attacks.casualties+' killed, '+D.attacks.injured+'+ injured',cls:'red'},
+    {val:D.flows.offlineProduction.value,label:'Production Offline',sub:D.flows.strandedBarrels.value+' b/d stranded',cls:'red'}
+  ];
+  sg.innerHTML=stats.map(s=>`<div class="stat-box"><div class="stat-val ${s.cls}">${esc(String(s.val))}</div><div class="stat-label">${esc(s.label)}</div><div class="stat-sub">${esc(s.sub)}</div></div>`).join('');
+
+  // Situation
+  document.getElementById('situation').innerHTML=D.situation.map(p=>'<p>'+esc(p)+'</p>').join('');
+
+  // Offline bars
+  if(D.offlineByCountry){
+    const maxMb=Math.max(...D.offlineByCountry.map(c=>c.mbpd));
+    document.getElementById('offline-desc').textContent='~'+D.flows.offlineProduction.value+' b/d of Gulf crude production offline. By country:';
+    document.getElementById('offline-bars').innerHTML=D.offlineByCountry.map(c=>{
+      const pct=Math.round(c.mbpd/maxMb*100);
+      return `<div class="bar-row"><div class="bar-label"><span class="name">${esc(c.country)}</span><span class="val">${c.mbpd}M b/d</span></div><div class="bar-track"><div class="bar-fill" style="width:${pct}%;background:linear-gradient(90deg,var(--red)88,var(--red))"></div></div></div>`;
+    }).join('');
+  }
+
+  // Pipeline table
+  if(D.bypassPipelines){
+    document.getElementById('bypass-alert').innerHTML='⚠ Combined bypass capacity ~6.3M b/d vs 17.1M b/d pre-war need — a gap of ~10.8M b/d';
+    document.getElementById('pipeline-table').innerHTML=D.bypassPipelines.map(p=>{
+      let sc='status-online';
+      if(p.status==='MAX CAPACITY')sc='status-max';
+      else if(p.status==='PARTIAL')sc='status-partial';
+      else if(p.status==='GAP')sc='status-gap';
+      return `<div class="pipeline-row"><span class="pipeline-name">${esc(p.name)}</span><span class="pipeline-cap">${esc(p.capacity)}</span><span class="pipeline-status ${sc}">${esc(p.status)}</span><span class="pipeline-note">${esc(p.note)}</span></div>`;
+    }).join('');
+  }
+
+  // Supply chain
+  if(D.supplyChain){
+    const sevColors={critical:'var(--red)',elevated:'var(--amber)',moderate:'var(--magenta)'};
+    document.getElementById('supply-chain').innerHTML=D.supplyChain.map(s=>{
+      const c=sevColors[s.severity]||'var(--dim)';
+      return `<div class="cascade-item"><div class="cascade-dot" style="background:${c}"></div><div class="cascade-name" style="color:${c}">${esc(s.name)}</div><div class="cascade-desc">${esc(s.text)}</div></div>`;
+    }).join('');
+  }
+
+  // Regional exposure
+  if(D.regionalExposure){
+    const tabsEl=document.getElementById('region-tabs');
+    const panelsEl=document.getElementById('region-panels');
+    tabsEl.innerHTML=D.regionalExposure.map((r,i)=>
+      `<button class="region-tab${i===0?' active':''}" onclick="showRegion('${r.id}',this)">${r.flag} ${esc(r.name)}</button>`
+    ).join('');
+    panelsEl.innerHTML=D.regionalExposure.map((r,i)=>
+      `<div class="card region-panel${i===0?' active':''}" id="panel-${r.id}">${r.items.map(it=>'<div class="ei">▸ '+esc(it)+'</div>').join('')}</div>`
+    ).join('');
+  }
+
+  // Timeline
+  if(D.timeline){
+    document.getElementById('timeline').innerHTML=D.timeline.map(t=>
+      `<div class="timeline-item"><span class="tl-date">${esc(t.date)}</span><span class="tl-event">${esc(t.event)}</span></div>`
+    ).join('');
+  }
+
+  // Scenarios
+  if(D.scenarios){
+    const s=D.scenarios;
+    document.getElementById('scenarios').innerHTML=`
+      <div class="scenario-grid">
+        <div class="scenario-bull">
+          <div class="scenario-title" style="color:var(--green)">✅ BULL: ${esc(s.bull.title)}</div>
+          <div class="scenario-list">${s.bull.points.map(p=>'• '+esc(p)).join('<br>')}</div>
+        </div>
+        <div class="scenario-bear">
+          <div class="scenario-title" style="color:var(--red)">❌ BEAR: ${esc(s.bear.title)}</div>
+          <div class="scenario-list">${s.bear.points.map(p=>'• '+esc(p)).join('<br>')}</div>
+        </div>
+      </div>
+      <div class="catalyst">⚡ Key catalyst: US midterm elections Nov 3 — larger US operations reportedly planned after this date</div>
+    `;
+  }
+
+}).catch(err=>{
+  document.querySelector('.stat-grid').innerHTML='<div class="error-msg">Failed to load data: '+esc(err.message)+'. Try refreshing.</div>';
+});
+
+/* ── REGION TABS ── */
+function showRegion(id,btn){
+  document.querySelectorAll('.region-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.region-tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('panel-'+id).classList.add('active');
+  btn.classList.add('active');
+}
+</script>
+</body>
+</html>
