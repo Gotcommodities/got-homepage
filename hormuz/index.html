@@ -316,19 +316,30 @@ body{max-width:1200px;margin:0 auto;padding:0 16px 60px}
   </div>
 </div>
 
-<!-- LIVE NEWS -->
+<!-- LIVE COMMODITY NEWS (TradingView Timeline) -->
 <div class="section">
-  <div class="section-head">Live News <span class="live-tag">LIVE</span></div>
-  <div class="desc">Auto-refreshes every 5 minutes from Google News RSS.</div>
-  <div class="card">
-    <div class="news-tabs" id="war-news-tabs">
-      <button class="news-tab active" onclick="switchWarNews('hormuz',this)">Hormuz</button>
-      <button class="news-tab" onclick="switchWarNews('iran',this)">Iran War</button>
-      <button class="news-tab" onclick="switchWarNews('oil',this)">Oil Markets</button>
-      <button class="news-tab" onclick="switchWarNews('shipping',this)">Shipping</button>
+  <div class="section-head">Commodity Market News <span class="live-tag">LIVE</span></div>
+  <div class="desc">Real-time market news from TradingView. Auto-updating.</div>
+  <div class="card" style="padding:0;overflow:hidden;height:460px">
+    <div class="tradingview-widget-container" style="height:100%">
+      <div class="tradingview-widget-container__widget" style="height:100%"></div>
+      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>
+      {"feedMode":"market","market":"commodity","colorTheme":"dark","isTransparent":true,"displayMode":"regular","width":"100%","height":"100%","locale":"en"}
+      </script>
     </div>
-    <div class="news-container" id="war-news">
-      <div class="news-loading">Loading headlines...</div>
+  </div>
+</div>
+
+<!-- LIVE GENERAL NEWS (TradingView Timeline) -->
+<div class="section">
+  <div class="section-head">General Market News <span class="live-tag">LIVE</span></div>
+  <div class="desc">Broader market headlines. Auto-updating.</div>
+  <div class="card" style="padding:0;overflow:hidden;height:360px">
+    <div class="tradingview-widget-container" style="height:100%">
+      <div class="tradingview-widget-container__widget" style="height:100%"></div>
+      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>
+      {"feedMode":"all_symbols","colorTheme":"dark","isTransparent":true,"displayMode":"regular","width":"100%","height":"100%","locale":"en"}
+      </script>
     </div>
   </div>
 </div>
@@ -364,18 +375,16 @@ body{max-width:1200px;margin:0 auto;padding:0 16px 60px}
   <div class="card" id="supply-chain"></div>
 </div>
 
-<!-- SUPPLY CHAIN NEWS -->
+<!-- SUPPLY CHAIN NEWS (TradingView Symbol-Specific) -->
 <div class="section">
-  <div class="section-head">Supply Chain News <span class="live-tag">LIVE</span></div>
-  <div class="card">
-    <div class="news-tabs" id="chain-news-tabs">
-      <button class="news-tab active" onclick="switchChainNews('sulfur',this)">Sulfur</button>
-      <button class="news-tab" onclick="switchChainNews('fertilizer',this)">Fertilizer</button>
-      <button class="news-tab" onclick="switchChainNews('lng',this)">LNG</button>
-      <button class="news-tab" onclick="switchChainNews('tanker',this)">Tanker Rates</button>
-    </div>
-    <div class="news-container" id="chain-news">
-      <div class="news-loading">Loading headlines...</div>
+  <div class="section-head">Oil & Energy News <span class="live-tag">LIVE</span></div>
+  <div class="desc">Symbol-specific news for Brent crude. Auto-updating.</div>
+  <div class="card" style="padding:0;overflow:hidden;height:360px">
+    <div class="tradingview-widget-container" style="height:100%">
+      <div class="tradingview-widget-container__widget" style="height:100%"></div>
+      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>
+      {"feedMode":"symbol","symbol":"TVC:UKOIL","colorTheme":"dark","isTransparent":true,"displayMode":"regular","width":"100%","height":"100%","locale":"en"}
+      </script>
     </div>
   </div>
 </div>
@@ -405,7 +414,7 @@ body{max-width:1200px;margin:0 auto;padding:0 16px 60px}
 <div class="footer">
   <div class="brand-foot">GOT COMMODITIES</div>
   <div style="margin:6px 0">Hormuz Terminal │ <a href="https://www.gotcommodities.com" target="_top">gotcommodities.com</a></div>
-  <div>Data: Kpler, CENTCOM, UKMTO, Kpler, Al Jazeera, CNBC, Wikipedia. Prices: TradingView. News: Google News RSS. Vessel tracking: MarineTraffic.</div>
+  <div>Data: Kpler, CENTCOM, UKMTO, Al Jazeera, CNBC, Wikipedia. Prices & News: TradingView. Vessel tracking: MarineTraffic.</div>
   <div style="margin-top:4px">This terminal is for informational purposes only. Not financial advice.</div>
 </div>
 
@@ -423,85 +432,6 @@ updateClock();setInterval(updateClock,1000);
 
 /* ── HTML ESCAPE ── */
 function esc(t){const d=document.createElement('div');d.textContent=t;return d.innerHTML}
-
-/* ── TIME AGO ── */
-function timeAgo(d){
-  const s=Math.floor((new Date()-d)/1000);
-  if(isNaN(s)||s<0)return '';
-  if(s<60)return 'Just now';
-  if(s<3600)return Math.floor(s/60)+'m ago';
-  if(s<86400)return Math.floor(s/3600)+'h ago';
-  return Math.floor(s/86400)+'d ago';
-}
-
-/* ── NEWS FEEDS ── */
-const warQueries={
-  hormuz:'Strait+of+Hormuz+shipping+attacks',
-  iran:'Iran+war+US+military+2026',
-  oil:'oil+prices+Brent+crude+Iran',
-  shipping:'tanker+rates+shipping+Hormuz+VLCC'
-};
-const chainQueries={
-  sulfur:'sulfur+supply+shortage+Hormuz',
-  fertilizer:'fertilizer+prices+shortage+2026',
-  lng:'LNG+Qatar+natural+gas+prices',
-  tanker:'VLCC+tanker+rates+supertanker'
-};
-let activeWarTab='hormuz',activeChainTab='sulfur';
-
-function switchWarNews(tab,btn){
-  activeWarTab=tab;
-  document.querySelectorAll('#war-news-tabs .news-tab').forEach(t=>t.classList.remove('active'));
-  btn.classList.add('active');
-  fetchNewsFeed('war-news',warQueries[tab]);
-}
-function switchChainNews(tab,btn){
-  activeChainTab=tab;
-  document.querySelectorAll('#chain-news-tabs .news-tab').forEach(t=>t.classList.remove('active'));
-  btn.classList.add('active');
-  fetchNewsFeed('chain-news',chainQueries[tab]);
-}
-
-async function fetchNewsFeed(containerId,q){
-  const el=document.getElementById(containerId);
-  el.innerHTML='<div class="news-loading">Loading...</div>';
-  const rssUrl='https://news.google.com/rss/search?q='+q+'&hl=en-US&gl=US&ceid=US:en';
-
-  // Try 1: rss2json
-  try{
-    const r=await fetch('https://api.rss2json.com/v1/api.json?rss_url='+encodeURIComponent(rssUrl));
-    if(r.ok){const d=await r.json();if(d.items&&d.items.length){renderNews(el,d.items.slice(0,12).map(i=>({title:i.title,link:i.link,source:i.author||'',date:i.pubDate})));return;}}
-  }catch(e){}
-
-  // Try 2: allorigins
-  try{
-    const r=await fetch('https://api.allorigins.win/raw?url='+encodeURIComponent(rssUrl));
-    if(r.ok){const txt=await r.text();const doc=new DOMParser().parseFromString(txt,'text/xml');const items=doc.querySelectorAll('item');
-    if(items.length){const arr=[];items.forEach((it,i)=>{if(i<12)arr.push({title:it.querySelector('title')?.textContent||'',link:it.querySelector('link')?.textContent||'',source:it.querySelector('source')?.textContent||'',date:it.querySelector('pubDate')?.textContent||''})});renderNews(el,arr);return;}}
-  }catch(e){}
-
-  // Try 3: gnews
-  try{
-    const r=await fetch('https://gnews.io/api/v4/search?q='+q.replace(/\+/g,' ')+'&lang=en&max=12&apikey=demo');
-    if(r.ok){const d=await r.json();if(d.articles&&d.articles.length){renderNews(el,d.articles.map(a=>({title:a.title,link:a.url,source:a.source?.name||'',date:a.publishedAt})));return;}}
-  }catch(e){}
-
-  el.innerHTML='<div class="news-loading" style="color:var(--red)">Could not load headlines. Try refreshing.</div>';
-}
-
-function renderNews(el,items){
-  el.innerHTML=items.map(i=>{
-    const t=i.date?timeAgo(new Date(i.date)):'';
-    return `<div class="news-item"><a href="${esc(i.link)}" target="_blank" rel="noopener">${esc(i.title)}</a><div class="news-meta">${esc(i.source)}${t?' · '+t:''}</div></div>`;
-  }).join('');
-}
-
-function refreshAllNews(){
-  fetchNewsFeed('war-news',warQueries[activeWarTab]);
-  fetchNewsFeed('chain-news',chainQueries[activeChainTab]);
-}
-refreshAllNews();
-setInterval(refreshAllNews,300000);
 
 /* ── LOAD DATA ── */
 fetch('data.json').then(r=>{if(!r.ok)throw new Error(r.status);return r.json()}).then(D=>{
