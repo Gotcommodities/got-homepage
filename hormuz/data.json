@@ -1,16 +1,16 @@
 {
   "edition": {
-    "date": "Sunday, October 18, 2026",
-    "statusDate": "SUN 18 OCT 2026 · 19:00 IST",
+    "date": "Monday, October 19, 2026",
+    "statusDate": "MON 19 OCT 2026 · 19:00 IST",
     "warStartDate": "2026-02-28",
-    "sessionCovered": "Fri, Oct 16",
+    "sessionCovered": "Sat, Oct 18",
     "alertLevel": "CRITICAL",
-    "alertText": "Iran escalating: 12 ships attacked this week, highest since war began"
+    "alertText": "IRGC claims two supertankers hit mines; 28 incidents in October — UKMTO overwhelmed"
   },
   "situation": [
-    "The Strait of Hormuz saw its worst week of attacks since the war began on February 28. UKMTO confirmed at least 12 ships were hit in the seven days to October 16, with one sunk (M/V GFS Pride), two disabled and three damaged. Kpler measured crude flows at 11.6 million barrels a day for the week to October 13, about 68% of the 17.1 million bpd pre-war baseline.",
-    "Both the US and Iran claim control of the strait. CENTCOM's Brad Cooper said 400 ships and 100 million barrels passed through last week; Iran's IRGC said a supertanker carrying over 2 million barrels caught fire on Saturday after hitting a mine. Brent jumped 3.6% to near $110 on Friday, its first touch of that level since May. VLCC tanker rates are around $1.3 million a day.",
-    "Iran set seven conditions for reopening the strait on October 4 and declared a prohibited zone on September 5. The US says its blockade has cost Iran $25 billion in oil export income. After the November 3 midterms, the US is reportedly prepared for larger operations."
+    "The Strait of Hormuz crisis deepened in the war's eighth month. UKMTO reported 29 warnings covering 28 incidents in October to date — the highest sustained attack pace since the war began on February 28. At least 16 confirmed attacks were logged in the week ending October 18. The Singapore-flagged container ship GFS Pride sank on October 14 after an IRGC projectile strike, bringing confirmed commercial sinkings to five since March. Kpler measured crude flows at 11.6 million barrels per day for the week to October 13, about 68% of the 17.1 million bpd pre-war baseline, though daily flows are wildly volatile — 20.8 million barrels transited on October 8 but only 2.9 million on October 11.",
+    "Iran's IRGC claimed on October 18 that two laden supertankers — each carrying over 2 million barrels of crude — hit naval mines and caught fire on unauthorized routes. JMIC says the claims are unsubstantiated. Oil prices rallied sharply last week: Brent settled at $109.86 on Friday (its first touch of $110 since May) before easing to $108.81 on Monday. WTI hit $101.41 Friday and slipped to $101.00. VLCC tanker rates remain near $1.3 million a day — 43 times the January level — with freight now making up 27% of delivered crude cost versus 3% pre-war.",
+    "Diplomatic efforts remain stalled. Iran's seven conditions for reopening the strait (set October 4) are still on the table. Trump has ruled out nuclear weapons and ground troops, saying the war will end after the November 3 midterm elections. The UN warns of a food security emergency as fertilizer shipments through the strait remain near zero and QatarEnergy has extended LNG cancellations into November. UKMTO says it is struggling to accurately report true attack numbers because many ships will not report being hit."
   ],
   "flows": {
     "crude": { "value": "11.6M", "unit": "b/d", "source": "Kpler", "pctPreWar": 68 },
@@ -22,22 +22,22 @@
     "transitsOut": 125
   },
   "attacks": {
-    "thisWeek": 12,
-    "totalWar": 97,
-    "sunk": 3,
-    "disabled": 22,
-    "casualties": 25,
-    "injured": 35
+    "thisWeek": 16,
+    "totalWar": 101,
+    "sunk": 5,
+    "disabled": 24,
+    "casualties": 27,
+    "injured": 37
   },
   "tankerRates": {
     "vlcc": "$1.3M/day",
-    "note": "War premium at historic high"
+    "note": "43x pre-war level; 27% of delivered crude cost"
   },
   "prices": {
-    "brent": { "v": "$109.69", "day": 3.56 },
-    "wti": { "v": "$101.84", "day": 3.95 },
+    "brent": { "v": "$108.81", "day": -1.0 },
+    "wti": { "v": "$101.00", "day": -0.4 },
     "coal": { "v": "$150.40", "day": 0.50 },
-    "gold": { "v": "$4,166", "day": -0.11 }
+    "gold": { "v": "$4,177", "day": 0.30 }
   },
   "bypassPipelines": [
     { "name": "Saudi East-West (Yanbu)", "capacity": "4.5M b/d", "status": "MAX CAPACITY", "note": "Running full" },
@@ -53,10 +53,10 @@
     { "country": "Iran", "mbpd": 1.6 }
   ],
   "supplyChain": [
-    { "name": "Sulfur", "severity": "critical", "text": "Global exports down 45% from pre-war. 600kt stranded in Gulf at April peak. Byproduct — cannot ramp output. MEG supplied ~35% of global urea and 25% of ammonia." },
+    { "name": "Sulfur", "severity": "critical", "text": "Global exports down 45% from pre-war. Nearly half of seaborne sulfur passed through Hormuz pre-war. Sulfur prices at record highs. MEG supplied ~35% of global urea and 25% of ammonia." },
     { "name": "Sulfuric Acid", "severity": "critical", "text": "China banned exports Apr-Aug (700kt/yr quota replaced). SX-EW copper producers (15% of global cathode) fully exposed. Huayou cut Indonesian nickel HPAL output 50%." },
-    { "name": "Fertilizer", "severity": "elevated", "text": "OCP's last MEG sulfur cargo: April 10. Mosaic cut US phosphate output ~2M tonnes. North American sulfur flowing to Africa at historic premiums." },
-    { "name": "LNG", "severity": "elevated", "text": "Qatar LNG (~20% of global trade) largely blocked. Europe 12-14% LNG was Qatar. Asian buyers switching back to coal — Newcastle at 3-year high $150/t." },
+    { "name": "Fertilizer", "severity": "critical", "text": "Fertilizer shipments through Hormuz remain near zero. UN warns of food emergency as planting season approaches. Mosaic cut US phosphate output ~2M tonnes. OCP's last MEG sulfur cargo: April 10." },
+    { "name": "LNG", "severity": "elevated", "text": "Qatar LNG (~20% of global trade) largely blocked. QatarEnergy extended cancellations into November. Europe 12-14% LNG was Qatar. Asian buyers switching back to coal — Newcastle at 3-year high ~$150/t." },
     { "name": "Petrochemicals", "severity": "moderate", "text": "MEG ethylene/polyethylene exports disrupted. Gulf petrochem complex cut to ~60% capacity. Dow, LyondellBasell margins widening on supply constraint." }
   ],
   "regionalExposure": [
@@ -90,30 +90,30 @@
     ]}
   ],
   "warNews": [
-    { "title": "UKMTO issues 4 attack alerts in single day; Iran claims ADNOC tanker strike", "source": "Seatrade Maritime", "date": "Oct 13", "url": "https://seatrade-maritime.com/security/ukmto-issues-four-hormuz-attack-reports-iran-claims-adnoc-tanker-strike" },
-    { "title": "Iran reports tanker fire amid escalating Hormuz attacks — 10 vessels hit in 3 days", "source": "Shafaq News", "date": "Oct 15", "url": "https://shafaq.com/en/Middle-East/Iran-reports-tanker-fire-amid-escalating-Hormuz-attacks" },
-    { "title": "Container ship sinks after hitting naval mine in unauthorized route — IRGC", "source": "Shafaq News", "date": "Oct 15", "url": "https://shafaq.com/en/Middle-East/Iran-reports-tanker-fire-amid-escalating-Hormuz-attacks" },
-    { "title": "VLCC Kazimah III catches fire after projectile strike — first October attack", "source": "Seatrade Maritime", "date": "Oct 2", "url": "https://www.seatrade-maritime.com/security/tanker-catches-fire-after-first-hormuz-attack-in-october" },
-    { "title": "Supertanker hits mine in southern passage; explosion and engine fire — IRGC", "source": "Shafaq News", "date": "Oct 11", "url": "https://shafaq.com/en/Middle-East/Projectile-strikes-tanker-in-Hormuz-as-attacks-rise" },
-    { "title": "Two oil tankers hit by projectiles near Strait of Hormuz", "source": "Kuwait Times", "date": "Oct 11", "url": "https://kuwaittimes.com/article/50835/world/2-oil-tankers-hit-by-projectiles-near-strait-of-hormuz/" },
-    { "title": "Iranian gunboats open fire on tanker transiting Strait of Hormuz", "source": "Ship & Bunker", "date": "Oct 9", "url": "https://shipandbunker.com/news/world/327755-iranian-gunboats-open-fire-on-tanker-in-strait-of-hormuz" },
-    { "title": "Iran turns back three oil tankers in Strait of Hormuz amid conflict", "source": "CryptoBriefing", "date": "Oct 8", "url": "https://cryptobriefing.com/iran-turns-back-three-oil-tankers-in-strait-of-hormuz-amid-2026-conflict/" }
+    { "title": "Iran claims two supertankers hit mines, catch fire in Strait of Hormuz", "source": "Al Jazeera", "date": "Oct 18", "url": "https://aljazeera.com/news/2026/10/18/iran-says-two-tankers-catch-fire-after-hitting-mines-in-strait-of-hormuz" },
+    { "title": "UKMTO struggling to accurately report true number of Hormuz attacks", "source": "Seatrade Maritime", "date": "Oct 18", "url": "https://www.seatrade-maritime.com/security/ukmto-struggling-to-accurately-report-hormuz-attacks" },
+    { "title": "US and Iran both claim control of Strait of Hormuz amid attacks on vessels", "source": "Al Jazeera", "date": "Oct 17", "url": "https://www.aljazeera.com/news/2026/10/17/us-and-iran-both-claim-control-of-strait-of-hormuz-amid-attacks-on-vessels" },
+    { "title": "Singapore confirms container ship GFS Pride sunk in Iran Hormuz attacks", "source": "Seatrade Maritime", "date": "Oct 15", "url": "https://www.seatrade-maritime.com/security/iran-claims-mine-sank-container-ship-amid-fresh-hormuz-attacks" },
+    { "title": "UKMTO issues 12 attack reports in single week — wartime high for Hormuz", "source": "Iran International", "date": "Oct 13", "url": "https://www.iranintl.com/en/202610139592" },
+    { "title": "Iran hits tanker in Sohar and two in Hormuz; US disables bulker", "source": "Seatrade Maritime", "date": "Oct 12", "url": "https://www.seatrade-maritime.com/security/iran-hits-tanker-in-sohar-and-two-in-hormuz-us-disables-bulker" },
+    { "title": "Iran sets crosshairs on US-UAE oil shuttle out of Strait of Hormuz", "source": "Al Jazeera", "date": "Oct 12", "url": "https://www.aljazeera.com/economy/2026/10/12/iran-sets-crosshairs-on-us-uae-oil-shuttle-out-of-strait-of-hormuz" },
+    { "title": "Tanker hit by multiple projectiles off north coast of Qatar — UKMTO", "source": "Al Jazeera", "date": "Oct 8", "url": "https://www.aljazeera.com/news/2026/10/8/tanker-hit-by-multiple-projectiles-off-north-coast-of-qatar-ukmto-says" }
   ],
   "commodityNews": [
-    { "title": "Brent crude surges past $100 as Middle East turmoil deepens", "source": "Times of Oman", "date": "Oct 16", "url": "https://timesofoman.com/article/176768-brent-crude-surges-past-100-as-middle-east-turmoil-deepens" },
-    { "title": "VLCC day rates exceed $1.3M — war premium at historic high", "source": "Seatrade Maritime", "date": "Oct 13", "url": "https://seatrade-maritime.com/security/ukmto-issues-four-hormuz-attack-reports-iran-claims-adnoc-tanker-strike" },
-    { "title": "Newcastle coal hits 3-year high at $150/t as Asian buyers switch from LNG", "source": "Market Data", "date": "Oct 14", "url": "" },
-    { "title": "Oil can hit $91/bbl in late 2026 on Iran disruption — BNEF forecast", "source": "BloombergNEF", "date": "Oct 10", "url": "https://about.bnef.com/insights/commodities/oil-can-hit-91-a-barrel-in-late-2026-on-iran-disruption/" },
-    { "title": "Gold steady at $4,166/oz as safe-haven demand persists", "source": "Market Data", "date": "Oct 16", "url": "" },
-    { "title": "Philippines and India press over seafarer safety as casualties rise", "source": "Seatrade Maritime", "date": "Oct 2", "url": "https://www.seatrade-maritime.com/security/tanker-catches-fire-after-first-hormuz-attack-in-october" }
+    { "title": "Brent crude holds near $110 on Mideast and Ukraine conflicts", "source": "Bloomberg", "date": "Oct 18", "url": "https://www.bloomberg.com/news/articles/2026-10-18/latest-oil-market-news-and-analysis-for-oct-19" },
+    { "title": "U.S. crude oil tops $100 as Iran escalates Hormuz attacks", "source": "CNBC", "date": "Oct 16", "url": "https://www.cnbc.com/2026/10/16/oil-price-today-iran-strait-hormuz-ukraine-russia.html" },
+    { "title": "Oil prices head for weekly gain as Hormuz attacks rattle markets", "source": "OilPrice", "date": "Oct 16", "url": "https://oilprice.com/Latest-Energy-News/World-News/Oil-Prices-Head-for-Weekly-Gain-as-Hormuz-Attacks-Rattle-Markets.html" },
+    { "title": "Tanker rates hit $1.3M a day as 9 shipping stocks double in 2026", "source": "Benzinga", "date": "Oct 14", "url": "https://www.benzinga.com/markets/commodities/26/10/62274386/tanker-rates-hit-1-3m-a-day-as-9-shipping-stocks-double-in-2026" },
+    { "title": "Hormuz is turning shipping's fuel bill into a supply crisis", "source": "OilPrice", "date": "Oct 13", "url": "https://oilprice.com/Geopolitics/Middle-East/Hormuz-Is-Turning-Shippings-Fuel-Bill-Into-a-Supply-Crisis.html" },
+    { "title": "Gold holds near $4,177 as safe-haven demand persists amid Hormuz war", "source": "Market Data", "date": "Oct 19", "url": "" }
   ],
   "supplyChainNews": [
-    { "title": "Strait of Hormuz crisis keeps global fertilizer trade near standstill", "source": "Global Agriculture", "date": "Oct 12", "url": "https://www.global-agriculture.com/crop-nutrition/strait-of-hormuz-crisis-keeps-global-fertilizer-trade-near-standstill/" },
-    { "title": "Fertilizer markets shift from price to supply access after Hormuz disruption", "source": "Processing Magazine", "date": "Oct 8", "url": "https://www.processingmagazine.com/news-notes/news/55385083/fertilizer-markets-shift-from-price-to-supply-access-after-hormuz-disruption" },
-    { "title": "Hormuz toll on fertilizer drives food ingredient costs higher", "source": "Food Ingredients First", "date": "Oct 6", "url": "https://www.foodingredientsfirst.com/news/hormuz-toll-fertilizer-food-costs.html" },
-    { "title": "Sulfur supply disruption hits Indonesia MHP costs — SMM Insight", "source": "SMM", "date": "Oct 4", "url": "https://news.metal.com/newscontent/103784759-smm-insight-strait-of-hormuz-closure-sulfur-supply-disruption-indonesia-mhp-cost-impact" },
-    { "title": "Sulfur shortage raises phosphate supply alarm — AFI warning", "source": "Fertilizer Daily", "date": "Sep 28", "url": "https://www.fertilizerdaily.com/20260818-sulfur-shortage-phosphate-supply-afi-hormuz-warning/md/" },
-    { "title": "Houthi-Saudi blockade adds Red Sea layer to fertilizer disruption", "source": "Fertilizer Daily", "date": "Sep 24", "url": "https://www.fertilizerdaily.com/20260824-houthi-saudi-blockade-red-sea-fertilizer-2026/" }
+    { "title": "UN warns Hormuz crisis could trigger global food emergency as fertilizer deal stalls", "source": "Kurdistan24", "date": "Oct 14", "url": "https://www.kurdistan24.net/en/story/946253" },
+    { "title": "UN official warns of looming food crisis as Hormuz fertiliser plan stalls", "source": "Al Jazeera", "date": "Oct 14", "url": "https://aljazeera.com/news/2026/10/14/un-official-warns-of-looming-food-crisis-as-hormuz-fertiliser-plan-stalls" },
+    { "title": "Fertilizer supply squeeze: war and trade tensions threaten affordability", "source": "Hoosier Ag Today", "date": "Oct 13", "url": "https://www.hoosieragtoday.com/2026/10/13/fertilizer-supply-squeeze/" },
+    { "title": "Fertilizer shipments through the Strait of Hormuz remain near zero", "source": "UkrAgroConsult", "date": "Oct 10", "url": "https://ukragroconsult.com/en/news/fertilizer-shipments-through-the-strait-of-hormuz-remain-near-zero/" },
+    { "title": "Hormuz crude recovery hides a slower one for LNG, fertilizer, helium", "source": "Enterprise AM", "date": "Oct 7", "url": "https://enterpriseam.com/logistics/2026/10/07/hormuzs-crude-recovery-hides-a-slower-one-for-lng-fertilizer-helium-and-aluminum/" },
+    { "title": "QatarEnergy extends LNG cancellations into November as Hormuz disruption drags on", "source": "Euronews", "date": "Aug 31", "url": "https://www.euronews.com/business/2026/08/31/qatarenergy-extends-lng-cancellations-into-november-as-hormuz-disruption-drags-on" }
   ],
   "scenarios": {
     "bull": {
@@ -150,6 +150,8 @@
     { "date": "Aug 25", "event": "US confirms clearing 100+ mines from strait" },
     { "date": "Sep 5", "event": "Iran declares prohibited zone around strait" },
     { "date": "Oct 4", "event": "Iran sets 7 conditions to reopen" },
-    { "date": "Oct 16", "event": "12 ships attacked this week — wartime high" }
+    { "date": "Oct 14", "event": "GFS Pride sinks — 5th commercial vessel lost" },
+    { "date": "Oct 16", "event": "12 ships attacked in one week — wartime high" },
+    { "date": "Oct 18", "event": "IRGC claims two supertankers hit mines and caught fire" }
   ]
 }
