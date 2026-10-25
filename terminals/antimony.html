@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Antimony Terminal | GOT Commodities</title>
+<meta name="description" content="Live antimony price tracker: Rotterdam ingot, China domestic, DLA stockpile data. Track China export ban, military-critical supply chains, and flame retardant markets.">
+<meta name="keywords" content="antimony price, antimony market, China antimony export ban, antimony trioxide, flame retardant, military ammunition, US Antimony, UAMY, GOT Commodities">
+<meta property="og:title" content="Antimony Terminal | GOT Commodities">
+<meta property="og:description" content="Antimony price tracker with military-critical supply chain analysis, China export controls, and defense stockpile data.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.gotcommodities.com/antimony">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--amber:#FFB800;--red:#FF3B3B;--green:#00E676;--cyan:#00E5FF;--magenta:#FF00E5;--dim:#5A5A6A;--bg:#0A0A0F;--card:#111118;--border:#1E1E2A}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'JetBrains Mono','Fira Code','Courier New',monospace;background:var(--bg);color:#E0E0E0;line-height:1.6;padding:16px;max-width:1200px;margin:0 auto}
+a{color:var(--cyan);text-decoration:none}a:hover{text-decoration:underline}
+.top-bar{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--border);margin-bottom:20px;flex-wrap:wrap;gap:8px}
+.brand{color:var(--amber);font-weight:700;font-size:.85rem;letter-spacing:1px}.brand a{color:var(--amber)}
+.live-tag{display:inline-flex;align-items:center;gap:6px;font-size:.7rem;color:var(--red);text-transform:uppercase;letter-spacing:1px}
+.live-dot{width:8px;height:8px;background:var(--red);border-radius:50%;animation:pulse 1.5s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.header{text-align:center;padding:30px 0;border-bottom:1px solid var(--border);margin-bottom:24px}
+.header h1{font-size:2rem;color:var(--red);margin-bottom:8px;letter-spacing:2px}
+.header .subtitle{color:var(--dim);font-size:.85rem}
+.header .price-hero{font-size:2.5rem;color:#FFF;margin:16px 0 4px;font-weight:700}
+.header .price-unit{color:var(--dim);font-size:.8rem}
+.section{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:24px;margin-bottom:20px}
+.section-num{color:var(--amber);font-size:.7rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
+.section h2{color:var(--amber);font-size:1.1rem;margin-bottom:16px;letter-spacing:1px}
+.section h3{color:#FFF;font-size:.95rem;margin:16px 0 8px}
+.widget-container{margin:16px 0;border-radius:4px;overflow:hidden}
+.proxy-tag{display:inline-block;background:rgba(255,184,0,.15);color:var(--amber);font-size:.65rem;padding:2px 8px;border-radius:3px;margin-bottom:8px;letter-spacing:1px}
+.direct-tag{display:inline-block;background:rgba(0,229,255,.15);color:var(--cyan);font-size:.65rem;padding:2px 8px;border-radius:3px;margin-bottom:8px;letter-spacing:1px}
+.data-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin:16px 0}
+.data-item{background:rgba(255,255,255,.03);padding:16px;border-radius:6px;border:1px solid var(--border)}
+.data-label{color:var(--dim);font-size:.7rem;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
+.data-value{font-size:1.3rem;font-weight:600;color:#FFF}.data-note{font-size:.75rem;color:var(--dim);margin-top:4px}
+.supply-bar{margin:8px 0}.supply-bar-label{display:flex;justify-content:space-between;font-size:.8rem;margin-bottom:4px}
+.supply-bar-track{height:6px;background:var(--border);border-radius:3px;overflow:hidden}
+.supply-bar-fill{height:100%;border-radius:3px;background:var(--amber)}
+.link-list{list-style:none}.link-list li{padding:10px 0;border-bottom:1px solid var(--border);font-size:.85rem}
+.link-list li:last-child{border-bottom:none}.link-source{color:var(--dim);font-size:.7rem}
+p{margin-bottom:12px;font-size:.85rem}
+.cascade-box{background:rgba(255,59,59,.08);border:1px solid rgba(255,59,59,.25);border-radius:6px;padding:16px;margin:16px 0}
+.cascade-box .cascade-title{color:var(--red);font-size:.8rem;font-weight:600;margin-bottom:8px;text-transform:uppercase;letter-spacing:1px}
+.alert-box{background:rgba(255,0,229,.08);border:1px solid rgba(255,0,229,.25);border-radius:6px;padding:16px;margin:16px 0}
+.alert-box .alert-title{color:var(--magenta);font-size:.8rem;font-weight:600;margin-bottom:8px;text-transform:uppercase;letter-spacing:1px}
+.footer{text-align:center;padding:24px 0;border-top:1px solid var(--border);margin-top:20px}
+.footer p{color:var(--dim);font-size:.7rem}
+@media(max-width:600px){.header h1{font-size:1.5rem}.header .price-hero{font-size:1.8rem}.section{padding:16px}.data-grid{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <span class="brand"><a href="https://www.gotcommodities.com">GOT COMMODITIES</a></span>
+  <span class="live-tag"><span class="live-dot"></span> MILITARY CRITICAL</span>
+</div>
+
+<div class="header">
+  <h1>ANTIMONY</h1>
+  <div class="subtitle">CRITICAL MINERAL · MILITARY · FLAME RETARDANT</div>
+  <div class="price-hero">¥92,000/t</div>
+  <div class="price-unit">China #1 Ingot · SMM · Oct 2026</div>
+</div>
+
+<!-- LIVE PROXY -->
+<div class="section">
+  <div class="section-num">01 — MARKET TRACKER</div>
+  <h2>Price Proxy</h2>
+  <p style="color:var(--dim);font-size:.8rem;margin-bottom:16px;">Antimony has no exchange-traded futures. Prices are set via producer quotes and weekly assessments (Fastmarkets, SMM). This stock is one of the few publicly traded antimony plays.</p>
+
+  <span class="direct-tag">DIRECT PLAY — US Antimony Corp (AMEX: UAMY) · Small-Cap Antimony Producer</span>
+  <div class="widget-container">
+    <div class="tradingview-widget-container">
+      <div class="tradingview-widget-container__widget"></div>
+      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+      {"symbol":"AMEX:UAMY","width":"100%","height":"360","locale":"en","dateRange":"12M","colorTheme":"dark","isTransparent":true,"autosize":false}
+      </script>
+    </div>
+  </div>
+</div>
+
+<!-- KEY DATA -->
+<div class="section">
+  <div class="section-num">02 — KEY DATA</div>
+  <h2>Market Snapshot</h2>
+  <div class="data-grid">
+    <div class="data-item">
+      <div class="data-label">China #1 Ingot</div>
+      <div class="data-value">¥92,000</div>
+      <div class="data-note">/tonne · SMM Oct 2026</div>
+    </div>
+    <div class="data-item">
+      <div class="data-label">Weekly Change</div>
+      <div class="data-value" style="color:var(--red)">−12.4%</div>
+      <div class="data-note">w/w · Correction from highs</div>
+    </div>
+    <div class="data-item">
+      <div class="data-label">Rotterdam Ingot</div>
+      <div class="data-value">~$25,400</div>
+      <div class="data-note">/tonne · Fastmarkets</div>
+    </div>
+    <div class="data-item">
+      <div class="data-label">US DLA Contract</div>
+      <div class="data-value">$245M</div>
+      <div class="data-note">3,026 tonnes over 5 years</div>
+    </div>
+    <div class="data-item">
+      <div class="data-label">China Monopoly</div>
+      <div class="data-value" style="color:var(--red)">~80%</div>
+      <div class="data-note">Of global mine production</div>
+    </div>
+    <div class="data-item">
+      <div class="data-label">Global Market</div>
+      <div class="data-value">~$2.6B</div>
+      <div class="data-note">2026 estimated value</div>
+    </div>
+  </div>
+</div>
+
+<!-- WHY IT MATTERS -->
+<div class="section">
+  <div class="section-num">03 — WHY IT MATTERS</div>
+  <h2>The Pentagon's Quiet Dependency</h2>
+  <p>Antimony is a military-critical mineral with no viable substitute in its two largest applications: flame retardants (~55% of demand) and lead-antimony alloys for ammunition. Every bullet casing, every fire-resistant circuit board, every military vehicle's interior lining depends on antimony trioxide. The US has near-zero domestic production and minimal stockpiles.</p>
+  <p>China controls approximately 80% of global antimony mine production and imposed civilian export restrictions in late 2024. The ban's suspension — extended through November 2026 with conditions — keeps supply flowing but leaves Western defense supply chains dependent on Beijing's tolerance. China has signaled a planned 5% production increase in H2 2026, which partially explains the recent 12.4% weekly price correction.</p>
+  <p>The US Defense Logistics Agency (DLA) signed a $245 million stockpile contract for 3,026 tonnes over five years — an acknowledgment that the current supply structure is a national security vulnerability. But 3,026 tonnes barely covers a year of US consumption.</p>
+
+  <div class="alert-box">
+    <div class="alert-title">⚠ China Export Ban Status</div>
+    <p style="margin:0;font-size:.8rem;">China's civilian antimony export prohibition is <strong style="color:var(--magenta)">suspended through Nov 2026</strong> with conditions. Re-imposition would immediately cut ~80% of global supply to Western buyers. The DLA stockpile covers roughly one year of US demand.</p>
+  </div>
+
+  <div class="cascade-box">
+    <div class="cascade-title">📌 Weaponization Chain</div>
+    <p style="margin:0;font-size:.8rem;">China Export Ban Re-imposed → Antimony Supply Cut → Ammunition Production Disrupted → Flame Retardant Shortage → Defense Electronics Halted → NATO Military Readiness Degraded</p>
+  </div>
+</div>
+
+<!-- SUPPLY CHAIN -->
+<div class="section">
+  <div class="section-num">04 — SUPPLY CHAIN</div>
+  <h2>Global Antimony Production</h2>
+
+  <div class="supply-bar">
+    <div class="supply-bar-label"><span>China</span><span style="color:var(--red)">~80%</span></div>
+    <div class="supply-bar-track"><div class="supply-bar-fill" style="width:80%; background:var(--red)"></div></div>
+  </div>
+  <div class="supply-bar">
+    <div class="supply-bar-label"><span>Russia</span><span style="color:var(--red)">~5%</span></div>
+    <div class="supply-bar-track"><div class="supply-bar-fill" style="width:5%; background:var(--red)"></div></div>
+  </div>
+  <div class="supply-bar">
+    <div class="supply-bar-label"><span>Tajikistan</span><span>~4%</span></div>
+    <div class="supply-bar-track"><div class="supply-bar-fill" style="width:4%; background:var(--dim)"></div></div>
+  </div>
+  <div class="supply-bar">
+    <div class="supply-bar-label"><span>Turkey</span><span>~3%</span></div>
+    <div class="supply-bar-track"><div class="supply-bar-fill" style="width:3%; background:var(--dim)"></div></div>
+  </div>
+  <div class="supply-bar">
+    <div class="supply-bar-label"><span>Others</span><span>~8%</span></div>
+    <div class="supply-bar-track"><div class="supply-bar-fill" style="width:8%; background:var(--dim)"></div></div>
+  </div>
+
+  <h3>Demand Breakdown</h3>
+  <p><strong style="color:var(--amber)">Flame retardants: ~55%</strong> — Antimony trioxide (ATO) is the synergist in halogenated flame retardant systems. Used in electronics, textiles, automotive, construction. No cost-effective substitute at scale.</p>
+  <p><strong>Lead-antimony alloys: ~20%</strong> — Ammunition, lead-acid batteries, cable sheathing. Antimony hardens lead — critical for ballistic performance.</p>
+  <p><strong>Other: ~25%</strong> — Catalysts (PET plastic production), semiconductors, glass decolorizers, ceramics.</p>
+
+  <h3>US Vulnerability</h3>
+  <p>The United States produces virtually no antimony domestically. US Antimony Corp (UAMY) operates a small smelter in Montana, but relies partly on imported feedstock. The US is 84% import-dependent for antimony, with China as the primary source.</p>
+</div>
+
+<!-- CURATED LINKS -->
+<div class="section">
+  <div class="section-num">05 — RESOURCES</div>
+  <h2>Curated Links</h2>
+
+  <h3>Market Prices</h3>
+  <ul class="link-list">
+    <li><a href="https://www.mining.com/markets/commodity/antimony/">Mining.com — Antimony Price</a> <span class="link-source">Daily price tracking</span></li>
+    <li><a href="https://www.metal.com/Antimony">Shanghai Metals Market — Antimony</a> <span class="link-source">China domestic prices</span></li>
+    <li><a href="https://www.fastmarkets.com/">Fastmarkets</a> <span class="link-source">Rotterdam ingot benchmark</span></li>
+  </ul>
+
+  <h3>Companies</h3>
+  <ul class="link-list">
+    <li><a href="https://www.usantimony.com/">US Antimony Corp (AMEX: UAMY)</a> <span class="link-source">Only US antimony smelter</span></li>
+    <li><a href="https://www.perpetuaresources.com/">Perpetua Resources</a> <span class="link-source">Stibnite Gold-Antimony Project (Idaho)</span></li>
+    <li><a href="https://www.militarymetals.com/">Military Metals Corp</a> <span class="link-source">Canadian antimony explorer</span></li>
+  </ul>
+
+  <h3>Defense & Policy</h3>
+  <ul class="link-list">
+    <li><a href="https://www.dla.mil/Strategic-Materials/">DLA Strategic Materials</a> <span class="link-source">US defense stockpile program</span></li>
+    <li><a href="https://pubs.usgs.gov/periodicals/mcs2024/mcs2024-antimony.pdf">USGS — Antimony Commodity Summary</a> <span class="link-source">Annual review</span></li>
+    <li><a href="https://www.csis.org/">CSIS — Critical Minerals</a> <span class="link-source">Policy analysis</span></li>
+  </ul>
+
+  <h3>Analysis</h3>
+  <ul class="link-list">
+    <li><a href="https://www.crugroup.com/">CRU Group</a> <span class="link-source">Minor metals market analysis</span></li>
+    <li><a href="https://www.reuters.com/markets/commodities/">Reuters Commodities</a> <span class="link-source">Breaking news</span></li>
+  </ul>
+</div>
+
+<div class="footer">
+  <p><a href="https://www.gotcommodities.com" style="color:var(--amber)">GOT COMMODITIES</a></p>
+  <p style="margin-top:8px;">Data sourced from SMM, Fastmarkets, USGS, DLA. Antimony is not exchange-traded; prices reflect producer quotes and weekly assessments. This page is for informational purposes only.</p>
+  <p style="margin-top:4px;">© 2026 GOT Commodities. All rights reserved.</p>
+</div>
+
+</body>
+</html>

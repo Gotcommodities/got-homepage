@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sulfur Terminal | GOT Commodities</title>
+<meta name="description" content="Live sulfur price tracker: CFR Southeast Asia, FOB Middle East benchmarks. Track Hormuz disruption impact on sulfuric acid supply chains — copper mining, fertilizer, oil refining.">
+<meta name="keywords" content="sulfur price, sulphur price, sulfuric acid, sulfur market, Hormuz sulfur, fertilizer sulfur, copper mining sulfuric acid, GOT Commodities">
+<meta property="og:title" content="Sulfur Terminal | GOT Commodities">
+<meta property="og:description" content="The most interconnected commodity nobody covers. Sulfur prices, supply chains, and Hormuz disruption analysis.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.gotcommodities.com/sulfur">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--amber:#FFB800;--red:#FF3B3B;--green:#00E676;--cyan:#00E5FF;--magenta:#FF00E5;--dim:#5A5A6A;--bg:#0A0A0F;--card:#111118;--border:#1E1E2A}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'JetBrains Mono','Fira Code','Courier New',monospace;background:var(--bg);color:#E0E0E0;line-height:1.6;padding:16px;max-width:1200px;margin:0 auto}
+a{color:var(--cyan);text-decoration:none}a:hover{text-decoration:underline}
+.top-bar{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--border);margin-bottom:20px;flex-wrap:wrap;gap:8px}
+.brand{color:var(--amber);font-weight:700;font-size:.85rem;letter-spacing:1px}.brand a{color:var(--amber)}
+.live-tag{display:inline-flex;align-items:center;gap:6px;font-size:.7rem;color:var(--green);text-transform:uppercase;letter-spacing:1px}
+.live-dot{width:8px;height:8px;background:var(--green);border-radius:50%;animation:pulse 1.5s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.header{text-align:center;padding:30px 0;border-bottom:1px solid var(--border);margin-bottom:24px}
+.header h1{font-size:2rem;color:var(--amber);margin-bottom:8px;letter-spacing:2px}
+.header .subtitle{color:var(--dim);font-size:.85rem}
+.header .price-hero{font-size:2.5rem;color:#FFF;margin:16px 0 4px;font-weight:700}
+.header .price-unit{color:var(--dim);font-size:.8rem}
+.section{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:24px;margin-bottom:20px}
+.section-num{color:var(--amber);font-size:.7rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
+.section h2{color:var(--amber);font-size:1.1rem;margin-bottom:16px;letter-spacing:1px}
+.section h3{color:#FFF;font-size:.95rem;margin:16px 0 8px}
+.widget-container{margin:16px 0;border-radius:4px;overflow:hidden}
+.proxy-tag{display:inline-block;background:rgba(255,184,0,.15);color:var(--amber);font-size:.65rem;padding:2px 8px;border-radius:3px;margin-bottom:8px;letter-spacing:1px}
+.data-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin:16px 0}
+.data-item{background:rgba(255,255,255,.03);padding:16px;border-radius:6px;border:1px solid var(--border)}
+.data-label{color:var(--dim);font-size:.7rem;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
+.data-value{font-size:1.3rem;font-weight:600;color:#FFF}.data-note{font-size:.75rem;color:var(--dim);margin-top:4px}
+.supply-bar{margin:8px 0}.supply-bar-label{display:flex;justify-content:space-between;font-size:.8rem;margin-bottom:4px}
+.supply-bar-track{height:6px;background:var(--border);border-radius:3px;overflow:hidden}
+.supply-bar-fill{height:100%;border-radius:3px;background:var(--amber)}
+.link-list{list-style:none}.link-list li{padding:10px 0;border-bottom:1px solid var(--border);font-size:.85rem}
+.link-list li:last-child{border-bottom:none}.link-source{color:var(--dim);font-size:.7rem}
+p{margin-bottom:12px;font-size:.85rem}
+.cascade-box{background:rgba(255,59,59,.08);border:1px solid rgba(255,59,59,.25);border-radius:6px;padding:16px;margin:16px 0}
+.cascade-box .cascade-title{color:var(--red);font-size:.8rem;font-weight:600;margin-bottom:8px;text-transform:uppercase;letter-spacing:1px}
+.footer{text-align:center;padding:24px 0;border-top:1px solid var(--border);margin-top:20px}
+.footer p{color:var(--dim);font-size:.7rem}
+@media(max-width:600px){.header h1{font-size:1.5rem}.header .price-hero{font-size:1.8rem}.section{padding:16px}.data-grid{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <span class="brand"><a href="https://www.gotcommodities.com">GOT COMMODITIES</a></span>
+  <span class="live-tag"><span class="live-dot"></span> WEEKLY BENCHMARKS</span>
+</div>
+
+<div class="header">
+  <h1>SULFUR</h1>
+  <div class="subtitle">INDUSTRIAL CHEMICAL · CRITICAL COMMODITY</div>
+  <div class="price-hero">~$1,200/t</div>
+  <div class="price-unit">CFR Southeast Asia · Oct 2026</div>
+</div>
+
+<!-- LIVE PRICE PROXIES -->
+<div class="section">
+  <div class="section-num">01 — MARKET PROXIES</div>
+  <h2>Price Trackers</h2>
+  <p style="color:var(--dim);font-size:.8rem;margin-bottom:16px;">Sulfur has no exchange-traded futures. Prices are set via weekly benchmarks (Argus, CRU). These stock proxies track correlated fertilizer companies.</p>
+
+  <span class="proxy-tag">PROXY — CF Industries (NYSE: CF) · Sulfuric Acid Producer</span>
+  <div class="widget-container">
+    <div class="tradingview-widget-container">
+      <div class="tradingview-widget-container__widget"></div>
+      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+      {"symbol":"NYSE:CF","width":"100%","height":"360","locale":"en","dateRange":"12M","colorTheme":"dark","isTransparent":true,"autosize":false}
+      </script>
+    </div>
+  </div>
+
+  <span class="proxy-tag">PROXY — Mosaic (NYSE: MOS) · Phosphate Fertilizer</span>
+  <div class="widget-container">
+    <div class="tradingview-widget-container">
+      <div class="tradingview-widget-container__widget"></div>
+      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+      {"symbol":"NYSE:MOS","width":"100%","height":"220","locale":"en","dateRange":"12M","colorTheme":"dark","isTransparent":true,"autosize":false}
+      </script>
+    </div>
+  </div>
+</div>
+
+<!-- KEY DATA -->
+<div class="section">
+  <div class="section-num">02 — KEY DATA</div>
+  <h2>Market Snapshot</h2>
+  <div class="data-grid">
+    <div class="data-item">
+      <div class="data-label">CFR SE Asia</div>
+      <div class="data-value">~$1,200</div>
+      <div class="data-note">/tonne · weekly benchmark</div>
+    </div>
+    <div class="data-item">
+      <div class="data-label">FOB Kuwait</div>
+      <div class="data-value">$765</div>
+      <div class="data-note">/tonne</div>
+    </div>
+    <div class="data-item">
+      <div class="data-label">FOB Qatar</div>
+      <div class="data-value">$740</div>
+      <div class="data-note">/tonne</div>
+    </div>
+    <div class="data-item">
+      <div class="data-label">China Domestic</div>
+      <div class="data-value">¥7,200</div>
+      <div class="data-note">/tonne · granular</div>
+    </div>
+    <div class="data-item">
+      <div class="data-label">China ME Import Share</div>
+      <div class="data-value" style="color:var(--red);">56%</div>
+      <div class="data-note">Pre-war Middle East dependency</div>
+    </div>
+    <div class="data-item">
+      <div class="data-label">Global Production</div>
+      <div class="data-value">~80 Mt</div>
+      <div class="data-note">/year · mostly from oil/gas refining</div>
+    </div>
+  </div>
+</div>
+
+<!-- WHY IT MATTERS -->
+<div class="section">
+  <div class="section-num">03 — WHY IT MATTERS</div>
+  <h2>The Most Interconnected Commodity Nobody Covers</h2>
+  <p>Sulfur is a byproduct of oil and gas refining — and the essential input for sulfuric acid, the world's most produced industrial chemical. Sulfuric acid is required for copper leaching (hydrometallurgy), phosphate fertilizer production, oil refining alkylation, and dozens of other industrial processes. When sulfur supply tightens, the effects cascade across seemingly unrelated industries.</p>
+  <p>China imported 56% of its sulfur from the Middle East before the current conflict. Hormuz disruption is directly squeezing sulfuric acid supply globally, with CFR Southeast Asia prices elevated at $1,100–1,300 per tonne. The Middle East FOB benchmarks (Kuwait $765, Qatar $740) reflect the difficulty of getting material through the strait.</p>
+  <p>The sulfur–copper connection is particularly critical: approximately 30% of global copper production relies on sulfuric acid for leaching. Tight sulfur means tighter copper means constrained electrification. This makes sulfur a hidden bottleneck in the global energy transition.</p>
+
+  <div class="cascade-box">
+    <div class="cascade-title">⚠ The Sulfur Cascade</div>
+    <p style="margin:0;font-size:.8rem;">Hormuz Disruption → Middle East Sulfur Offline → Sulfuric Acid Shortage → Copper Leaching Disrupted → Phosphate Fertilizer Squeezed → Oil Refining Constrained → Electrification Bottleneck + Food Security Risk</p>
+  </div>
+</div>
+
+<!-- SUPPLY CHAIN -->
+<div class="section">
+  <div class="section-num">04 — SUPPLY CHAIN</div>
+  <h2>Global Sulfur Production</h2>
+  <p style="color:var(--dim);font-size:.8rem;margin-bottom:12px;">Sulfur is primarily a byproduct of oil & gas desulfurization. The largest producers are the largest oil producers.</p>
+
+  <div class="supply-bar">
+    <div class="supply-bar-label"><span>China</span><span style="color:var(--amber)">~20%</span></div>
+    <div class="supply-bar-track"><div class="supply-bar-fill" style="width:20%"></div></div>
+  </div>
+  <div class="supply-bar">
+    <div class="supply-bar-label"><span>Middle East (Saudi, UAE, Qatar, Kuwait)</span><span style="color:var(--red)">~18%</span></div>
+    <div class="supply-bar-track"><div class="supply-bar-fill" style="width:18%; background:var(--red)"></div></div>
+  </div>
+  <div class="supply-bar">
+    <div class="supply-bar-label"><span>United States</span><span>~12%</span></div>
+    <div class="supply-bar-track"><div class="supply-bar-fill" style="width:12%; background:var(--cyan)"></div></div>
+  </div>
+  <div class="supply-bar">
+    <div class="supply-bar-label"><span>Russia</span><span>~10%</span></div>
+    <div class="supply-bar-track"><div class="supply-bar-fill" style="width:10%; background:var(--dim)"></div></div>
+  </div>
+  <div class="supply-bar">
+    <div class="supply-bar-label"><span>Canada</span><span>~8%</span></div>
+    <div class="supply-bar-track"><div class="supply-bar-fill" style="width:8%; background:var(--dim)"></div></div>
+  </div>
+  <div class="supply-bar">
+    <div class="supply-bar-label"><span>Others</span><span>~32%</span></div>
+    <div class="supply-bar-track"><div class="supply-bar-fill" style="width:32%; background:var(--dim)"></div></div>
+  </div>
+
+  <h3>Key Consumers</h3>
+  <p>Fertilizer production (phosphoric acid) consumes approximately 50% of global sulfur. Copper mining (leaching/SX-EW) takes about 15%. Oil refining, chemicals, and metal smelting account for the rest. China is the world's largest sulfur importer.</p>
+</div>
+
+<!-- CURATED LINKS -->
+<div class="section">
+  <div class="section-num">05 — RESOURCES</div>
+  <h2>Curated Links</h2>
+
+  <h3>Market Prices</h3>
+  <ul class="link-list">
+    <li><a href="https://www.argusmedia.com/en/news/sulphur">Argus Media — Sulphur</a> <span class="link-source">Industry-standard weekly benchmarks</span></li>
+    <li><a href="https://www.intratec.us/solutions/primary-commodity-prices/commodity/sulfur-prices">Intratec — Sulfur Prices</a> <span class="link-source">Monthly historical data</span></li>
+    <li><a href="https://www.metal.com/">Shanghai Metals Market (SMM)</a> <span class="link-source">CFR China sulfur</span></li>
+  </ul>
+
+  <h3>Top Producers & Traders</h3>
+  <ul class="link-list">
+    <li><a href="https://www.adnoc.ae/">ADNOC (UAE)</a> <span class="link-source">Major Middle East sulfur producer</span></li>
+    <li><a href="https://www.aramco.com/">Saudi Aramco</a> <span class="link-source">Largest oil/sulfur byproduct producer</span></li>
+    <li><a href="https://www.cfindustries.com/">CF Industries (NYSE: CF)</a> <span class="link-source">Major sulfuric acid producer</span></li>
+  </ul>
+
+  <h3>Analysis & Research</h3>
+  <ul class="link-list">
+    <li><a href="https://www.crugroup.com/knowledge-and-insights/commodities/sulphur/">CRU Group — Sulphur</a> <span class="link-source">Market analysis & forecasts</span></li>
+    <li><a href="https://www.sulphurinstitute.org/">The Sulphur Institute</a> <span class="link-source">Industry association & data</span></li>
+    <li><a href="https://pubs.usgs.gov/periodicals/mcs2024/mcs2024-sulfur.pdf">USGS — Sulfur Commodity Summary</a> <span class="link-source">US Geological Survey annual</span></li>
+  </ul>
+
+  <h3>News</h3>
+  <ul class="link-list">
+    <li><a href="https://www.argusmedia.com/en/news/sulphur">Argus Sulphur News</a> <span class="link-source">Weekly market reports</span></li>
+    <li><a href="https://www.fertilizerdaily.com/">Fertilizer Daily</a> <span class="link-source">Sulfur & fertilizer news</span></li>
+  </ul>
+
+  <h3>Data & Statistics</h3>
+  <ul class="link-list">
+    <li><a href="https://www.worldbank.org/en/research/commodity-markets">World Bank Commodity Markets</a> <span class="link-source">Historical price data</span></li>
+    <li><a href="https://www.ihs.com/products/sulphur-chemical-economics-handbook.html">IHS Markit — Sulphur CEH</a> <span class="link-source">Industry reference</span></li>
+  </ul>
+</div>
+
+<div class="footer">
+  <p><a href="https://www.gotcommodities.com" style="color:var(--amber)">GOT COMMODITIES</a></p>
+  <p style="margin-top:8px;">Data sourced from Argus Media, CRU Group, USGS, World Bank. Sulfur is not exchange-traded; prices reflect weekly benchmarks and may be delayed. This page is for informational purposes only.</p>
+  <p style="margin-top:4px;">© 2026 GOT Commodities. All rights reserved.</p>
+</div>
+
+</body>
+</html>

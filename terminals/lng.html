@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LNG Terminal | GOT Commodities</title>
+<meta name="description" content="Live LNG price tracker: JKM Asian spot, TTF Europe, Henry Hub. Track Hormuz disruption impact on Qatar's 106 Mt/yr LNG exports and global energy cascades.">
+<meta name="keywords" content="LNG price, JKM spot, LNG terminal, natural gas price, Qatar LNG, Hormuz LNG disruption, TTF gas price, Henry Hub, GOT Commodities">
+<meta property="og:title" content="LNG Terminal | GOT Commodities">
+<meta property="og:description" content="Live LNG price tracker with Hormuz disruption analysis. JKM Asian spot, TTF, Henry Hub.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.gotcommodities.com/lng">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --amber: #FFB800;
+  --red: #FF3B3B;
+  --green: #00E676;
+  --cyan: #00E5FF;
+  --magenta: #FF00E5;
+  --dim: #5A5A6A;
+  --bg: #0A0A0F;
+  --card: #111118;
+  --border: #1E1E2A;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+  background: var(--bg);
+  color: #E0E0E0;
+  line-height: 1.6;
+  padding: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+a { color: var(--cyan); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.brand { color: var(--amber); font-weight: 700; font-size: 0.85rem; letter-spacing: 1px; }
+.brand a { color: var(--amber); }
+.live-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.7rem;
+  color: var(--green);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.live-dot {
+  width: 8px; height: 8px;
+  background: var(--green);
+  border-radius: 50%;
+  animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.header {
+  text-align: center;
+  padding: 30px 0;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 24px;
+}
+.header h1 {
+  font-size: 2rem;
+  color: var(--amber);
+  margin-bottom: 8px;
+  letter-spacing: 2px;
+}
+.header .subtitle {
+  color: var(--dim);
+  font-size: 0.85rem;
+}
+.header .price-hero {
+  font-size: 2.5rem;
+  color: #FFF;
+  margin: 16px 0 4px;
+  font-weight: 700;
+}
+.header .price-unit {
+  color: var(--dim);
+  font-size: 0.8rem;
+}
+
+.section {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 20px;
+}
+.section-num {
+  color: var(--amber);
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.section h2 {
+  color: var(--amber);
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+}
+.section h3 {
+  color: #FFF;
+  font-size: 0.95rem;
+  margin: 16px 0 8px;
+}
+
+.widget-container {
+  margin: 16px 0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.proxy-tag {
+  display: inline-block;
+  background: rgba(255, 184, 0, 0.15);
+  color: var(--amber);
+  font-size: 0.65rem;
+  padding: 2px 8px;
+  border-radius: 3px;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.data-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin: 16px 0;
+}
+.data-item {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 16px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+}
+.data-label {
+  color: var(--dim);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+.data-value {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #FFF;
+}
+.data-note {
+  font-size: 0.75rem;
+  color: var(--dim);
+  margin-top: 4px;
+}
+
+.supply-bar {
+  margin: 8px 0;
+}
+.supply-bar-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  margin-bottom: 4px;
+}
+.supply-bar-track {
+  height: 6px;
+  background: var(--border);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.supply-bar-fill {
+  height: 100%;
+  border-radius: 3px;
+  background: var(--amber);
+}
+
+.link-list { list-style: none; }
+.link-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.85rem;
+}
+.link-list li:last-child { border-bottom: none; }
+.link-source {
+  color: var(--dim);
+  font-size: 0.7rem;
+}
+
+p { margin-bottom: 12px; font-size: 0.85rem; }
+
+.cascade-box {
+  background: rgba(255, 59, 59, 0.08);
+  border: 1px solid rgba(255, 59, 59, 0.25);
+  border-radius: 6px;
+  padding: 16px;
+  margin: 16px 0;
+}
+.cascade-box .cascade-title {
+  color: var(--red);
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer {
+  text-align: center;
+  padding: 24px 0;
+  border-top: 1px solid var(--border);
+  margin-top: 20px;
+}
+.footer p {
+  color: var(--dim);
+  font-size: 0.7rem;
+}
+
+@media (max-width: 600px) {
+  .header h1 { font-size: 1.5rem; }
+  .header .price-hero { font-size: 1.8rem; }
+  .section { padding: 16px; }
+  .data-grid { grid-template-columns: 1fr 1fr; }
+}
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <span class="brand"><a href="https://www.gotcommodities.com">GOT COMMODITIES</a></span>
+  <span class="live-tag"><span class="live-dot"></span> LIVE PRICES</span>
+</div>
+
+<div class="header">
+  <h1>LNG</h1>
+  <div class="subtitle">LIQUEFIED NATURAL GAS · ENERGY</div>
+  <div class="price-hero">~$29/MMBtu</div>
+  <div class="price-unit">JKM Asian Spot · Oct 2026</div>
+</div>
+
+<!-- LIVE PRICE WIDGETS -->
+<div class="section">
+  <div class="section-num">01 — LIVE MARKET PRICES</div>
+  <h2>Price Trackers</h2>
+
+  <span class="proxy-tag">PROXY — Cheniere Energy (NYSE: LNG)</span>
+  <div class="widget-container">
+    <div class="tradingview-widget-container">
+      <div class="tradingview-widget-container__widget"></div>
+      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+      {"symbol":"NYSE:LNG","width":"100%","height":"360","locale":"en","dateRange":"12M","colorTheme":"dark","isTransparent":true,"autosize":false}
+      </script>
+    </div>
+  </div>
+
+  <span style="color: var(--dim); font-size: 0.75rem;">Brent Crude — direct LNG price driver</span>
+  <div class="widget-container">
+    <div class="tradingview-widget-container">
+      <div class="tradingview-widget-container__widget"></div>
+      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+      {"symbol":"TVC:UKOIL","width":"100%","height":"220","locale":"en","dateRange":"12M","colorTheme":"dark","isTransparent":true,"autosize":false}
+      </script>
+    </div>
+  </div>
+</div>
+
+<!-- KEY DATA -->
+<div class="section">
+  <div class="section-num">02 — KEY DATA</div>
+  <h2>Market Snapshot</h2>
+  <div class="data-grid">
+    <div class="data-item">
+      <div class="data-label">JKM Asian Spot</div>
+      <div class="data-value">~$29</div>
+      <div class="data-note">/MMBtu · Oct 2026</div>
+    </div>
+    <div class="data-item">
+      <div class="data-label">TTF Europe</div>
+      <div class="data-value">€28.9</div>
+      <div class="data-note">/MWh · Amsterdam</div>
+    </div>
+    <div class="data-item">
+      <div class="data-label">Henry Hub US</div>
+      <div class="data-value">$3.10</div>
+      <div class="data-note">/MMBtu · disconnected from global</div>
+    </div>
+    <div class="data-item">
+      <div class="data-label">Qatar Export Capacity</div>
+      <div class="data-value">106 Mt/yr</div>
+      <div class="data-note">At risk from Hormuz disruption</div>
+    </div>
+    <div class="data-item">
+      <div class="data-label">Weekly Change</div>
+      <div class="data-value" style="color: var(--green);">+10%</div>
+      <div class="data-note">JKM w/w surge</div>
+    </div>
+    <div class="data-item">
+      <div class="data-label">Global LNG Trade</div>
+      <div class="data-value">~400 Mt</div>
+      <div class="data-note">2025 annual · GIIGNL</div>
+    </div>
+  </div>
+</div>
+
+<!-- WHY IT MATTERS -->
+<div class="section">
+  <div class="section-num">03 — WHY IT MATTERS</div>
+  <h2>The Hormuz–LNG Cascade</h2>
+  <p>Qatar is the world's largest LNG exporter, shipping approximately 106 million tonnes per year — virtually all of it through the Strait of Hormuz. Any disruption to Hormuz transit directly threatens Asia's and Europe's gas supply, making LNG one of the most geopolitically sensitive energy commodities on the planet.</p>
+  <p>The JKM (Japan Korea Marker) Asian spot price has surged to approximately $29 per MMBtu, up roughly 10% on the week, as the Hormuz crisis intensifies. European TTF trades near €28.9 per MWh. The widening premium between Asian spot and US Henry Hub ($3.10) reflects the structural disconnect: US gas remains abundant from shale production, while global spot markets are tightening on supply fears.</p>
+  <p>The cascade effect is critical: when LNG prices spike, Asian and European utilities switch back to coal, pushing Newcastle thermal coal to near three-year highs. This substitution chain — Hormuz → LNG disruption → coal demand → emissions reversal — is one of the most consequential energy dynamics in the current crisis.</p>
+
+  <div class="cascade-box">
+    <div class="cascade-title">⚠ Supply Chain Cascade</div>
+    <p style="margin:0;font-size:0.8rem;">Hormuz Disruption → Qatar LNG Offline → JKM Spot Spike → Asian/European Coal Substitution → Newcastle Coal Rally → Emissions Reversal → ESG Target Slippage</p>
+  </div>
+</div>
+
+<!-- SUPPLY CHAIN -->
+<div class="section">
+  <div class="section-num">04 — SUPPLY CHAIN</div>
+  <h2>Global LNG Production</h2>
+
+  <div class="supply-bar">
+    <div class="supply-bar-label"><span>Qatar</span><span style="color:var(--amber)">~27%</span></div>
+    <div class="supply-bar-track"><div class="supply-bar-fill" style="width:27%"></div></div>
+  </div>
+  <div class="supply-bar">
+    <div class="supply-bar-label"><span>Australia</span><span>~21%</span></div>
+    <div class="supply-bar-track"><div class="supply-bar-fill" style="width:21%; background:var(--cyan)"></div></div>
+  </div>
+  <div class="supply-bar">
+    <div class="supply-bar-label"><span>United States</span><span>~20%</span></div>
+    <div class="supply-bar-track"><div class="supply-bar-fill" style="width:20%; background:var(--cyan)"></div></div>
+  </div>
+  <div class="supply-bar">
+    <div class="supply-bar-label"><span>Russia</span><span>~8%</span></div>
+    <div class="supply-bar-track"><div class="supply-bar-fill" style="width:8%; background:var(--dim)"></div></div>
+  </div>
+  <div class="supply-bar">
+    <div class="supply-bar-label"><span>Malaysia</span><span>~6%</span></div>
+    <div class="supply-bar-track"><div class="supply-bar-fill" style="width:6%; background:var(--dim)"></div></div>
+  </div>
+  <div class="supply-bar">
+    <div class="supply-bar-label"><span>Others</span><span>~18%</span></div>
+    <div class="supply-bar-track"><div class="supply-bar-fill" style="width:18%; background:var(--dim)"></div></div>
+  </div>
+
+  <h3>Key Consumers</h3>
+  <p>Japan, China, South Korea, India, and the EU are the top LNG importers. Japan alone imports approximately 70 million tonnes per year, with limited domestic gas production. European imports surged after cutting Russian pipeline gas in 2022.</p>
+
+  <h3>Chokepoint</h3>
+  <p>The <strong style="color:var(--red)">Strait of Hormuz</strong> is the single-point-of-failure for Qatari LNG. There is no pipeline bypass for LNG — it must transit by tanker through the 21-mile-wide strait. Roughly 20% of global LNG supply passes through Hormuz daily.</p>
+</div>
+
+<!-- CURATED LINKS -->
+<div class="section">
+  <div class="section-num">05 — RESOURCES</div>
+  <h2>Curated Links</h2>
+
+  <h3>Market Prices</h3>
+  <ul class="link-list">
+    <li><a href="https://tradingeconomics.com/commodity/natural-gas">Trading Economics — Natural Gas</a> <span class="link-source">Daily spot & futures</span></li>
+    <li><a href="https://www.reuters.com/business/energy/">Reuters Energy — LNG & Gas</a> <span class="link-source">Breaking market news</span></li>
+    <li><a href="https://www.spglobal.com/commodityinsights/en/market-insights/topics/lng">S&P Global Platts — JKM Benchmark</a> <span class="link-source">Industry-standard JKM pricing</span></li>
+  </ul>
+
+  <h3>Top LNG Companies</h3>
+  <ul class="link-list">
+    <li><a href="https://www.qatarenergy.qa/">QatarEnergy</a> <span class="link-source">World's largest LNG exporter</span></li>
+    <li><a href="https://www.shell.com/energy-and-innovation/natural-gas/liquefied-natural-gas-lng.html">Shell LNG</a> <span class="link-source">Major trader & shipper</span></li>
+    <li><a href="https://www.cheniere.com/">Cheniere Energy (NYSE: LNG)</a> <span class="link-source">Largest US LNG exporter</span></li>
+    <li><a href="https://totalenergies.com/energy-expertise/exploration-production/natural-gas/liquefied-natural-gas">TotalEnergies LNG</a> <span class="link-source">Major global portfolio</span></li>
+  </ul>
+
+  <h3>Analysis & Research</h3>
+  <ul class="link-list">
+    <li><a href="https://www.bakerinstitute.org/research/asian-spot-prices-lng-and-other-energy-commodities">Baker Institute — Asian LNG Spot Prices</a> <span class="link-source">Academic research</span></li>
+    <li><a href="https://giignl.org/">GIIGNL — International LNG Importers Group</a> <span class="link-source">Annual reports & trade data</span></li>
+    <li><a href="https://www.iea.org/fuels-and-technologies/gas">IEA — Gas & LNG Outlook</a> <span class="link-source">Global supply/demand forecasts</span></li>
+  </ul>
+
+  <h3>News</h3>
+  <ul class="link-list">
+    <li><a href="https://www.reuters.com/business/energy/lng/">Reuters LNG News</a> <span class="link-source">Breaking</span></li>
+    <li><a href="https://www.naturalgasintel.com/">Natural Gas Intelligence</a> <span class="link-source">Daily market reports</span></li>
+    <li><a href="https://www.lngindustry.com/">LNG Industry</a> <span class="link-source">Trade publication</span></li>
+  </ul>
+
+  <h3>Data & Statistics</h3>
+  <ul class="link-list">
+    <li><a href="https://www.eia.gov/naturalgas/">US EIA — Natural Gas Data</a> <span class="link-source">Henry Hub, US production</span></li>
+    <li><a href="https://www.bp.com/en/global/corporate/energy-economics/statistical-review-of-world-energy.html">BP Statistical Review</a> <span class="link-source">Global LNG trade flows</span></li>
+  </ul>
+</div>
+
+<div class="footer">
+  <p><a href="https://www.gotcommodities.com" style="color:var(--amber)">GOT COMMODITIES</a></p>
+  <p style="margin-top:8px;">Data sourced from Reuters, Trading Economics, S&P Global Platts, GIIGNL. Prices are indicative and may be delayed. This page is for informational purposes only and does not constitute investment advice.</p>
+  <p style="margin-top:4px;">© 2026 GOT Commodities. All rights reserved.</p>
+</div>
+
+</body>
+</html>

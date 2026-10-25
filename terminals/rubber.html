@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rubber | GOT Commodities</title>
+<meta name="description" content="Live natural rubber price tracking. RSS3 and TSR20 benchmarks, Southeast Asian supply tightness, fungal blight risk, and auto industry demand outlook.">
+<meta name="keywords" content="rubber price, natural rubber, RSS3, TSR20, SHFE rubber, rubber futures, Thailand rubber, GOT Commodities">
+<meta property="og:title" content="Rubber Terminal | GOT Commodities">
+<meta property="og:description" content="Live rubber price tracking and plantation supply chain intelligence.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.gotcommodities.com/rubber">
+<meta name="twitter:card" content="summary_large_image">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--amber:#FFB800;--red:#FF3B3B;--green:#00E676;--cyan:#00E5FF;--magenta:#FF00E5;--dim:#5A5A6A;--bg:#0A0A0F;--card:#111118;--border:#1E1E2A}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'JetBrains Mono','Fira Code','Courier New',monospace;background:var(--bg);color:#E0E0E0;line-height:1.6;min-height:100vh}
+.container{max-width:900px;margin:0 auto;padding:16px}
+.header{border-bottom:1px solid var(--border);padding:20px 0;margin-bottom:24px}
+.header-top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.brand{font-size:11px;color:var(--dim);letter-spacing:2px;text-transform:uppercase}
+.brand a{color:var(--amber);text-decoration:none}.brand a:hover{text-decoration:underline}
+.live-tag{display:inline-flex;align-items:center;gap:6px;font-size:10px;color:var(--green);letter-spacing:1px;text-transform:uppercase}
+.live-dot{width:6px;height:6px;background:var(--green);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.commodity-title{font-size:32px;font-weight:700;color:var(--amber);margin-top:12px;line-height:1.2}
+.commodity-subtitle{font-size:13px;color:var(--dim);margin-top:4px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:20px;margin-bottom:16px}
+.card-header{font-size:11px;color:var(--amber);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+.data-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px}
+.data-label{font-size:10px;color:var(--dim);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
+.data-value{font-size:20px;font-weight:600;color:#FFF}.data-value.amber{color:var(--amber)}.data-value.green{color:var(--green)}
+.data-note{font-size:11px;color:var(--dim);margin-top:2px}
+.supply-bar-container{margin-bottom:12px}
+.supply-bar-label{display:flex;justify-content:space-between;font-size:12px;margin-bottom:4px}
+.supply-bar-label span:first-child{color:#E0E0E0}.supply-bar-label span:last-child{color:var(--amber)}
+.supply-bar{height:8px;background:var(--border);border-radius:4px;overflow:hidden}
+.supply-bar-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--amber),var(--red))}
+.section-num{font-size:28px;font-weight:700;color:var(--border);margin-bottom:4px}
+.section-title{font-size:16px;font-weight:600;color:var(--amber);margin-bottom:12px}
+.link-list{list-style:none}.link-list li{padding:8px 0;border-bottom:1px solid var(--border)}.link-list li:last-child{border-bottom:none}
+.link-list a{color:var(--cyan);text-decoration:none;font-size:13px}.link-list a:hover{text-decoration:underline}
+.link-desc{font-size:11px;color:var(--dim);margin-top:2px}
+.prose{font-size:13px;color:#C0C0C0;line-height:1.8}.prose p{margin-bottom:12px}.prose strong{color:#FFF}
+.tag{display:inline-block;padding:2px 8px;border-radius:3px;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase}
+.tag-firm{background:rgba(0,230,118,.15);color:var(--green);border:1px solid var(--green)}
+.proxy-tag{display:inline-block;padding:1px 6px;border-radius:3px;font-size:9px;font-weight:600;letter-spacing:1px;color:var(--amber);border:1px solid var(--amber);margin-left:8px}
+.widget-wrapper{margin-bottom:16px;border-radius:6px;overflow:hidden}
+.alert-box{padding:12px 16px;border-radius:4px;font-size:12px;margin-bottom:16px;line-height:1.6}
+.alert-amber{background:rgba(255,184,0,.08);border:1px solid rgba(255,184,0,.3);color:var(--amber)}
+.data-table{width:100%;border-collapse:collapse;font-size:12px}
+.data-table th{text-align:left;padding:8px;border-bottom:1px solid var(--amber);color:var(--amber);font-size:10px;letter-spacing:1px;text-transform:uppercase}
+.data-table td{padding:8px;border-bottom:1px solid var(--border);color:#C0C0C0}
+.footer{border-top:1px solid var(--border);padding:20px 0;margin-top:24px;text-align:center}
+.footer-brand{font-size:12px;color:var(--amber);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}
+.footer-disclaimer{font-size:10px;color:var(--dim);max-width:600px;margin:0 auto;line-height:1.6}
+.footer a{color:var(--cyan);text-decoration:none}.footer a:hover{text-decoration:underline}
+@media(max-width:600px){.commodity-title{font-size:24px}.data-value{font-size:16px}.data-grid{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header class="header">
+    <div class="header-top">
+      <div class="brand"><a href="https://www.gotcommodities.com">GOT Commodities</a> · Intelligence Terminal</div>
+      <div class="live-tag"><span class="live-dot"></span> LIVE</div>
+    </div>
+    <h1 class="commodity-title">Rubber</h1>
+    <div class="commodity-subtitle">NR · Natural Rubber · RSS3 / TSR20 · The Plantation Commodity</div>
+  </header>
+
+  <!-- TRADINGVIEW WIDGET -->
+  <div class="card">
+    <div class="card-header">Live Price Indicator <span class="proxy-tag">PROXY</span></div>
+    <div class="widget-wrapper">
+      <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+        {"symbol":"NYSE:GT","width":"100%","height":"360","locale":"en","dateRange":"12M","colorTheme":"dark","isTransparent":true,"autosize":false,"largeChartUrl":""}
+        </script>
+      </div>
+      <div class="link-desc" style="margin-top:4px">Goodyear Tire & Rubber (NYSE: GT) — world's largest tire manufacturer, major NR consumer</div>
+    </div>
+  </div>
+
+  <!-- KEY DATA -->
+  <div class="card">
+    <div class="card-header">Key Data</div>
+    <div class="alert-box alert-amber">
+      <strong>Supply tightness:</strong> Southeast Asian rubber plantations face aging tree stock, labour shortages, and recurring fungal leaf blight (Pestalotiopsis). Global NR supply deficit projected for 2026–2028 as replanting lags demand growth.
+    </div>
+    <div class="data-grid">
+      <div class="data-item">
+        <div class="data-label">RSS3 (Bangkok)</div>
+        <div class="data-value amber">~$2,400/t</div>
+        <div class="data-note">Ribbed Smoked Sheet Grade 3</div>
+      </div>
+      <div class="data-item">
+        <div class="data-label">SHFE Rubber</div>
+        <div class="data-value">¥186/kg</div>
+        <div class="data-note">Shanghai Futures Exchange front-month</div>
+      </div>
+      <div class="data-item">
+        <div class="data-label">TSR20 (SGX)</div>
+        <div class="data-value">~$1,850/t</div>
+        <div class="data-note">Technically Specified Rubber · Singapore</div>
+      </div>
+      <div class="data-item">
+        <div class="data-label">Status</div>
+        <div class="data-value"><span class="tag tag-firm">FIRM</span></div>
+        <div class="data-note">Supply tightness supporting prices</div>
+      </div>
+      <div class="data-item">
+        <div class="data-label">Global Production</div>
+        <div class="data-value">~14.5M t</div>
+        <div class="data-note">2025 estimate · IRSG</div>
+      </div>
+      <div class="data-item">
+        <div class="data-label">Tire Share</div>
+        <div class="data-value">~70%</div>
+        <div class="data-note">Of total NR consumption</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHY IT MATTERS -->
+  <div class="card">
+    <div class="card-header">Why Rubber Matters</div>
+    <div class="prose">
+      <p>Natural rubber is one of the few globally critical commodities that <strong>cannot be synthetically replaced</strong> at scale. Synthetic rubber (derived from petroleum) handles about 60% of total rubber demand, but aircraft tyres, heavy-duty truck tyres, surgical gloves, and high-performance applications require the superior elasticity and heat resistance of natural rubber from <em>Hevea brasiliensis</em> trees. The global tyre industry alone consumes roughly 70% of all NR production.</p>
+      <p>The supply side is uniquely fragile. Rubber trees take <strong>7 years to mature</strong> before tapping can begin, creating long supply response lags. Over 85% of global NR production comes from a narrow band of Southeast Asia — Thailand, Indonesia, and Vietnam — where plantations face compounding threats: aging tree stock planted during the 1990s boom, a chronic labour shortage as smallholder farmers exit to higher-paying work, and the spread of <strong>Pestalotiopsis leaf blight</strong>, a fungal disease that has devastated plantations across Indonesia and is moving northwest.</p>
+      <p>Demand is structurally growing. China consumes over 40% of global NR for its tyre and auto manufacturing sectors. India's rapidly expanding vehicle fleet is the second growth driver. Even the EV transition is rubber-positive: EVs are heavier than ICE vehicles, wearing tyres faster and requiring premium compounds. The International Rubber Study Group (IRSG) projects a structural NR supply deficit through 2028, making rubber one of the quietest bull stories in commodities.</p>
+    </div>
+  </div>
+
+  <!-- SUPPLY CHAIN -->
+  <div class="card">
+    <div class="card-header">Supply Chain — NR Production</div>
+    <div class="supply-bar-container">
+      <div class="supply-bar-label"><span>Thailand</span><span>~33%</span></div>
+      <div class="supply-bar"><div class="supply-bar-fill" style="width:33%"></div></div>
+    </div>
+    <div class="supply-bar-container">
+      <div class="supply-bar-label"><span>Indonesia</span><span>~22%</span></div>
+      <div class="supply-bar"><div class="supply-bar-fill" style="width:22%"></div></div>
+    </div>
+    <div class="supply-bar-container">
+      <div class="supply-bar-label"><span>Vietnam</span><span>~8%</span></div>
+      <div class="supply-bar"><div class="supply-bar-fill" style="width:8%"></div></div>
+    </div>
+    <div class="supply-bar-container">
+      <div class="supply-bar-label"><span>India</span><span>~6%</span></div>
+      <div class="supply-bar"><div class="supply-bar-fill" style="width:6%"></div></div>
+    </div>
+    <div class="supply-bar-container">
+      <div class="supply-bar-label"><span>China (Yunnan/Hainan)</span><span>~6%</span></div>
+      <div class="supply-bar"><div class="supply-bar-fill" style="width:6%"></div></div>
+    </div>
+    <div class="supply-bar-container">
+      <div class="supply-bar-label"><span>Ivory Coast</span><span>~5%</span></div>
+      <div class="supply-bar"><div class="supply-bar-fill" style="width:5%"></div></div>
+    </div>
+    <div class="supply-bar-container">
+      <div class="supply-bar-label"><span>Rest of World</span><span>~20%</span></div>
+      <div class="supply-bar"><div class="supply-bar-fill" style="width:20%"></div></div>
+    </div>
+    <div style="margin-top:16px;padding:12px;background:rgba(255,59,59,.06);border:1px solid var(--border);border-radius:4px;font-size:12px;color:var(--red)">
+      <strong>Blight risk:</strong> Pestalotiopsis leaf fall disease has spread across Indonesian plantations since 2019 and is now reported in parts of Thailand and Malaysia. A severe outbreak could remove 10–15% of global supply within a single season.
+    </div>
+  </div>
+
+  <!-- CURATED LINKS -->
+  <div class="card">
+    <div class="section-num">01</div>
+    <div class="section-title">Market Prices</div>
+    <ul class="link-list">
+      <li><a href="https://tradingeconomics.com/commodity/rubber" target="_blank" rel="noopener">Trading Economics — Rubber</a><div class="link-desc">SGX TSR20 and SHFE rubber futures price charts and forecasts</div></li>
+      <li><a href="https://www.barchart.com/futures/quotes/TF*0/overview" target="_blank" rel="noopener">Barchart — SGX Rubber (TSR20)</a><div class="link-desc">Singapore Exchange rubber futures pricing and historical data</div></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="section-num">02</div>
+    <div class="section-title">Industry Bodies</div>
+    <ul class="link-list">
+      <li><a href="https://www.rubberstudy.org/" target="_blank" rel="noopener">International Rubber Study Group (IRSG)</a><div class="link-desc">Intergovernmental body — rubber supply/demand balance, production data, statistical bulletins</div></li>
+      <li><a href="https://www.anrpc.org/" target="_blank" rel="noopener">Association of Natural Rubber Producing Countries (ANRPC)</a><div class="link-desc">Represents 90%+ of global NR supply. Monthly market reports and production data</div></li>
+      <li><a href="https://www.raot.co.th/" target="_blank" rel="noopener">Rubber Authority of Thailand (RAOT)</a><div class="link-desc">Thai government rubber agency — Bangkok RSS3 benchmark pricing</div></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="section-num">03</div>
+    <div class="section-title">Top Consumers</div>
+    <ul class="link-list">
+      <li><a href="https://www.goodyear.com/" target="_blank" rel="noopener">Goodyear Tire & Rubber Co.</a><div class="link-desc">NYSE: GT · One of the world's largest tyre manufacturers</div></li>
+      <li><a href="https://www.bridgestone.com/" target="_blank" rel="noopener">Bridgestone Corporation</a><div class="link-desc">World's largest tyre company by revenue. Major NR procurement influence</div></li>
+      <li><a href="https://www.michelin.com/" target="_blank" rel="noopener">Michelin Group</a><div class="link-desc">Leading tyre manufacturer and sustainable rubber sourcing advocate</div></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="section-num">04</div>
+    <div class="section-title">News & Analysis</div>
+    <ul class="link-list">
+      <li><a href="https://www.reuters.com/markets/commodities/" target="_blank" rel="noopener">Reuters Commodities — Rubber</a><div class="link-desc">Breaking news on rubber markets, plantation output, and SHFE/SGX futures</div></li>
+      <li><a href="https://rubberworld.com/" target="_blank" rel="noopener">Rubber World Magazine</a><div class="link-desc">Technical industry publication covering rubber compounding, processing, and market trends</div></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="section-num">05</div>
+    <div class="section-title">Rubber Grades</div>
+    <table class="data-table">
+      <thead>
+        <tr><th>Grade</th><th>Description</th><th>Use</th></tr>
+      </thead>
+      <tbody>
+        <tr><td style="color:var(--amber)">RSS3</td><td>Ribbed Smoked Sheet Grade 3</td><td>Bangkok benchmark · tyres, industrial goods</td></tr>
+        <tr><td style="color:var(--amber)">TSR20</td><td>Technically Specified Rubber 20</td><td>SGX benchmark · tyres, auto parts</td></tr>
+        <tr><td>TSR10 / TSR5</td><td>Higher-purity grades</td><td>Medical, pharmaceutical, surgical gloves</td></tr>
+        <tr><td>Latex concentrate</td><td>60% DRC liquid latex</td><td>Gloves, condoms, foam, adhesives</td></tr>
+        <tr><td>SBR / BR</td><td>Synthetic rubber (petroleum-derived)</td><td>Passenger car tyres, footwear, belts</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-brand">GOT Commodities</div>
+    <div class="footer-disclaimer">
+      Data sourced from Trading Economics, IRSG, ANRPC, Rubber Authority of Thailand, and Singapore Exchange. Prices are indicative and may not reflect real-time trading. This page is for informational purposes only and does not constitute investment advice.<br>
+      <a href="https://www.gotcommodities.com">gotcommodities.com</a>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

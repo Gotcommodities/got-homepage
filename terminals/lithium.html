@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lithium | GOT Commodities</title>
+<meta name="description" content="Live lithium carbonate price tracking. Chinese Li₂CO₃ oversupply, Guangzhou Futures Exchange data, Australian spodumene mine cuts, and EV battery demand outlook.">
+<meta name="keywords" content="lithium price, lithium carbonate, Li2CO3, lithium oversupply, EV battery lithium, spodumene, Guangzhou Futures Exchange, lithium China, GOT Commodities">
+<meta property="og:title" content="Lithium Terminal | GOT Commodities">
+<meta property="og:description" content="Live lithium price tracking and EV supply chain intelligence.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.gotcommodities.com/lithium">
+<meta name="twitter:card" content="summary_large_image">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--amber:#FFB800;--red:#FF3B3B;--green:#00E676;--cyan:#00E5FF;--magenta:#FF00E5;--dim:#5A5A6A;--bg:#0A0A0F;--card:#111118;--border:#1E1E2A}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'JetBrains Mono','Fira Code','Courier New',monospace;background:var(--bg);color:#E0E0E0;line-height:1.6;min-height:100vh}
+.container{max-width:900px;margin:0 auto;padding:16px}
+.header{border-bottom:1px solid var(--border);padding:20px 0;margin-bottom:24px}
+.header-top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.brand{font-size:11px;color:var(--dim);letter-spacing:2px;text-transform:uppercase}
+.brand a{color:var(--amber);text-decoration:none}.brand a:hover{text-decoration:underline}
+.live-tag{display:inline-flex;align-items:center;gap:6px;font-size:10px;color:var(--green);letter-spacing:1px;text-transform:uppercase}
+.live-dot{width:6px;height:6px;background:var(--green);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.commodity-title{font-size:32px;font-weight:700;color:var(--amber);margin-top:12px;line-height:1.2}
+.commodity-subtitle{font-size:13px;color:var(--dim);margin-top:4px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:20px;margin-bottom:16px}
+.card-header{font-size:11px;color:var(--amber);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+.data-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px}
+.data-label{font-size:10px;color:var(--dim);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
+.data-value{font-size:20px;font-weight:600;color:#FFF}.data-value.amber{color:var(--amber)}.data-value.red{color:var(--red)}
+.data-note{font-size:11px;color:var(--dim);margin-top:2px}
+.supply-bar-container{margin-bottom:12px}
+.supply-bar-label{display:flex;justify-content:space-between;font-size:12px;margin-bottom:4px}
+.supply-bar-label span:first-child{color:#E0E0E0}.supply-bar-label span:last-child{color:var(--amber)}
+.supply-bar{height:8px;background:var(--border);border-radius:4px;overflow:hidden}
+.supply-bar-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--amber),var(--red))}
+.section-num{font-size:28px;font-weight:700;color:var(--border);margin-bottom:4px}
+.section-title{font-size:16px;font-weight:600;color:var(--amber);margin-bottom:12px}
+.link-list{list-style:none}.link-list li{padding:8px 0;border-bottom:1px solid var(--border)}.link-list li:last-child{border-bottom:none}
+.link-list a{color:var(--cyan);text-decoration:none;font-size:13px}.link-list a:hover{text-decoration:underline}
+.link-desc{font-size:11px;color:var(--dim);margin-top:2px}
+.prose{font-size:13px;color:#C0C0C0;line-height:1.8}.prose p{margin-bottom:12px}.prose strong{color:#FFF}
+.tag{display:inline-block;padding:2px 8px;border-radius:3px;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase}
+.tag-weak{background:rgba(255,59,59,.15);color:var(--red);border:1px solid var(--red)}
+.proxy-tag{display:inline-block;padding:1px 6px;border-radius:3px;font-size:9px;font-weight:600;letter-spacing:1px;color:var(--amber);border:1px solid var(--amber);margin-left:8px}
+.widget-wrapper{margin-bottom:16px;border-radius:6px;overflow:hidden}
+.widget-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.data-table{width:100%;border-collapse:collapse;font-size:12px}
+.data-table th{text-align:left;padding:8px;border-bottom:1px solid var(--amber);color:var(--amber);font-size:10px;letter-spacing:1px;text-transform:uppercase}
+.data-table td{padding:8px;border-bottom:1px solid var(--border);color:#C0C0C0}
+.footer{border-top:1px solid var(--border);padding:20px 0;margin-top:24px;text-align:center}
+.footer-brand{font-size:12px;color:var(--amber);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}
+.footer-disclaimer{font-size:10px;color:var(--dim);max-width:600px;margin:0 auto;line-height:1.6}
+.footer a{color:var(--cyan);text-decoration:none}.footer a:hover{text-decoration:underline}
+@media(max-width:600px){.commodity-title{font-size:24px}.data-value{font-size:16px}.data-grid{grid-template-columns:1fr 1fr}.widget-row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header class="header">
+    <div class="header-top">
+      <div class="brand"><a href="https://www.gotcommodities.com">GOT Commodities</a> · Intelligence Terminal</div>
+      <div class="live-tag"><span class="live-dot"></span> LIVE</div>
+    </div>
+    <h1 class="commodity-title">Lithium</h1>
+    <div class="commodity-subtitle">Li₂CO₃ · Lithium Carbonate · The EV Revolution Metal</div>
+  </header>
+
+  <!-- TRADINGVIEW WIDGETS -->
+  <div class="card">
+    <div class="card-header">Live Price Indicators <span class="proxy-tag">PROXY</span></div>
+    <div class="widget-row">
+      <div class="widget-wrapper">
+        <div class="tradingview-widget-container">
+          <div class="tradingview-widget-container__widget"></div>
+          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+          {"symbol":"NYSE:ALB","width":"100%","height":"360","locale":"en","dateRange":"12M","colorTheme":"dark","isTransparent":true,"autosize":false,"largeChartUrl":""}
+          </script>
+        </div>
+        <div class="link-desc" style="margin-top:4px">Albemarle (NYSE: ALB) — world's largest lithium producer</div>
+      </div>
+      <div class="widget-wrapper">
+        <div class="tradingview-widget-container">
+          <div class="tradingview-widget-container__widget"></div>
+          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+          {"symbol":"AMEX:LIT","width":"100%","height":"360","locale":"en","dateRange":"12M","colorTheme":"dark","isTransparent":true,"autosize":false,"largeChartUrl":""}
+          </script>
+        </div>
+        <div class="link-desc" style="margin-top:4px">Global X Lithium & Battery Tech ETF (AMEX: LIT)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- KEY DATA -->
+  <div class="card">
+    <div class="card-header">Key Data</div>
+    <div class="data-grid">
+      <div class="data-item">
+        <div class="data-label">China Li₂CO₃</div>
+        <div class="data-value amber">¥99,350/t</div>
+        <div class="data-note">~$13,700 · down 27% m/m</div>
+      </div>
+      <div class="data-item">
+        <div class="data-label">GFEX Futures</div>
+        <div class="data-value">¥119,780/t</div>
+        <div class="data-note">Guangzhou Futures Exchange front-month</div>
+      </div>
+      <div class="data-item">
+        <div class="data-label">CIF Asia Spot</div>
+        <div class="data-value">~$16,159/t</div>
+        <div class="data-note">Benchmark / SMM index</div>
+      </div>
+      <div class="data-item">
+        <div class="data-label">Status</div>
+        <div class="data-value"><span class="tag tag-weak">WEAK</span></div>
+        <div class="data-note">Oversupply overwhelming demand</div>
+      </div>
+      <div class="data-item">
+        <div class="data-label">Spodumene 6%</div>
+        <div class="data-value">~$2,254/t</div>
+        <div class="data-note">FOB Australia · Benchmark</div>
+      </div>
+      <div class="data-item">
+        <div class="data-label">2022 Peak</div>
+        <div class="data-value red">¥600,000/t</div>
+        <div class="data-note">Nov 2022 · down ~83% from peak</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHY IT MATTERS -->
+  <div class="card">
+    <div class="card-header">Why Lithium Matters</div>
+    <div class="prose">
+      <p>Lithium is the foundational metal of the electric vehicle revolution. Every EV battery — whether NMC, LFP, or solid-state — requires lithium as its core cathode and electrolyte material. Global EV sales surpassed 17 million units in 2024, and battery demand for grid-scale energy storage is growing even faster. The long-term demand trajectory is structurally bullish: the IEA projects lithium demand will grow 4–6x by 2040 under net-zero scenarios.</p>
+      <p>The short-term reality, however, is <strong>severe oversupply</strong>. A massive wave of mine and refinery expansion — triggered by the 2022 price spike to ¥600,000/t (over $80,000) — has flooded the market with excess capacity. Chinese lithium carbonate has crashed over 80% from its peak, forcing Australian spodumene miners to cut production as spot prices fall below $1,000/t (their breakeven). The Guangzhou Futures Exchange (GFEX), which launched lithium carbonate contracts in 2023, has amplified price discovery and volatility.</p>
+      <p><strong>The "lithium triangle"</strong> of Argentina, Bolivia, and Chile holds over half the world's identified lithium resources in brine deposits, while hard-rock spodumene mining in Australia provides the marginal supply. China dominates refining — processing over 65% of global lithium chemicals regardless of where the ore is mined. The market likely needs 12–18 months to absorb excess capacity before a sustainable price recovery, but the entry of sovereign wealth funds and strategic stockpiling programs (US, EU, India, Japan) underscores the metal's long-term critical status.</p>
+    </div>
+  </div>
+
+  <!-- SUPPLY CHAIN -->
+  <div class="card">
+    <div class="card-header">Supply Chain</div>
+    <div class="supply-bar-container">
+      <div class="supply-bar-label"><span>Australia (mine)</span><span>~47%</span></div>
+      <div class="supply-bar"><div class="supply-bar-fill" style="width:47%"></div></div>
+    </div>
+    <div class="supply-bar-container">
+      <div class="supply-bar-label"><span>Chile (mine)</span><span>~22%</span></div>
+      <div class="supply-bar"><div class="supply-bar-fill" style="width:22%"></div></div>
+    </div>
+    <div class="supply-bar-container">
+      <div class="supply-bar-label"><span>China (mine)</span><span>~15%</span></div>
+      <div class="supply-bar"><div class="supply-bar-fill" style="width:15%"></div></div>
+    </div>
+    <div class="supply-bar-container">
+      <div class="supply-bar-label"><span>Argentina (mine)</span><span>~6%</span></div>
+      <div class="supply-bar"><div class="supply-bar-fill" style="width:6%"></div></div>
+    </div>
+    <div class="supply-bar-container">
+      <div class="supply-bar-label"><span>Rest of World</span><span>~10%</span></div>
+      <div class="supply-bar"><div class="supply-bar-fill" style="width:10%"></div></div>
+    </div>
+    <div style="margin-top:16px;padding:12px;background:rgba(255,184,0,.06);border:1px solid var(--border);border-radius:4px;font-size:12px;color:var(--amber)">
+      <strong>Refining bottleneck:</strong> China processes >65% of global lithium chemicals regardless of mine origin. Western refining capacity (US, Europe, Australia) is scaling but remains 3–5 years behind.
+    </div>
+  </div>
+
+  <!-- CURATED LINKS -->
+  <div class="card">
+    <div class="section-num">01</div>
+    <div class="section-title">Market Prices</div>
+    <ul class="link-list">
+      <li><a href="https://tradingeconomics.com/commodity/lithium" target="_blank" rel="noopener">Trading Economics — Lithium</a><div class="link-desc">Chinese lithium carbonate price chart, GFEX futures data, and forecasts</div></li>
+      <li><a href="https://www.metal.com/Lithium" target="_blank" rel="noopener">Shanghai Metals Market (SMM) — Lithium</a><div class="link-desc">Chinese domestic lithium carbonate and hydroxide prices</div></li>
+      <li><a href="https://www.fastmarkets.com/metals-and-mining/battery-raw-materials/" target="_blank" rel="noopener">Fastmarkets — Battery Raw Materials</a><div class="link-desc">Professional lithium carbonate and hydroxide price assessments (subscription)</div></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="section-num">02</div>
+    <div class="section-title">Top Producers</div>
+    <ul class="link-list">
+      <li><a href="https://www.albemarle.com/" target="_blank" rel="noopener">Albemarle Corporation</a><div class="link-desc">NYSE: ALB · World's largest lithium producer (Greenbushes, Salar de Atacama)</div></li>
+      <li><a href="https://www.sqm.com/" target="_blank" rel="noopener">SQM (Sociedad Química y Minera)</a><div class="link-desc">Chile · Major lithium brine producer in Salar de Atacama</div></li>
+      <li><a href="https://www.pilbaraminerals.com.au/" target="_blank" rel="noopener">Pilbara Minerals</a><div class="link-desc">Australia · Pilgangoora spodumene mine — one of the world's largest hard-rock lithium operations</div></li>
+      <li><a href="https://www.ganfenglithium.com/en/" target="_blank" rel="noopener">Ganfeng Lithium</a><div class="link-desc">China · Integrated lithium miner, refiner, and battery recycler</div></li>
+      <li><a href="https://www.tianqilithium.com/" target="_blank" rel="noopener">Tianqi Lithium</a><div class="link-desc">China · Major refiner with stakes in Greenbushes (Australia) and Salar de Atacama (Chile)</div></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="section-num">03</div>
+    <div class="section-title">Expert Analysis</div>
+    <ul class="link-list">
+      <li><a href="https://www.benchmarkminerals.com/lithium/" target="_blank" rel="noopener">Benchmark Mineral Intelligence — Lithium</a><div class="link-desc">The definitive lithium supply chain analytics platform. Price assessments, gigafactory tracker</div></li>
+      <li><a href="https://www.iea.org/reports/global-critical-minerals-outlook-2024" target="_blank" rel="noopener">IEA — Global Critical Minerals Outlook</a><div class="link-desc">Long-term lithium demand projections under net-zero scenarios</div></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="section-num">04</div>
+    <div class="section-title">News</div>
+    <ul class="link-list">
+      <li><a href="https://www.mining.com/?s=lithium" target="_blank" rel="noopener">Mining.com — Lithium News</a><div class="link-desc">Latest lithium market developments, mine expansions, and shutdowns</div></li>
+      <li><a href="https://www.reuters.com/markets/commodities/" target="_blank" rel="noopener">Reuters Commodities</a><div class="link-desc">Breaking lithium and EV battery supply chain news</div></li>
+      <li><a href="https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-lithium.pdf" target="_blank" rel="noopener">USGS — Lithium Mineral Commodity Summary 2026</a><div class="link-desc">US government data: production, reserves, trade, and prices</div></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="section-num">05</div>
+    <div class="section-title">Price History</div>
+    <table class="data-table">
+      <thead>
+        <tr><th>Period</th><th>China Li₂CO₃</th><th>Context</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>2020</td><td>¥40,000/t</td><td>Pre-EV boom baseline</td></tr>
+        <tr><td>Nov 2022</td><td style="color:var(--red)">¥600,000/t</td><td>All-time high · EV demand surge, supply crunch</td></tr>
+        <tr><td>Mid-2023</td><td>¥200,000/t</td><td>Demand pause, inventory build</td></tr>
+        <tr><td>Late 2024</td><td>¥75,000/t</td><td>Oversupply, Australian mine cuts begin</td></tr>
+        <tr><td>Sep 2026</td><td>¥99,350/t</td><td>Stabilizing but still oversupplied</td></tr>
+        <tr><td>GFEX Futures</td><td style="color:var(--amber)">¥119,780/t</td><td>Front-month contango — market expects recovery</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-brand">GOT Commodities</div>
+    <div class="footer-disclaimer">
+      Data sourced from Trading Economics, Shanghai Metals Market, Benchmark Mineral Intelligence, Fastmarkets, and USGS. Prices are indicative and may not reflect real-time trading. This page is for informational purposes only and does not constitute investment advice.<br>
+      <a href="https://www.gotcommodities.com">gotcommodities.com</a>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
