@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cobalt | GOT Commodities</title>
+<meta name="description" content="Live cobalt price tracking. DRC controls 70% of global mine supply and has imposed export quotas. EV battery chemistry shift from NMC to LFP is structurally reshaping demand.">
+<meta name="keywords" content="cobalt price, cobalt LME, cobalt DRC, cobalt Congo, EV battery cobalt, NMC LFP, cobalt supply chain, cobalt export quotas, GOT Commodities">
+<meta property="og:title" content="Cobalt Terminal | GOT Commodities">
+<meta property="og:description" content="Live cobalt price tracking and EV battery supply chain intelligence.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.gotcommodities.com/cobalt">
+<meta name="twitter:card" content="summary_large_image">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--amber:#FFB800;--red:#FF3B3B;--green:#00E676;--cyan:#00E5FF;--magenta:#FF00E5;--dim:#5A5A6A;--bg:#0A0A0F;--card:#111118;--border:#1E1E2A}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'JetBrains Mono','Fira Code','Courier New',monospace;background:var(--bg);color:#E0E0E0;line-height:1.6;min-height:100vh}
+.container{max-width:900px;margin:0 auto;padding:16px}
+.header{border-bottom:1px solid var(--border);padding:20px 0;margin-bottom:24px}
+.header-top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.brand{font-size:11px;color:var(--dim);letter-spacing:2px;text-transform:uppercase}
+.brand a{color:var(--amber);text-decoration:none}.brand a:hover{text-decoration:underline}
+.live-tag{display:inline-flex;align-items:center;gap:6px;font-size:10px;color:var(--green);letter-spacing:1px;text-transform:uppercase}
+.live-dot{width:6px;height:6px;background:var(--green);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.commodity-title{font-size:32px;font-weight:700;color:var(--amber);margin-top:12px;line-height:1.2}
+.commodity-subtitle{font-size:13px;color:var(--dim);margin-top:4px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:20px;margin-bottom:16px}
+.card-header{font-size:11px;color:var(--amber);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+.data-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px}
+.data-label{font-size:10px;color:var(--dim);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
+.data-value{font-size:20px;font-weight:600;color:#FFF}.data-value.amber{color:var(--amber)}
+.data-note{font-size:11px;color:var(--dim);margin-top:2px}
+.supply-bar-container{margin-bottom:12px}
+.supply-bar-label{display:flex;justify-content:space-between;font-size:12px;margin-bottom:4px}
+.supply-bar-label span:first-child{color:#E0E0E0}.supply-bar-label span:last-child{color:var(--amber)}
+.supply-bar{height:8px;background:var(--border);border-radius:4px;overflow:hidden}
+.supply-bar-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--amber),var(--red))}
+.section-num{font-size:28px;font-weight:700;color:var(--border);margin-bottom:4px}
+.section-title{font-size:16px;font-weight:600;color:var(--amber);margin-bottom:12px}
+.link-list{list-style:none}.link-list li{padding:8px 0;border-bottom:1px solid var(--border)}.link-list li:last-child{border-bottom:none}
+.link-list a{color:var(--cyan);text-decoration:none;font-size:13px}.link-list a:hover{text-decoration:underline}
+.link-desc{font-size:11px;color:var(--dim);margin-top:2px}
+.prose{font-size:13px;color:#C0C0C0;line-height:1.8}.prose p{margin-bottom:12px}.prose strong{color:#FFF}
+.tag{display:inline-block;padding:2px 8px;border-radius:3px;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase}
+.tag-stabilising{background:rgba(0,230,118,.15);color:var(--green);border:1px solid var(--green)}
+.proxy-tag{display:inline-block;padding:1px 6px;border-radius:3px;font-size:9px;font-weight:600;letter-spacing:1px;color:var(--amber);border:1px solid var(--amber);margin-left:8px}
+.widget-wrapper{margin-bottom:16px;border-radius:6px;overflow:hidden}
+.data-table{width:100%;border-collapse:collapse;font-size:12px}
+.data-table th{text-align:left;padding:8px;border-bottom:1px solid var(--amber);color:var(--amber);font-size:10px;letter-spacing:1px;text-transform:uppercase}
+.data-table td{padding:8px;border-bottom:1px solid var(--border);color:#C0C0C0}
+.footer{border-top:1px solid var(--border);padding:20px 0;margin-top:24px;text-align:center}
+.footer-brand{font-size:12px;color:var(--amber);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}
+.footer-disclaimer{font-size:10px;color:var(--dim);max-width:600px;margin:0 auto;line-height:1.6}
+.footer a{color:var(--cyan);text-decoration:none}.footer a:hover{text-decoration:underline}
+@media(max-width:600px){.commodity-title{font-size:24px}.data-value{font-size:16px}.data-grid{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header class="header">
+    <div class="header-top">
+      <div class="brand"><a href="https://www.gotcommodities.com">GOT Commodities</a> · Intelligence Terminal</div>
+      <div class="live-tag"><span class="live-dot"></span> LIVE</div>
+    </div>
+    <h1 class="commodity-title">Cobalt</h1>
+    <div class="commodity-subtitle">LME / Rotterdam Spot · The EV Battery Metal</div>
+  </header>
+
+  <!-- TRADINGVIEW WIDGET -->
+  <div class="card">
+    <div class="card-header">Live Price Indicator <span class="proxy-tag">PROXY</span></div>
+    <div class="widget-wrapper">
+      <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+        {"symbol":"AMEX:LIT","width":"100%","height":"360","locale":"en","dateRange":"12M","colorTheme":"dark","isTransparent":true,"autosize":false,"largeChartUrl":""}
+        </script>
+      </div>
+    </div>
+    <div class="link-desc">Global X Lithium & Battery Tech ETF (AMEX: LIT) — battery metals basket including cobalt-exposed miners and processors</div>
+  </div>
+
+  <!-- KEY DATA -->
+  <div class="card">
+    <div class="card-header">Key Data</div>
+    <div class="data-grid">
+      <div class="data-item">
+        <div class="data-label">Rotterdam Spot</div>
+        <div class="data-value amber">~$56,108/t</div>
+        <div class="data-note">Fastmarkets standard grade</div>
+      </div>
+      <div class="data-item">
+        <div class="data-label">LME Cobalt</div>
+        <div class="data-value">~$33,000/t</div>
+        <div class="data-note">Exchange-traded contract</div>
+      </div>
+      <div class="data-item">
+        <div class="data-label">Status</div>
+        <div class="data-value"><span class="tag tag-stabilising">STABILISING</span></div>
+        <div class="data-note">DRC export quotas in effect</div>
+      </div>
+      <div class="data-item">
+        <div class="data-label">DRC Export Quota</div>
+        <div class="data-value">96,600 t/yr</div>
+        <div class="data-note">State mining company Gécamines</div>
+      </div>
+      <div class="data-item">
+        <div class="data-label">Global Mine Supply</div>
+        <div class="data-value">~200,000 t</div>
+        <div class="data-note">2025 est.</div>
+      </div>
+      <div class="data-item">
+        <div class="data-label">DRC Share</div>
+        <div class="data-value">~70%</div>
+        <div class="data-note">Dominant supplier</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHY IT MATTERS -->
+  <div class="card">
+    <div class="card-header">Why Cobalt Matters</div>
+    <div class="prose">
+      <p>Cobalt is at a structural crossroads. For a decade it was the indispensable cathode material in lithium-ion batteries — the NMC (nickel-manganese-cobalt) chemistry that powered the first wave of electric vehicles. But the rapid adoption of <strong>lithium iron phosphate (LFP) cathodes</strong>, which use zero cobalt, is fundamentally reshaping demand. Tesla, BYD, and most Chinese EV makers have shifted to LFP for standard-range vehicles, and LFP now accounts for over 40% of global EV battery capacity.</p>
+      <p>The <strong>Democratic Republic of Congo controls approximately 70% of global mine production</strong>, making cobalt one of the most geographically concentrated commodities on Earth. In response to collapsing prices (cobalt fell from over $80,000/t in 2022 to under $30,000 in 2024), the DRC imposed export quotas of 96,600 tonnes per year through state mining company Gécamines, aiming to stabilize prices the way OPEC manages oil output.</p>
+      <p>Despite the LFP headwind, cobalt retains critical demand from <strong>aerospace superalloys</strong> (jet engine turbine blades), high-performance NMC batteries for premium EVs and grid storage, and industrial catalysts. The ethical dimension — artisanal mining in the DRC involves documented child labor and hazardous conditions — continues to drive Western OEMs toward cobalt-free chemistry or responsibly sourced supply chains, adding structural downward pressure on demand growth.</p>
+    </div>
+  </div>
+
+  <!-- SUPPLY CHAIN -->
+  <div class="card">
+    <div class="card-header">Mine Supply Concentration</div>
+    <div class="supply-bar-container">
+      <div class="supply-bar-label"><span>DR Congo</span><span>~70%</span></div>
+      <div class="supply-bar"><div class="supply-bar-fill" style="width:70%"></div></div>
+    </div>
+    <div class="supply-bar-container">
+      <div class="supply-bar-label"><span>Indonesia</span><span>~8%</span></div>
+      <div class="supply-bar"><div class="supply-bar-fill" style="width:8%"></div></div>
+    </div>
+    <div class="supply-bar-container">
+      <div class="supply-bar-label"><span>Russia</span><span>~5%</span></div>
+      <div class="supply-bar"><div class="supply-bar-fill" style="width:5%"></div></div>
+    </div>
+    <div class="supply-bar-container">
+      <div class="supply-bar-label"><span>Australia</span><span>~4%</span></div>
+      <div class="supply-bar"><div class="supply-bar-fill" style="width:4%"></div></div>
+    </div>
+    <div class="supply-bar-container">
+      <div class="supply-bar-label"><span>Philippines</span><span>~3%</span></div>
+      <div class="supply-bar"><div class="supply-bar-fill" style="width:3%"></div></div>
+    </div>
+    <div class="supply-bar-container">
+      <div class="supply-bar-label"><span>Rest of World</span><span>~10%</span></div>
+      <div class="supply-bar"><div class="supply-bar-fill" style="width:10%"></div></div>
+    </div>
+
+    <table class="data-table" style="margin-top:16px">
+      <thead>
+        <tr><th>End Use</th><th>Share</th><th>Application</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>EV / rechargeable batteries</td><td>~60%</td><td>NMC cathodes (NMC 811, 622, 532)</td></tr>
+        <tr><td>Superalloys</td><td>~15%</td><td>Jet engines, gas turbines, aerospace</td></tr>
+        <tr><td>Catalysts</td><td>~8%</td><td>Petroleum refining, chemicals</td></tr>
+        <tr><td>Hard metals / cemented carbides</td><td>~7%</td><td>Cutting tools, wear-resistant parts</td></tr>
+        <tr><td>Other</td><td>~10%</td><td>Magnets, pigments, electronics</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- CURATED LINKS -->
+  <div class="card">
+    <div class="section-num">01</div>
+    <div class="section-title">Market Prices</div>
+    <ul class="link-list">
+      <li><a href="https://www.lme.com/Metals/EV/Cobalt" target="_blank" rel="noopener">LME — Cobalt Contract</a><div class="link-desc">Official London Metal Exchange cobalt prices and warehouse stocks</div></li>
+      <li><a href="https://www.fastmarkets.com/metals-and-mining/battery-raw-materials/" target="_blank" rel="noopener">Fastmarkets — Battery Raw Materials</a><div class="link-desc">Rotterdam standard grade cobalt assessments (subscription)</div></li>
+      <li><a href="https://tradingeconomics.com/commodity/cobalt" target="_blank" rel="noopener">Trading Economics — Cobalt</a><div class="link-desc">Cobalt price charts, forecasts, and historical data</div></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="section-num">02</div>
+    <div class="section-title">Top Producers</div>
+    <ul class="link-list">
+      <li><a href="https://www.glencore.com/what-we-do/metals-and-minerals/cobalt" target="_blank" rel="noopener">Glencore</a><div class="link-desc">World's largest cobalt miner · Mutanda and Katanga mines, DRC</div></li>
+      <li><a href="https://www.cmoc.com/" target="_blank" rel="noopener">CMOC Group (China Moly)</a><div class="link-desc">China · Tenke Fungurume mine, DRC — second largest cobalt producer</div></li>
+      <li><a href="https://www.gecamines.cd/" target="_blank" rel="noopener">Gécamines</a><div class="link-desc">DRC state mining company · Manages export quotas and JV partnerships</div></li>
+      <li><a href="https://www.eramet.com/" target="_blank" rel="noopener">Eramet</a><div class="link-desc">France · Cobalt from nickel laterite processing in New Caledonia</div></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="section-num">03</div>
+    <div class="section-title">Expert Analysis</div>
+    <ul class="link-list">
+      <li><a href="https://www.cobaltinstitute.org/" target="_blank" rel="noopener">Cobalt Institute</a><div class="link-desc">Industry body: market data, responsible sourcing, demand outlook</div></li>
+      <li><a href="https://www.benchmarkminerals.com/cobalt/" target="_blank" rel="noopener">Benchmark Mineral Intelligence — Cobalt</a><div class="link-desc">Battery supply chain analytics and cobalt price assessments</div></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="section-num">04</div>
+    <div class="section-title">News</div>
+    <ul class="link-list">
+      <li><a href="https://www.mining.com/?s=cobalt" target="_blank" rel="noopener">Mining.com — Cobalt News</a><div class="link-desc">Latest cobalt mining developments, DRC policy, and market updates</div></li>
+      <li><a href="https://www.reuters.com/markets/commodities/" target="_blank" rel="noopener">Reuters Commodities</a><div class="link-desc">Global commodity market news including cobalt and battery metals</div></li>
+      <li><a href="https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-cobalt.pdf" target="_blank" rel="noopener">USGS — Cobalt Mineral Commodity Summary 2026</a><div class="link-desc">US government data: production, imports, prices, reserves</div></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="section-num">05</div>
+    <div class="section-title">Battery Chemistry Shift</div>
+    <table class="data-table">
+      <thead>
+        <tr><th>Chemistry</th><th>Cobalt Content</th><th>Use Case</th><th>Trend</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>NMC 811</td><td>~6%</td><td>Premium EVs, long range</td><td style="color:var(--amber)">Stable</td></tr>
+        <tr><td>NMC 622</td><td>~12%</td><td>Mid-range EVs</td><td style="color:var(--red)">Declining</td></tr>
+        <tr><td>NMC 532</td><td>~20%</td><td>Legacy packs</td><td style="color:var(--red)">Phasing out</td></tr>
+        <tr><td>LFP</td><td style="color:var(--green)">0%</td><td>Standard EVs, grid storage</td><td style="color:var(--green)">Growing fast</td></tr>
+        <tr><td>NCA</td><td>~9%</td><td>Tesla (legacy packs)</td><td style="color:var(--amber)">Stable</td></tr>
+      </tbody>
+    </table>
+    <div class="link-desc" style="margin-top:8px">LFP now accounts for >40% of global EV battery installations, up from <15% in 2020</div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-brand">GOT Commodities</div>
+    <div class="footer-disclaimer">
+      Data sourced from LME, Fastmarkets, Cobalt Institute, and USGS. Prices are indicative and may not reflect real-time trading. This page is for informational purposes only and does not constitute investment advice.<br>
+      <a href="https://www.gotcommodities.com">gotcommodities.com</a>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

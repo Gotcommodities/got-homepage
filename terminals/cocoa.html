@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cocoa | GOT Commodities</title>
+<meta name="description" content="Live cocoa price tracking. ICE cocoa futures hit $12,931 in December 2024 — the worst supply crisis in decades. West Africa crop failures, swollen shoot virus, and global inventory depletion.">
+<meta name="keywords" content="cocoa price, cocoa futures, ICE cocoa, cocoa crisis, Ghana cocoa, Ivory Coast cocoa, chocolate prices, cocoa supply crisis, swollen shoot virus, GOT Commodities">
+<meta property="og:title" content="Cocoa Terminal | GOT Commodities">
+<meta property="og:description" content="Live cocoa price tracking and supply crisis intelligence.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.gotcommodities.com/cocoa">
+<meta name="twitter:card" content="summary_large_image">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--amber:#FFB800;--red:#FF3B3B;--green:#00E676;--cyan:#00E5FF;--magenta:#FF00E5;--dim:#5A5A6A;--bg:#0A0A0F;--card:#111118;--border:#1E1E2A}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'JetBrains Mono','Fira Code','Courier New',monospace;background:var(--bg);color:#E0E0E0;line-height:1.6;min-height:100vh}
+.container{max-width:900px;margin:0 auto;padding:16px}
+.header{border-bottom:1px solid var(--border);padding:20px 0;margin-bottom:24px}
+.header-top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.brand{font-size:11px;color:var(--dim);letter-spacing:2px;text-transform:uppercase}
+.brand a{color:var(--amber);text-decoration:none}.brand a:hover{text-decoration:underline}
+.live-tag{display:inline-flex;align-items:center;gap:6px;font-size:10px;color:var(--green);letter-spacing:1px;text-transform:uppercase}
+.live-dot{width:6px;height:6px;background:var(--green);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.commodity-title{font-size:32px;font-weight:700;color:var(--amber);margin-top:12px;line-height:1.2}
+.commodity-subtitle{font-size:13px;color:var(--dim);margin-top:4px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:20px;margin-bottom:16px}
+.card-header{font-size:11px;color:var(--amber);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+.data-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px}
+.data-label{font-size:10px;color:var(--dim);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
+.data-value{font-size:20px;font-weight:600;color:#FFF}.data-value.amber{color:var(--amber)}.data-value.red{color:var(--red)}
+.data-note{font-size:11px;color:var(--dim);margin-top:2px}
+.supply-bar-container{margin-bottom:12px}
+.supply-bar-label{display:flex;justify-content:space-between;font-size:12px;margin-bottom:4px}
+.supply-bar-label span:first-child{color:#E0E0E0}.supply-bar-label span:last-child{color:var(--amber)}
+.supply-bar{height:8px;background:var(--border);border-radius:4px;overflow:hidden}
+.supply-bar-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--amber),var(--red))}
+.section-num{font-size:28px;font-weight:700;color:var(--border);margin-bottom:4px}
+.section-title{font-size:16px;font-weight:600;color:var(--amber);margin-bottom:12px}
+.link-list{list-style:none}.link-list li{padding:8px 0;border-bottom:1px solid var(--border)}.link-list li:last-child{border-bottom:none}
+.link-list a{color:var(--cyan);text-decoration:none;font-size:13px}.link-list a:hover{text-decoration:underline}
+.link-desc{font-size:11px;color:var(--dim);margin-top:2px}
+.prose{font-size:13px;color:#C0C0C0;line-height:1.8}.prose p{margin-bottom:12px}.prose strong{color:#FFF}
+.tag{display:inline-block;padding:2px 8px;border-radius:3px;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase}
+.tag-volatile{background:rgba(255,184,0,.15);color:var(--amber);border:1px solid var(--amber)}
+.proxy-tag{display:inline-block;padding:1px 6px;border-radius:3px;font-size:9px;font-weight:600;letter-spacing:1px;color:var(--amber);border:1px solid var(--amber);margin-left:8px}
+.widget-wrapper{margin-bottom:16px;border-radius:6px;overflow:hidden}
+.data-table{width:100%;border-collapse:collapse;font-size:12px}
+.data-table th{text-align:left;padding:8px;border-bottom:1px solid var(--amber);color:var(--amber);font-size:10px;letter-spacing:1px;text-transform:uppercase}
+.data-table td{padding:8px;border-bottom:1px solid var(--border);color:#C0C0C0}
+.footer{border-top:1px solid var(--border);padding:20px 0;margin-top:24px;text-align:center}
+.footer-brand{font-size:12px;color:var(--amber);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}
+.footer-disclaimer{font-size:10px;color:var(--dim);max-width:600px;margin:0 auto;line-height:1.6}
+.footer a{color:var(--cyan);text-decoration:none}.footer a:hover{text-decoration:underline}
+.alert-box{background:rgba(255,59,59,.08);border:1px solid var(--red);border-radius:6px;padding:14px 16px;margin-bottom:16px;font-size:12px;color:var(--red)}
+.alert-box strong{color:#FF6B6B}
+@media(max-width:600px){.commodity-title{font-size:24px}.data-value{font-size:16px}.data-grid{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header class="header">
+    <div class="header-top">
+      <div class="brand"><a href="https://www.gotcommodities.com">GOT Commodities</a> · Intelligence Terminal</div>
+      <div class="live-tag"><span class="live-dot"></span> LIVE</div>
+    </div>
+    <h1 class="commodity-title">Cocoa</h1>
+    <div class="commodity-subtitle">ICE Futures · The Supply Crisis Commodity</div>
+  </header>
+
+  <!-- ALERT -->
+  <div class="alert-box">
+    <strong>⚠ SUPPLY CRISIS:</strong> ICE cocoa hit an all-time high of $12,931/t in December 2024. Three consecutive poor harvests in West Africa have depleted global inventories. Prices remain historically elevated.
+  </div>
+
+  <!-- TRADINGVIEW WIDGET -->
+  <div class="card">
+    <div class="card-header">Live Price Indicator <span class="proxy-tag">PROXY</span></div>
+    <div class="widget-wrapper">
+      <!-- TradingView Widget — Hershey as cocoa proxy -->
+      <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+        {"symbol":"NYSE:HSY","width":"100%","height":"360","locale":"en","dateRange":"12M","colorTheme":"dark","isTransparent":true,"autosize":false,"largeChartUrl":""}
+        </script>
+      </div>
+    </div>
+    <div class="link-desc">Hershey (NYSE: HSY) — largest US chocolate maker; strong inverse correlation with cocoa input costs</div>
+  </div>
+
+  <!-- KEY DATA -->
+  <div class="card">
+    <div class="card-header">Key Data</div>
+    <div class="data-grid">
+      <div class="data-item">
+        <div class="data-label">ICE Cocoa</div>
+        <div class="data-value amber">~$5,550/t</div>
+        <div class="data-note">Oct 2026 · down ~5% w/w</div>
+      </div>
+      <div class="data-item">
+        <div class="data-label">All-Time High</div>
+        <div class="data-value red">$12,931/t</div>
+        <div class="data-note">December 2024</div>
+      </div>
+      <div class="data-item">
+        <div class="data-label">Status</div>
+        <div class="data-value"><span class="tag tag-volatile">VOLATILE</span></div>
+        <div class="data-note">Supply crisis ongoing</div>
+      </div>
+      <div class="data-item">
+        <div class="data-label">Global Production</div>
+        <div class="data-value">~4.8M t/yr</div>
+        <div class="data-note">Below ~5.2M t demand</div>
+      </div>
+      <div class="data-item">
+        <div class="data-label">Exchange</div>
+        <div class="data-value">ICE</div>
+        <div class="data-note">Intercontinental Exchange</div>
+      </div>
+      <div class="data-item">
+        <div class="data-label">Contract</div>
+        <div class="data-value">CC</div>
+        <div class="data-note">$/tonne · 10 t per contract</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHY IT MATTERS -->
+  <div class="card">
+    <div class="card-header">Why Cocoa Matters</div>
+    <div class="prose">
+      <p>Cocoa is in the grip of its worst supply crisis in modern history. Three consecutive poor harvests in West Africa — driven by <strong>swollen shoot virus disease (CSSVD)</strong>, aging tree stock, illegal gold mining encroaching on plantations, and increasingly erratic rainfall — have pushed global inventories to critically low levels. ICE cocoa futures hit an all-time record of $12,931 per tonne in December 2024, a price that was unimaginable just two years prior when cocoa traded around $2,500.</p>
+      <p><strong>Ghana and Ivory Coast together account for approximately 60% of global cocoa production.</strong> Both countries' cocoa boards (COCOBOD and CCC) have struggled with smuggling, farmer poverty, and the logistical challenge of replanting millions of virus-infected trees — a process that takes 3–5 years before new trees yield. The structural deficit means any weather shock (El Niño-related drought, excessive Harmattan winds) can trigger explosive price spikes even from current elevated levels.</p>
+      <p>Downstream, the $130 billion global chocolate industry is facing <strong>unprecedented margin compression</strong>. Major processors (Barry Callebaut, Cargill, Olam) have passed through costs, and consumer chocolate prices have risen 20–40% in major markets. Some manufacturers are reducing cocoa content or shrinking portion sizes. The supply crisis has refocused attention on sustainable cocoa farming, fair pricing for smallholders, and the fragility of a global supply chain dependent on a narrow equatorial growing belt.</p>
+    </div>
+  </div>
+
+  <!-- SUPPLY CHAIN -->
+  <div class="card">
+    <div class="card-header">Production Concentration</div>
+    <div class="supply-bar-container">
+      <div class="supply-bar-label"><span>Ivory Coast</span><span>~38%</span></div>
+      <div class="supply-bar"><div class="supply-bar-fill" style="width:38%"></div></div>
+    </div>
+    <div class="supply-bar-container">
+      <div class="supply-bar-label"><span>Ghana</span><span>~20%</span></div>
+      <div class="supply-bar"><div class="supply-bar-fill" style="width:20%"></div></div>
+    </div>
+    <div class="supply-bar-container">
+      <div class="supply-bar-label"><span>Ecuador</span><span>~8%</span></div>
+      <div class="supply-bar"><div class="supply-bar-fill" style="width:8%"></div></div>
+    </div>
+    <div class="supply-bar-container">
+      <div class="supply-bar-label"><span>Cameroon</span><span>~6%</span></div>
+      <div class="supply-bar"><div class="supply-bar-fill" style="width:6%"></div></div>
+    </div>
+    <div class="supply-bar-container">
+      <div class="supply-bar-label"><span>Nigeria</span><span>~5%</span></div>
+      <div class="supply-bar"><div class="supply-bar-fill" style="width:5%"></div></div>
+    </div>
+    <div class="supply-bar-container">
+      <div class="supply-bar-label"><span>Indonesia</span><span>~4%</span></div>
+      <div class="supply-bar"><div class="supply-bar-fill" style="width:4%"></div></div>
+    </div>
+    <div class="supply-bar-container">
+      <div class="supply-bar-label"><span>Rest of World</span><span>~19%</span></div>
+      <div class="supply-bar"><div class="supply-bar-fill" style="width:19%"></div></div>
+    </div>
+  </div>
+
+  <!-- CURATED LINKS -->
+  <div class="card">
+    <div class="section-num">01</div>
+    <div class="section-title">Market Prices</div>
+    <ul class="link-list">
+      <li><a href="https://tradingeconomics.com/commodity/cocoa" target="_blank" rel="noopener">Trading Economics — Cocoa Price</a><div class="link-desc">Live ICE cocoa futures chart, historical data, and forecasts</div></li>
+      <li><a href="https://www.barchart.com/futures/quotes/CC*0/overview" target="_blank" rel="noopener">Barchart — ICE Cocoa Futures</a><div class="link-desc">Futures chain, open interest, commitment of traders data</div></li>
+      <li><a href="https://www.investing.com/commodities/us-cocoa" target="_blank" rel="noopener">Investing.com — Cocoa</a><div class="link-desc">Live quotes, technical analysis, and news</div></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="section-num">02</div>
+    <div class="section-title">Top Producers & Processors</div>
+    <ul class="link-list">
+      <li><a href="https://www.barry-callebaut.com/" target="_blank" rel="noopener">Barry Callebaut</a><div class="link-desc">Switzerland · World's largest cocoa processor and chocolate manufacturer</div></li>
+      <li><a href="https://www.cargill.com/food-bev/cocoa-chocolate" target="_blank" rel="noopener">Cargill Cocoa & Chocolate</a><div class="link-desc">Major processor, sourcing and sustainability programs</div></li>
+      <li><a href="https://www.olamgroup.com/products-services/olam-food-ingredients/cocoa.html" target="_blank" rel="noopener">Olam Food Ingredients — Cocoa</a><div class="link-desc">Major trader and processor with West African farm operations</div></li>
+      <li><a href="https://www.thehersheycompany.com/" target="_blank" rel="noopener">The Hershey Company</a><div class="link-desc">NYSE: HSY · Largest US chocolate company, major cocoa buyer</div></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="section-num">03</div>
+    <div class="section-title">Expert Analysis & Industry Bodies</div>
+    <ul class="link-list">
+      <li><a href="https://www.icco.org/" target="_blank" rel="noopener">International Cocoa Organization (ICCO)</a><div class="link-desc">Intergovernmental body: quarterly bulletins, production statistics, market reports</div></li>
+      <li><a href="https://www.worldcocoafoundation.org/" target="_blank" rel="noopener">World Cocoa Foundation</a><div class="link-desc">Sustainability initiatives, farmer programs, and industry outlook</div></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="section-num">04</div>
+    <div class="section-title">News</div>
+    <ul class="link-list">
+      <li><a href="https://www.reuters.com/markets/commodities/cocoa/" target="_blank" rel="noopener">Reuters — Cocoa Market News</a><div class="link-desc">Breaking cocoa market and West Africa crop updates</div></li>
+      <li><a href="https://www.confectionerynews.com/tag/keyword/Food/Cocoa" target="_blank" rel="noopener">Confectionery News — Cocoa</a><div class="link-desc">Industry downstream impact: chocolate pricing, reformulation, supply chain</div></li>
+      <li><a href="https://www.bloomberg.com/quote/CC1:COM" target="_blank" rel="noopener">Bloomberg — Cocoa Futures</a><div class="link-desc">Professional market data and analysis (subscription)</div></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="section-num">05</div>
+    <div class="section-title">Crisis Timeline</div>
+    <table class="data-table">
+      <thead>
+        <tr><th>Date</th><th>Event</th><th>Impact</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>2022–23</td><td>CSSVD spreads across Ghana's Eastern Region</td><td>Ghana output falls below 700k tonnes</td></tr>
+        <tr><td>Mid-2023</td><td>El Niño reduces Ivory Coast midcrop rainfall</td><td>Global deficit widens to 400k+ tonnes</td></tr>
+        <tr><td>Apr 2024</td><td>ICE cocoa surpasses $10,000/t for first time</td><td>Chocolate inflation accelerates globally</td></tr>
+        <tr><td>Dec 2024</td><td style="color:var(--red)">All-time high: $12,931/t</td><td>Processor margins collapse; inventory critically low</td></tr>
+        <tr><td>2025</td><td>Ivory Coast arrivals improve modestly</td><td>Prices ease but remain 2–3x historical norms</td></tr>
+        <tr><td>Oct 2026</td><td>ICE cocoa ~$5,550/t, still volatile</td><td>Supply recovering but structurally fragile</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-brand">GOT Commodities</div>
+    <div class="footer-disclaimer">
+      Data sourced from ICE Futures, Trading Economics, ICCO, and Reuters. Prices are indicative and may not reflect real-time trading. This page is for informational purposes only and does not constitute investment advice.<br>
+      <a href="https://www.gotcommodities.com">gotcommodities.com</a>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

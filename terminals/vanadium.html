@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vanadium | GOT Commodities</title>
+<meta name="description" content="Live vanadium pentoxide (V₂O₅) price tracking, supply chain analysis, and VRFB energy storage outlook. China, Russia, and South Africa control over 90% of global supply.">
+<meta name="keywords" content="vanadium price, vanadium pentoxide, V2O5, VRFB, vanadium redox flow battery, energy storage, grid battery, vanadium supply chain, China vanadium, GOT Commodities">
+<meta property="og:title" content="Vanadium Terminal | GOT Commodities">
+<meta property="og:description" content="Live vanadium pentoxide price tracking and supply chain intelligence.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.gotcommodities.com/vanadium">
+<meta name="twitter:card" content="summary_large_image">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --amber: #FFB800;
+  --red: #FF3B3B;
+  --green: #00E676;
+  --cyan: #00E5FF;
+  --magenta: #FF00E5;
+  --dim: #5A5A6A;
+  --bg: #0A0A0F;
+  --card: #111118;
+  --border: #1E1E2A;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+  background: var(--bg);
+  color: #E0E0E0;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+.container { max-width: 900px; margin: 0 auto; padding: 16px; }
+
+/* Header */
+.header {
+  border-bottom: 1px solid var(--border);
+  padding: 20px 0;
+  margin-bottom: 24px;
+}
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.brand {
+  font-size: 11px;
+  color: var(--dim);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.brand a { color: var(--amber); text-decoration: none; }
+.brand a:hover { text-decoration: underline; }
+.live-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  color: var(--green);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.live-dot {
+  width: 6px; height: 6px;
+  background: var(--green);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+.commodity-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--amber);
+  margin-top: 12px;
+  line-height: 1.2;
+}
+.commodity-subtitle {
+  font-size: 13px;
+  color: var(--dim);
+  margin-top: 4px;
+}
+
+/* Cards */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+.card-header {
+  font-size: 11px;
+  color: var(--amber);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Key Data Grid */
+.data-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+.data-item { }
+.data-label {
+  font-size: 10px;
+  color: var(--dim);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.data-value {
+  font-size: 20px;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+.data-value.amber { color: var(--amber); }
+.data-note {
+  font-size: 11px;
+  color: var(--dim);
+  margin-top: 2px;
+}
+
+/* Supply Chain Bars */
+.supply-bar-container { margin-bottom: 12px; }
+.supply-bar-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+.supply-bar-label span:first-child { color: #E0E0E0; }
+.supply-bar-label span:last-child { color: var(--amber); }
+.supply-bar {
+  height: 8px;
+  background: var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.supply-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--amber), var(--red));
+}
+
+/* Sections */
+.section-num {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--border);
+  margin-bottom: 4px;
+}
+.section-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--amber);
+  margin-bottom: 12px;
+}
+.link-list { list-style: none; }
+.link-list li {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+}
+.link-list li:last-child { border-bottom: none; }
+.link-list a {
+  color: var(--cyan);
+  text-decoration: none;
+  font-size: 13px;
+}
+.link-list a:hover { text-decoration: underline; }
+.link-desc {
+  font-size: 11px;
+  color: var(--dim);
+  margin-top: 2px;
+}
+
+/* Prose */
+.prose {
+  font-size: 13px;
+  color: #C0C0C0;
+  line-height: 1.8;
+}
+.prose p { margin-bottom: 12px; }
+.prose strong { color: #FFFFFF; }
+
+/* Tag */
+.tag {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.tag-soft { background: rgba(90,90,106,0.3); color: var(--dim); border: 1px solid var(--dim); }
+.tag-critical { background: rgba(255,59,59,0.15); color: var(--red); border: 1px solid var(--red); }
+.tag-strong { background: rgba(0,230,118,0.15); color: var(--green); border: 1px solid var(--green); }
+.tag-restricted { background: rgba(255,0,229,0.15); color: var(--magenta); border: 1px solid var(--magenta); }
+
+/* Table */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+.data-table th {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid var(--amber);
+  color: var(--amber);
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.data-table td {
+  padding: 8px;
+  border-bottom: 1px solid var(--border);
+  color: #C0C0C0;
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 20px 0;
+  margin-top: 24px;
+  text-align: center;
+}
+.footer-brand {
+  font-size: 12px;
+  color: var(--amber);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.footer-disclaimer {
+  font-size: 10px;
+  color: var(--dim);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+.footer a { color: var(--cyan); text-decoration: none; }
+.footer a:hover { text-decoration: underline; }
+
+/* Responsive */
+@media (max-width: 600px) {
+  .commodity-title { font-size: 24px; }
+  .data-value { font-size: 16px; }
+  .data-grid { grid-template-columns: 1fr 1fr; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-top">
+      <div class="brand"><a href="https://www.gotcommodities.com">GOT Commodities</a> · Intelligence Terminal</div>
+      <div class="live-tag"><span class="live-dot"></span> DATA UPDATED WEEKLY</div>
+    </div>
+    <h1 class="commodity-title">Vanadium</h1>
+    <div class="commodity-subtitle">V₂O₅ · Vanadium Pentoxide · The Grid Battery Metal</div>
+  </header>
+
+  <!-- KEY DATA -->
+  <div class="card">
+    <div class="card-header">Key Data</div>
+    <div class="data-grid">
+      <div class="data-item">
+        <div class="data-label">V₂O₅ Price</div>
+        <div class="data-value amber">$5.02/lb</div>
+        <div class="data-note">2025 avg · down from $5.44 in 2024</div>
+      </div>
+      <div class="data-item">
+        <div class="data-label">Benchmark</div>
+        <div class="data-value">98% V₂O₅</div>
+        <div class="data-note">Fastmarkets / Mining.com</div>
+      </div>
+      <div class="data-item">
+        <div class="data-label">Status</div>
+        <div class="data-value"><span class="tag tag-soft">SOFT</span></div>
+        <div class="data-note">Steel demand softening</div>
+      </div>
+      <div class="data-item">
+        <div class="data-label">World Production</div>
+        <div class="data-value">~110,000 t</div>
+        <div class="data-note">2025 est. · USGS</div>
+      </div>
+      <div class="data-item">
+        <div class="data-label">US Import Reliance</div>
+        <div class="data-value">41%</div>
+        <div class="data-note">Brazil 47%, S. Africa 43%</div>
+      </div>
+      <div class="data-item">
+        <div class="data-label">Steel Use Share</div>
+        <div class="data-value">>90%</div>
+        <div class="data-note">Metallurgical applications</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHY IT MATTERS -->
+  <div class="card">
+    <div class="card-header">Why Vanadium Matters</div>
+    <div class="prose">
+      <p>Vanadium is a dual-use critical mineral with an established role in high-strength steel alloys and a transformative future in grid-scale energy storage. Over 90% of current vanadium consumption goes into steel — adding as little as 0.1% vanadium to structural steel increases its tensile strength by up to 100%, reducing weight and material costs in construction, pipelines, and automotive frames.</p>
+      <p>The long-term bull case rests on <strong>vanadium redox flow batteries (VRFBs)</strong>. Unlike lithium-ion, VRFBs can discharge for 4–12 hours without degradation, last 25+ years with minimal capacity loss, and scale power and energy independently. This makes them ideal for grid-scale storage — balancing wind and solar intermittency. China has already commissioned 100+ MWh VRFB installations, and a single large order can move the entire vanadium market given its relatively small size (~110,000 tonnes per year).</p>
+      <p><strong>China dominates</strong> with approximately 75% of global mine production (~82,000 tonnes in 2024), followed by Russia and South Africa. A 50% tariff on Brazilian vanadium products took effect in August 2025 under US trade policy, potentially disrupting the supply chain for American steelmakers and VRFB manufacturers who depend on imported V₂O₅.</p>
+    </div>
+  </div>
+
+  <!-- SUPPLY CHAIN -->
+  <div class="card">
+    <div class="card-header">Supply Chain Concentration</div>
+    <div class="supply-bar-container">
+      <div class="supply-bar-label"><span>China</span><span>~75%</span></div>
+      <div class="supply-bar"><div class="supply-bar-fill" style="width:75%"></div></div>
+    </div>
+    <div class="supply-bar-container">
+      <div class="supply-bar-label"><span>Russia</span><span>~10%</span></div>
+      <div class="supply-bar"><div class="supply-bar-fill" style="width:10%"></div></div>
+    </div>
+    <div class="supply-bar-container">
+      <div class="supply-bar-label"><span>South Africa</span><span>~8%</span></div>
+      <div class="supply-bar"><div class="supply-bar-fill" style="width:8%"></div></div>
+    </div>
+    <div class="supply-bar-container">
+      <div class="supply-bar-label"><span>Brazil</span><span>~5%</span></div>
+      <div class="supply-bar"><div class="supply-bar-fill" style="width:5%"></div></div>
+    </div>
+    <div class="supply-bar-container">
+      <div class="supply-bar-label"><span>Rest of World</span><span>~2%</span></div>
+      <div class="supply-bar"><div class="supply-bar-fill" style="width:2%"></div></div>
+    </div>
+
+    <table class="data-table" style="margin-top:16px">
+      <thead>
+        <tr><th>End Use</th><th>Share</th><th>Application</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Steel alloys</td><td>>90%</td><td>HSLA steel, rebar, pipelines, tools</td></tr>
+        <tr><td>Chemical catalysts</td><td>~4%</td><td>Sulfuric acid production, ceramics</td></tr>
+        <tr><td>Energy storage</td><td>~3%</td><td>Vanadium redox flow batteries (VRFBs)</td></tr>
+        <tr><td>Aerospace / titanium</td><td>~2%</td><td>Ti-6Al-4V alloy for jet engines</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- CURATED LINKS -->
+  <div class="card">
+    <div class="section-num">01</div>
+    <div class="section-title">Market Prices</div>
+    <ul class="link-list">
+      <li><a href="https://www.mining.com/markets/commodity/vanadium-pentoxide/" target="_blank" rel="noopener">Mining.com — Vanadium Pentoxide Price</a><div class="link-desc">Daily/weekly V₂O₅ benchmark price chart and data</div></li>
+      <li><a href="https://www.fastmarkets.com/metals-and-mining/minor-metals/" target="_blank" rel="noopener">Fastmarkets — Minor Metals</a><div class="link-desc">Professional vanadium price assessments (subscription)</div></li>
+      <li><a href="https://tradingeconomics.com/commodity/vanadium" target="_blank" rel="noopener">Trading Economics — Vanadium</a><div class="link-desc">Vanadium price history and forecasts</div></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="section-num">02</div>
+    <div class="section-title">Top Producers</div>
+    <ul class="link-list">
+      <li><a href="https://www.panzhihuasteel.com/" target="_blank" rel="noopener">Panzhihua Iron & Steel (Pangang Group)</a><div class="link-desc">China · World's largest vanadium producer from titaniferous magnetite</div></li>
+      <li><a href="https://www.evraz.com/" target="_blank" rel="noopener">Evraz</a><div class="link-desc">Russia · Major vanadium producer from steel slag</div></li>
+      <li><a href="https://www.bushveldminerals.com/" target="_blank" rel="noopener">Bushveld Minerals</a><div class="link-desc">South Africa · Primary vanadium miner and VRFB manufacturer</div></li>
+      <li><a href="https://www.largo.com/" target="_blank" rel="noopener">Largo Inc.</a><div class="link-desc">Brazil (Maracás Menchen mine) · Integrated vanadium + VRFB energy storage</div></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="section-num">03</div>
+    <div class="section-title">Expert Analysis</div>
+    <ul class="link-list">
+      <li><a href="https://www.vanitec.org/" target="_blank" rel="noopener">Vanitec — Vanadium International Technical Committee</a><div class="link-desc">Industry body: market data, research, and demand statistics</div></li>
+      <li><a href="https://www.woodmac.com/reports/metals-vanadium-market/" target="_blank" rel="noopener">Wood Mackenzie — Vanadium Market Reports</a><div class="link-desc">Supply, demand and price forecasting (subscription)</div></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="section-num">04</div>
+    <div class="section-title">News & Research</div>
+    <ul class="link-list">
+      <li><a href="https://www.mining.com/?s=vanadium" target="_blank" rel="noopener">Mining.com — Vanadium News</a><div class="link-desc">Latest vanadium market news and project updates</div></li>
+      <li><a href="https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-vanadium.pdf" target="_blank" rel="noopener">USGS — Vanadium Mineral Commodity Summary 2026</a><div class="link-desc">Definitive US government data: production, imports, prices, reserves</div></li>
+      <li><a href="https://www.energy-storage.news/?s=vanadium" target="_blank" rel="noopener">Energy Storage News — Vanadium</a><div class="link-desc">VRFB project announcements and grid storage developments</div></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="section-num">05</div>
+    <div class="section-title">Production Data</div>
+    <table class="data-table">
+      <thead>
+        <tr><th>Country</th><th>2024 (t)</th><th>2025 Est. (t)</th><th>Reserves (t)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>China</td><td>84,000</td><td>82,000</td><td>5,800</td></tr>
+        <tr><td>Russia</td><td>—</td><td>—</td><td>5,000</td></tr>
+        <tr><td>South Africa</td><td>—</td><td>—</td><td>3,500</td></tr>
+        <tr><td>Brazil</td><td>5,190</td><td>5,300</td><td>—</td></tr>
+        <tr><td>Australia</td><td>—</td><td>—</td><td>11,000</td></tr>
+        <tr><td style="color:var(--amber)">World Total</td><td style="color:var(--amber)">118,000</td><td style="color:var(--amber)">110,000</td><td style="color:var(--amber)">21,000</td></tr>
+      </tbody>
+    </table>
+    <div class="link-desc" style="margin-top:8px">Source: USGS Mineral Commodity Summaries 2026</div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-brand">GOT Commodities</div>
+    <div class="footer-disclaimer">
+      Data sourced from USGS, Fastmarkets, Mining.com, and Vanitec. Prices are indicative benchmarks and may not reflect real-time trading. This page is for informational purposes only and does not constitute investment advice.<br>
+      <a href="https://www.gotcommodities.com">gotcommodities.com</a>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
