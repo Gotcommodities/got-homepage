@@ -163,6 +163,17 @@ body{font-family:'JetBrains Mono','Fira Code','Courier New',monospace;background
     </div>
     <h1 class="commodity-title">Cocoa</h1>
     <div class="commodity-subtitle">ICE Futures · The Supply Crisis Commodity</div>
+  
+    <div class="price-hero-block" style="margin:20px 0 4px;">
+      <div id="live-price" style="font-size:2.5rem;color:#FFF;font-weight:700;">Loading...</div>
+      <div style="display:flex;align-items:center;justify-content:center;gap:12px;margin-top:4px;">
+        <span id="live-tag" style="font-size:.7rem;padding:2px 8px;border:1px solid var(--amber);border-radius:3px;color:var(--amber);text-transform:uppercase;letter-spacing:1px;">—</span>
+        <span id="live-day" style="font-size:.9rem;font-weight:600;color:var(--dim);">—</span>
+        <span id="live-monthly" style="font-size:.75rem;color:var(--dim);">—</span>
+      </div>
+      <div id="live-source" style="font-size:.65rem;color:var(--dim);margin-top:8px;">Loading from GOT Daily Desk...</div>
+      <div id="live-date" style="font-size:.6rem;color:var(--dim);margin-top:2px;">—</div>
+    </div>
   </header>
 
   <!-- ALERT -->
@@ -333,5 +344,71 @@ body{font-family:'JetBrains Mono','Fira Code','Courier New',monospace;background
   </footer>
 
 </div>
+
+<script>
+(function(){
+  var COMMODITY_ID = 'cocoa';
+  var DATA_URL = '../data.json';
+
+  function updatePrice(){
+    fetch(DATA_URL, {cache:'no-cache'})
+      .then(function(r){ return r.json(); })
+      .then(function(data){
+        var item = null;
+        for(var i=0; i<data.desk.length; i++){
+          if(data.desk[i].id === COMMODITY_ID){ item = data.desk[i]; break; }
+        }
+        if(!item) return;
+
+        // Update hero price
+        var heroEl = document.getElementById('live-price');
+        if(heroEl) heroEl.textContent = item.v + (item.u.charAt(0)==='/' ? item.u : ' ' + item.u);
+
+        // Update tag
+        var tagEl = document.getElementById('live-tag');
+        if(tagEl){
+          tagEl.textContent = item.tag;
+          var tagColors = {
+            'Strong':'var(--green)','Surging':'var(--magenta)','Firm':'var(--green)',
+            'Critical':'var(--red)','Restricted':'var(--magenta)','Crisis':'var(--red)',
+            'Weak':'var(--red)','Soft':'var(--amber)','Correcting':'var(--amber)',
+            'Volatile':'var(--amber)','Stabilising':'var(--cyan)'
+          };
+          tagEl.style.color = tagColors[item.tag] || 'var(--amber)';
+          tagEl.style.borderColor = tagColors[item.tag] || 'var(--amber)';
+        }
+
+        // Update monthly context
+        var mEl = document.getElementById('live-monthly');
+        if(mEl) mEl.textContent = item.m;
+
+        // Update daily change if available
+        var dayEl = document.getElementById('live-day');
+        if(dayEl && item.day !== null){
+          var sign = item.day >= 0 ? '+' : '';
+          dayEl.textContent = sign + item.day + '%%';
+          dayEl.style.color = item.day >= 0 ? 'var(--green)' : 'var(--red)';
+        } else if(dayEl && item.day === null){
+          dayEl.textContent = '—';
+          dayEl.style.color = 'var(--dim)';
+        }
+
+        // Update source line
+        var srcEl = document.getElementById('live-source');
+        if(srcEl) srcEl.textContent = 'Source: ' + item.src + ' · via GOT Daily Desk';
+
+        // Update edition date
+        var dateEl = document.getElementById('live-date');
+        if(dateEl && data.edition) dateEl.textContent = data.edition.sessionCovered || data.edition.date;
+      })
+      .catch(function(e){ console.log('GOT live price fetch error:', e); });
+  }
+
+  updatePrice();
+  // Refresh every 30 minutes
+  setInterval(updatePrice, 1800000);
+})();
+</script>
+
 </body>
 </html>
