@@ -1,16 +1,16 @@
 {
   "edition": {
-    "date": "Monday, October 26, 2026",
-    "statusDate": "MON 26 OCT 2026 · 07:29 IST",
+    "date": "Tuesday, October 27, 2026",
+    "statusDate": "TUE 27 OCT 2026 · 07:24 IST",
     "warStartDate": "2026-02-28",
-    "sessionCovered": "Sun, Oct 25",
+    "sessionCovered": "Mon, Oct 26",
     "alertLevel": "CRITICAL",
-    "alertText": "Trump rules out Sunday Iran strike but warns he may 'finish them off'; Brent eases to $115 after $117 weekly peak; IRGC claims 2 supertankers hit mines (4.5M bbl cargo); ~492 vessels waiting outside strait; Qatari mediators in Tehran as Iran sends mixed signals on reopening"
+    "alertText": "IRGC declares Hormuz 'closed' — warns ships risk being 'engulfed in flames'; Brent eases to $114.51 (-1.89%) on Qatar mediation hopes; UKMTO reports vessel on fire near Al-Faw and tanker disabled; Houthis attack Riyadh airport hours after reopening; Egypt approves troop deployment to Saudi Arabia; Pezeshkian heads to Moscow; Israel votes today"
   },
   "situation": [
-    "The Strait of Hormuz crisis entered day 240 with Iran sending contradictory diplomatic signals while shipping attacks continued at record pace. On October 24, Iran's Revolutionary Guard claimed two supertankers struck naval mines south of the strait, carrying an estimated 4.5 million barrels of crude — both vessels reportedly suffered engine-room explosions and were left disabled. Iran warned that the tankers had used an 'unauthorized route' and said it would 'under no circumstances' allow US warships into the Persian Gulf. CENTCOM denied the mine claims and said Admiral Brad Cooper visited the strait on October 25 to inspect operations. The Joint Maritime Information Centre (JMIC) reported approximately 492 vessels waiting outside the strait as of October 25, with visible AIS traffic in the single digits to low double digits — far below the pre-crisis baseline of 85 transits per day. UKMTO recorded 18,049 anomalous AIS positions in its weekly overview published October 23, while Windward detected 293 vessels affected by GPS jamming on October 21 alone. Despite the chaos, Kpler data shows Middle East crude flows largely recovered to pre-war levels, though oil products remain about 50% below pre-war volumes. CENTCOM continued to claim a 95% transit success rate through its facilitated corridor, reporting 101 US-facilitated transits from October 22 to 24.",
-    "Oil markets pulled back on Monday after a fierce weekly rally. Brent crude settled at $116.72 on Friday — its highest close since April and up roughly 6% for the week — before easing to around $115.16 in early Monday Asian trade (down 1.34%), while WTI dipped to $101.67 (down 1.55%) after settling at $103.27 on Friday. The rally was fueled by Iran's 7-tanker attack claims on October 22, the 2-supertanker mine strikes on October 24, and Houthi escalation against Saudi targets. Gold eased to around $4,006 per ounce after safe-haven flows pushed it above $4,100 earlier in the week. VLCC tanker rates remained near record levels around $1.4 million per day for Gulf-to-East Asia routes, with freight adding $33–41 per barrel to delivered crude cost — more than a quarter of the delivered price. The EIA raised its Q4 Brent forecast to $105 (up $14 from September), while HSBC lifted its 2026 Brent outlook to $90 with a $120 stalemate scenario. US gasoline averaged $4.29 per gallon nationally with diesel at $6.35 — the highest since the 2022 spike. The US Strategic Petroleum Reserve sat at its lowest level since 1982, with the Energy Department authorizing an exchange of up to 400,000 barrels.",
-    "Geopolitical tensions seesawed between escalation threats and diplomatic overtures over the weekend. On Friday, US Ambassador to Turkey Tom Barrack said a strike on Iran 'could happen this weekend,' prompting Trump to first raise the possibility of attacking 'as soon as Sunday' before ruling it out on October 25, saying 'there will be no strike today' while framing the choice as whether to 'make a deal or finish them off.' Iran's foreign ministry spokesman said Tehran 'has never left the negotiating table' but accused Washington of imposing 'unilateral demands.' Iran's ambassador to Pakistan said Tehran would reopen the strait within seven days if the US lifts its blockade, eases oil export restrictions, releases frozen assets, and ends hostilities — but Iran's Mehr News Agency denied any proposal had been sent, calling such reports 'a lie and fabrication.' Qatari mediators arrived in Tehran on Sunday to try to restart diplomacy. On the military front, Saudi Arabia intercepted a Houthi missile barrage near Mecca, and the death toll from the October 19 Houthi attack on a Yemeni government training camp in Shabwa rose to 73 killed with 14 still missing. Saudi Arabia postponed the Future Investment Initiative conference (originally scheduled October 26–29) to next year. European and Middle Eastern foreign ministers meeting in Istanbul on October 23 opposed renewed strikes on Iran, with Germany, France, and the UK saying they are ready to negotiate with Tehran."
+    "The Strait of Hormuz crisis entered day 241 with the IRGC taking the dramatic step of formally declaring the strait 'closed' on October 26, warning via Tasnim News Agency that violating vessels 'risk being engulfed in flames.' The declaration followed the deadliest month of the conflict — Lloyd's List Intelligence recorded at least 28 attacks or security incidents in and around the strait in October, more than double the monthly average since the war began. UKMTO issued two new warnings on October 26: a time-late report confirming an outbound tanker was struck and disabled by an unknown projectile at 0839 UTC on October 23 (crew safe), and a separate alert for a vessel on fire 63 nautical miles southeast of Al-Faw, Iraq, where a NASA satellite detected heat at 0926 hours. Iran's Persian Gulf Strait Authority (PGSA) non-compliant blacklist has grown to 123 vessels — up from 46 at its August 24 launch — with two new additions over the weekend including the Liberian-flagged VLCC Senegal Prosperity (Seatrade Maritime). Daily transits have collapsed to just 4 per day from a pre-war baseline of 85 (IMF PortWatch), while approximately 500 vessels remain delayed outside the strait. CENTCOM Commander Admiral Brad Cooper flew over the strait on October 25, saying US forces had cleared primary shipping lanes of Iranian sea mines and maintained a 95% transit success rate, with over 3,000 commercial vessels facilitated and more than 1.5 billion barrels of crude exported since summer. Kpler's latest assessment reports cumulative Middle East crude and condensate production outages have passed 2 billion barrels, with 5 million b/d still offline — though total Middle East crude exports have temporarily returned to pre-war levels thanks to Saudi Arabia ramping East-West Pipeline flows to 5.8 million b/d.",
+    "Oil markets retreated on Monday as Qatari-mediated diplomacy raised fleeting hopes of de-escalation. Brent crude fell 1.89% to $114.51 per barrel — pulling back from its $116.72 Friday settlement, the highest since April — while WTI dropped 2.16% to $101.04 per barrel. Vandana Hari of Vanda Insights cautioned the reprieve 'may prove temporary.' The prior week's 6% Brent rally was fueled by Iran's 7-tanker attack claims on October 22, the supertanker mine strikes on October 24, and Houthi escalation against Saudi targets. Gold eased to around $4,002 per ounce after safe-haven flows had pushed it above $4,100 earlier in the week. VLCC tanker rates remained near record levels at $1.2–1.4 million per day for Gulf-to-East Asia routes, with freight adding $33–41 per barrel to delivered crude cost — more than a quarter of the delivered price. Newcastle coal held near $150 per tonne, up 40% year-to-date as the Hormuz gas shock continues to revive coal demand (Kalkine). Gulf stock markets fell in sympathy, with Saudi Arabia's benchmark index down 1.1% and Aramco shares declining 1.2%. US gasoline averaged $4.29 per gallon nationally with diesel at $6.35 — the highest since the 2022 spike. The US Strategic Petroleum Reserve remains at its lowest level since 1982.",
+    "The Yemen theater escalated sharply alongside diplomatic maneuvers on multiple fronts. Houthi forces launched a missile barrage at Saudi Arabia on October 26, targeting Riyadh's King Khalid International Airport just hours after it partially reopened from a two-week closure following a deadly October attack that killed 13 and wounded over 300. The Saudi-led coalition intercepted at least 10 ballistic missiles aimed at the southern region, plus a cruise missile targeting Khamis Mushait, a ballistic missile and two drones aimed at Riyadh, and two missiles near the Makkah and Madina regions — with falling debris injuring two in the south. The coalition retaliated by destroying four Houthi missile launchers and five tunnel-stored missile depots in Sanaa. Egypt's parliament approved President Sisi's request to deploy troops to defend Saudi Arabia, described as defensive and not directed at Yemen. On the diplomatic front, Iran's President Pezeshkian traveled to Moscow for meetings with Putin and Qatar's Emir Tamim, while Qatari mediators continued shuttling proposals between Tehran and Washington. Saudi, Turkish, and Pakistani delegations met Iranian leaders in Tehran on Monday, with Iran's security chief Rezaei calling the talks 'very good' — though no concrete outcomes were announced. Trump said he was still deciding between a deal and action: 'Do I finish it off, which would be very easy to do, or do I make a deal?' Meanwhile, Israel holds its general election on October 27, with Netanyahu and former army chief Eisenkot in a tight race that could reshape the war's trajectory."
   ],
   "flows": {
     "crude": { "value": "24.6M", "unit": "b/d (total ME)", "source": "Kpler", "pctPreWar": 106 },
@@ -18,29 +18,29 @@
     "preWar": { "value": "23.3M", "unit": "b/d (total)" },
     "offlineProduction": { "value": "9.5M", "unit": "b/d" },
     "strandedBarrels": { "value": "6.8M", "unit": "b/d" },
-    "transitsIn": 10,
-    "transitsOut": 10
+    "transitsIn": 4,
+    "transitsOut": 4
   },
   "attacks": {
-    "thisWeek": 12,
-    "totalWar": 165,
+    "thisWeek": 14,
+    "totalWar": 168,
     "sunk": 8,
-    "disabled": 34,
+    "disabled": 35,
     "casualties": 34,
-    "injured": 53
+    "injured": 55
   },
   "tankerRates": {
-    "vlcc": "$1.4M/day",
-    "note": "47x pre-war level; freight ~$33-41/bbl >27% of delivered crude cost; war-risk insurance ~32x pre-crisis for supertanker passage; container surcharges $1,000/box (Maersk)"
+    "vlcc": "$1.2–1.4M/day",
+    "note": "47x pre-war level; freight ~$33-41/bbl >27% of delivered crude cost; war-risk insurance 6-10% of hull value (vs 0.25% pre-war); PGSA blacklist now 123 vessels; container surcharges $1,000/box (Maersk)"
   },
   "prices": {
-    "brent": { "v": "$115.16", "day": -1.34 },
-    "wti": { "v": "$101.67", "day": -1.55 },
-    "coal": { "v": "$151.20", "day": 0.0 },
-    "gold": { "v": "$4,006", "day": 0.26 }
+    "brent": { "v": "$114.51", "day": -1.89 },
+    "wti": { "v": "$101.04", "day": -2.16 },
+    "coal": { "v": "$150.00", "day": -0.79 },
+    "gold": { "v": "$4,002", "day": -0.10 }
   },
   "bypassPipelines": [
-    { "name": "Saudi East-West (Yanbu)", "capacity": "7.0M b/d", "status": "MAX CAPACITY", "note": "Aramco CEO confirms ramp from 2M to 7M b/d since war began; ~40% of non-Iranian crude now bypasses Hormuz" },
+    { "name": "Saudi East-West (Yanbu)", "capacity": "7.0M b/d", "status": "MAX CAPACITY", "note": "Aramco CEO confirms ramp from 2M to 7M b/d since war began; flows at 5.8M b/d (Kpler Oct 6); Houthis claim drone attacks on pumping stations Oct 26 — unconfirmed" },
     { "name": "UAE Fujairah Pipeline", "capacity": "1.5–1.8M b/d", "status": "ONLINE", "note": "ADNOC STS transfers; $3B Habshan-Fujairah expansion to double capacity by mid-2027" },
     { "name": "Iraq-Turkey (Ceyhan)", "capacity": "0.3M b/d", "status": "PARTIAL", "note": "Iraq exports approaching prewar levels via Hormuz, Ceyhan and truck routes" },
     { "name": "Combined bypass", "capacity": "~8.8–9.1M b/d", "status": "GAP", "note": "vs 23.3M pre-war total — pipeline bypass handles ~40% of non-Iranian flow" }
@@ -53,10 +53,10 @@
     { "country": "Iran", "mbpd": 1.6 }
   ],
   "supplyChain": [
-    { "name": "Sulfur", "severity": "critical", "text": "Global exports down 39% YoY to 6.1M tonnes in Q2 (S&P). Sulfur prices eased to ~$810/tonne by end-September from $1,000+ peak but remain far above pre-war levels. Mosaic idling South Fort Meade phosphate plant (Florida) for 6+ months from Dec 8 due to sulfur shortage. Morocco's OCP needs 3.7M tonnes/yr from the region. Nearly half of seaborne sulfur passed through Hormuz pre-war." },
+    { "name": "Sulfur", "severity": "critical", "text": "Global exports down 39% YoY to 6.1M tonnes in Q2 (S&P). Sulfur prices above $1,000/tonne feeding into phosphate production costs — Egypt, Brazil, India cutting output. Mosaic idling South Fort Meade phosphate plant (Florida) for 6+ months from Dec 8 due to sulfur shortage. Morocco's OCP needs 3.7M tonnes/yr from the region. Nearly half of seaborne sulfur passed through Hormuz pre-war." },
     { "name": "Sulfuric Acid", "severity": "critical", "text": "China banned exports Apr-Aug (700kt/yr quota replaced). SX-EW copper producers (15% of global cathode) fully exposed. Huayou cut Indonesian nickel HPAL output 50%." },
-    { "name": "Fertilizer", "severity": "critical", "text": "Only 8 urea vessels left Gulf waters in September. ~850kt urea stranded across Iran and Arabian Gulf by mid-July (ICIS). 4 of 5 Bangladesh urea plants shut since March due to LNG shortages. FAO Food Price Index at 136 (highest since Nov 2022). UNCTAD warns Hormuz disruption + El Niño could cut global harvests; fertilizer price volatility ahead of planting seasons threatens developing countries. Italian farmers blocking refineries over diesel." },
-    { "name": "LNG", "severity": "elevated", "text": "Qatar LNG exports still crippled — QatarEnergy signed historic deal to buy 4M tonnes/yr US LNG from Cheniere through 2054. Dutch TTF gas near €90/MWh. Japan's trade deficit doubled to ¥2.82T ($17.8B) on higher energy costs. Forbes warns next risk for US LNG is demand, not supply, as price dislocations persist." },
+    { "name": "Fertilizer", "severity": "critical", "text": "Fertilizer shipments through Hormuz 'close to zero' since early September; urea exports from Hormuz-dependent economies fell 83% YoY in April (ITC). ~850kt urea stranded. 4 of 5 Bangladesh urea plants shut since March due to LNG shortages. FAO Food Price Index at 136 (highest since Nov 2022). UNCTAD's de la Mora warns at Doha forum (Oct 25) that farmers cutting fertilizer use will affect 2027 crops; African nations Zimbabwe, Uganda face critical fuel/fertilizer shortfalls." },
+    { "name": "LNG", "severity": "elevated", "text": "Qatar LNG exports still crippled — QatarEnergy signed historic deal to buy 4M tonnes/yr US LNG from Cheniere through 2054. Dutch TTF gas near €90/MWh. Japan's trade deficit doubled to ¥2.82T ($17.8B) on higher energy costs. Forbes warns next risk for US LNG is demand, not supply, as price dislocations persist. Kpler: Asian LNG prices to rise amid simmering geopolitical tensions and elevated TTF." },
     { "name": "Petrochemicals", "severity": "moderate", "text": "MEG ethylene/polyethylene exports disrupted. Gulf petrochem complex cut to ~60% capacity. Methanol down 80% (ITC). Dow, LyondellBasell margins widening on supply constraint." }
   ],
   "regionalExposure": [
@@ -70,7 +70,7 @@
     { "id": "china", "flag": "🇨🇳", "name": "China", "items": [
       "~1/3 of oil imports via Hormuz pre-war",
       "Onshore crude stocks: ~1.2 billion barrels (~5 months of ME imports)",
-      "Iran's shadow fleet has run out of oil to sell to China (Kpler)",
+      "Iran's shadow fleet has run out of oil to sell to China (Kpler, mid-Oct)",
       "75% of Hormuz oil/LNG flows go to China+Japan+Korea+India",
       "Diversifying to Russia, Africa, Americas; pledged deeper cooperation with Iran"
     ]},
@@ -90,30 +90,30 @@
     ]}
   ],
   "warNews": [
-    { "title": "Trump rules out fresh strike on Iran Sunday in another U-turn as conflict drags on", "source": "India TV News", "date": "Oct 26", "url": "https://www.indiatvnews.com/news/world/no-us-strike-on-iran-today-trump-now-rules-out-fresh-attack-on-tehran-in-another-u-turn-as-conflict-drags-2026-10-26-1057907" },
-    { "title": "Iran says it has never left negotiating table, accuses US of imposing unilateral demands", "source": "anews", "date": "Oct 25", "url": "https://www.anews.com.tr/world/2026/10/25/iran-says-it-has-never-left-negotiating-table-accuses-us-of-imposing-unilateral-demands" },
-    { "title": "Iran's Revolutionary Guards say 2 supertankers hit naval mines in Strait of Hormuz", "source": "anews", "date": "Oct 24", "url": "https://www.anews.com.tr/middle-east/2026/10/24/irans-revolutionary-guards-say-2-supertankers-hit-naval-mines-in-strait-of-hormuz" },
-    { "title": "Nearly 500 vessels delayed amid new tanker attack and rising maritime threats", "source": "Gulf News", "date": "Oct 25", "url": "https://gulfnews.com/world/mena/strait-of-hormuz-crisis-nearly-500-vessels-face-disruption-amid-new-tanker-attack-1.500723273" },
-    { "title": "Attacks on shipping in Strait of Hormuz highest since March — day 239 update", "source": "EA WorldView", "date": "Oct 25", "url": "https://eaworldview.com/2026/10/us-war-on-iran-strait-of-hormuz-attacks-shipping/" },
-    { "title": "Iran warns US against entering Persian Gulf as IRGC claims supertankers hit mines", "source": "Tribune India", "date": "Oct 24", "url": "https://www.tribuneindia.com/news/world/iran-warns-us-against-entering-persian-gulf-as-irgc-claims-2-supertankers-hit-naval-mines-near-strait-of-hormuz" },
-    { "title": "Trump warns US may hit Iran 'a little bit further' as IRGC threatens US bases", "source": "Gulf News", "date": "Oct 25", "url": "https://gulfnews.com/world/mena/middle-east-war-trump-warns-us-may-hit-iran-a-little-bit-further-as-irgc-threatens-us-bases-netanyahu-calls-for-regime-change-in-tehran-1.500720580" },
-    { "title": "Death toll from Houthi attack on Yemen training camp rises to 73 killed", "source": "Reuters / Tribune", "date": "Oct 20", "url": "https://tribune.com.pk/story/2635932/death-toll-from-houthi-attack-on-yemen-training-camp-rises-to-73" }
+    { "title": "IRGC declares Strait of Hormuz 'closed,' warns ships risk being 'engulfed in flames'", "source": "House of Saud / Tasnim", "date": "Oct 26", "url": "https://houseofsaud.com/iran-declares-hormuz-closed-oct26/" },
+    { "title": "Saudi-led coalition strikes Houthi missile facilities after Riyadh airport targeted", "source": "Al Jazeera", "date": "Oct 26", "url": "https://www.aljazeera.com/news/2026/10/26/saudi-led-coalition-says-it-struck-houthi-missile-facilities" },
+    { "title": "Houthis launch missile barrage on Saudi Arabia as Riyadh airport reopens", "source": "The Nation", "date": "Oct 26", "url": "https://www.nation.com.pk/26-Oct-2026/houthis-launch-missile-barrage-saudi-arabia-riyadh-airport-reopens" },
+    { "title": "Egypt approves troop deployment to defend Saudi Arabia from Houthi attacks", "source": "Kurdistan24", "date": "Oct 26", "url": "https://www.kurdistan24.net/en/story/946890" },
+    { "title": "Trump weighs deal or action to 'finish off' Iran as war hits day 240", "source": "CBS News", "date": "Oct 26", "url": "https://www.cbsnews.com/live-updates/iran-war-trump-us-diplomacy-oil-prices-strait-of-hormuz/" },
+    { "title": "UKMTO reports vessel on fire near Al-Faw, tanker disabled in Strait of Hormuz", "source": "DEFCON Level", "date": "Oct 26", "url": "https://www.defconlevel.com/alert/2026-10-26-ukmto-reports-vessel-on-fire-southeast-of-al-faw-iraq-after-tanker-struck-and-disabled-in-strait-of-hormuz" },
+    { "title": "Iran threatens 'war without limits' on Israel, unveils 'shocking' weapons as casualties mount", "source": "Scheer Post", "date": "Oct 25", "url": "https://scheerpost.com/2026/10/25/iran-threatens-war-without-limits-on-israel-unveils-shocking-weapons-as-casualties-mount/" },
+    { "title": "Late reports of Hormuz attacks surface as Iran's PGSA blacklist expands to 123 vessels", "source": "Seatrade Maritime", "date": "Oct 26", "url": "https://www.seatrade-maritime.com/security/late-reports-of-hormuz-attacks-as-iran-blacklist-expands" }
   ],
   "commodityNews": [
-    { "title": "Brent crude settles at $116.72 — highest since April, up 6% for the week", "source": "FinanceFeeds", "date": "Oct 25", "url": "https://financefeeds.com/brent-crude-oil-price-116-72-saturday-week-ahead-houthi-saudi-fed-28-october-bull-120-bear-108/" },
-    { "title": "Brent falls 1.34% to $115.16 as markets ease after record weekly surge", "source": "Nation Thailand", "date": "Oct 26", "url": "https://www.nationthailand.com/news/world/40072732" },
-    { "title": "Oil market tightens as tanker attacks and inventory draws mount", "source": "OilPrice", "date": "Oct 24", "url": "https://oilprice.com/Energy/Crude-Oil/Oil-Market-Tightens-as-Tanker-Attacks-and-Inventory-Draws-Mount.html" },
-    { "title": "The next risk for US LNG is demand, not supply, as price dislocations persist", "source": "Forbes", "date": "Oct 24", "url": "https://www.forbes.com/sites/rrapier/2026/10/24/the-next-risk-for-us-lng-is-demand-not-supply/" },
-    { "title": "Kpler: Middle East crude flows largely recovered, but oil products still 50% below pre-war", "source": "CNBC", "date": "Oct 23", "url": "https://www.cnbc.com/video/2026/10/23/kpler-on-mideast-crude-flows.html" },
+    { "title": "Oil prices fall 2% on Iran diplomacy hopes — Brent drops to $114.51, WTI to $101.04", "source": "Grafa", "date": "Oct 27", "url": "https://grafa.com/en/news/united-states/oil-prices-fall-iran-diplomacy-saudi-supply-risks" },
+    { "title": "Newcastle coal up 40% this year at $150/tonne as Hormuz gas shock revives coal demand", "source": "Kalkine", "date": "Oct 26", "url": "https://kalkine.com.au/news/economic-news/newcastle-coal-price-2026-up-40-this-year-at-us150-a-tonne-as-the-hormuz-gas-shock-revives-coal" },
+    { "title": "Kpler: 2 billion barrels of Middle East crude lost, 5M b/d still offline with no deal in sight", "source": "Kpler", "date": "Oct 7", "url": "https://www.kpler.com/blog/seven-months-on-2-bn-bbl-lost-5-mbd-still-offline-and-no-deal-in-sight-1" },
+    { "title": "Record tanker rates cripple US crude oil flows to Asia", "source": "Naked Capitalism", "date": "Oct 25", "url": "https://www.nakedcapitalism.com/2026/10/record-tanker-rates-cripple-u-s-crude-oil-flows-to-asia.html" },
+    { "title": "VLCC freight rates surge to $35/bbl, reshaping global crude prices", "source": "Discovery Alert", "date": "Oct 26", "url": "https://discoveryalert.com/analysis/vlcc-freight-rates-crude-prices-october-2026/" },
     { "title": "Oil tankers plying the US-China route command $60 million, crushing demand", "source": "Bloomberg", "date": "Oct 22", "url": "https://www.bloomberg.com/news/articles/2026-10-22/oil-tankers-plying-the-us-china-route-command-60-million-it-s-crushing-demand" }
   ],
   "supplyChainNews": [
-    { "title": "Hormuz and Red Sea disruption squeezes food supplies, UN warns", "source": "UN News", "date": "Oct 25", "url": "https://news.un.org/en/audio/2026/10/1168653" },
-    { "title": "Fertilizer costs stay elevated as global supply disruptions persist", "source": "Global Agriculture", "date": "Oct 24", "url": "https://www.global-agriculture.com/crop-nutrition/fertilizer-costs-stay-elevated-as-global-supply-disruptions-persist/" },
-    { "title": "Shipping disruptions in Strait of Hormuz threaten global fertilizer supplies", "source": "UkrAgroConsult", "date": "Oct 24", "url": "https://ukragroconsult.com/en/news/shipping-disruptions-in-strait-of-hormuz-threaten-global-fertilizer-supplies/" },
-    { "title": "Nearly 500 vessels face disruption as maritime threats escalate in Hormuz", "source": "Gulf News", "date": "Oct 25", "url": "https://gulfnews.com/world/mena/strait-of-hormuz-crisis-nearly-500-vessels-face-disruption-amid-new-tanker-attack-1.500723273" },
-    { "title": "Agricultural train wreck and the 2027 global food crisis", "source": "Ahead of the Herd", "date": "Oct 24", "url": "https://aheadoftheherd.com/agricultural-train-wreck-and-the-2027-global-food-crisis-richard-mills/" },
-    { "title": "UNCTAD warns Hormuz fertilizer disruption combined with El Niño could cut harvests", "source": "UN News", "date": "Oct 22", "url": "https://news.un.org/en/audio/2026/10/1168653" }
+    { "title": "Iran war threatens Africa food security as fertilizer and fuel costs soar", "source": "Al Jazeera / Newsy Today", "date": "Oct 26", "url": "https://www.newsy-today.com/iran-war-threatens-africa-food-security-trade-officials-warn/" },
+    { "title": "Iran expands tanker blockade beyond Hormuz, threatening Saudi export routes", "source": "House of Saud", "date": "Oct 26", "url": "https://houseofsaud.com/iran-tanker-attacks-beyond-hormuz-saudi-export-routes/" },
+    { "title": "Hormuz shipping disruption is starting to hit harvests, UN agency says", "source": "Oman Observer", "date": "Oct 15", "url": "https://www.omanobserver.om/article/1197861/world/region/hormuz-shipping-disruption-is-starting-to-hit-harvests-un-agency-says" },
+    { "title": "Strait of Hormuz crisis keeps global fertilizer trade near standstill", "source": "Global Agriculture", "date": "Oct 24", "url": "https://www.global-agriculture.com/crop-nutrition/strait-of-hormuz-crisis-keeps-global-fertilizer-trade-near-standstill/" },
+    { "title": "Hormuz attacks overwhelm UKMTO as most shipping incidents go unreported", "source": "Splash247", "date": "Oct 25", "url": "https://splash247.com/hormuz-attacks-overwhelm-ukmto/" },
+    { "title": "Late reports of Hormuz attacks as Iran's PGSA blacklist expands to 123 vessels", "source": "Seatrade Maritime", "date": "Oct 26", "url": "https://www.seatrade-maritime.com/security/late-reports-of-hormuz-attacks-as-iran-blacklist-expands" }
   ],
   "scenarios": {
     "bull": {
@@ -131,8 +131,8 @@
       "points": [
         "Brent spikes to $160-170 (demand destruction price per Kpler)",
         "Pipeline bypass maxes at ~9.1M b/d vs 23.3M need",
-        "Post-midterm US-Israel strike on Iran (NPR report) triggers full closure",
-        "Iran threatens to cut 7 undersea fiber-optic cables in Hormuz",
+        "Post-midterm US-Israel strike on Iran triggers full closure",
+        "Houthis escalate to threaten Bab el-Mandeb, cutting Yanbu bypass route",
         "SPR drawdowns accelerate; US SPR at lowest since 1982"
       ]
     }
@@ -157,8 +157,9 @@
     { "date": "Oct 20", "event": "Iran shifts to engine-room targeting; IRGC claims MQ-9 drone downed; Munir arrives Tehran for 5th mediation visit; Hegseth meets Netanyahu" },
     { "date": "Oct 21", "event": "Tanker struck off Bukha, Oman — engine fire; US orders embassy staff out of Saudi/UAE/Qatar; Kpler: ME oil flows top pre-war at 24.5M b/d; Dammam airport attack kills 1; Rezaei: 'not a gram of uranium leaves Iran'" },
     { "date": "Oct 22", "event": "Iran claims 7 tankers hit overnight — largest single-day toll; Brent surges to $113 (5-month high); Aramco evacuates Dhahran HQ; Dammam death toll rises to 2; CENTCOM marks 100 days of Iran blockade ($25B exports prevented); QatarEnergy signs Cheniere LNG deal through 2054; Trump accuses Iran of faking strikes" },
-    { "date": "Oct 23", "event": "Brent surges to $116.72 (+6% weekly, highest since April); E3+R4 Istanbul meeting opposes renewed strikes; Saudi Arabia postpones FII conference; UK deploys RAF Typhoons to Saudi; UKMTO logs 18,049 anomalous AIS positions" },
+    { "date": "Oct 23", "event": "Brent surges to $116.72 (+6% weekly, highest since April); E3+R4 Istanbul meeting opposes renewed strikes; Saudi Arabia postpones FII conference; UK deploys RAF Typhoons to Saudi; UKMTO logs 18,049 anomalous AIS positions; tanker disabled by projectile (UKMTO late report)" },
     { "date": "Oct 24", "event": "IRGC claims 2 supertankers hit mines carrying 4.5M bbl; Iran warns US warships barred from Persian Gulf; US envoy Barrack hints at possible weekend strike; Bessent says Gulf oil exports above pre-war levels; oil slick closes UAE beaches" },
-    { "date": "Oct 25", "event": "Trump rules out Sunday strike — 'make a deal or finish them off'; Iran says 'never left negotiating table' but Mehr denies reopening proposal; Qatari mediators arrive Tehran; ~492 vessels waiting outside strait (JMIC); Saudi intercepts Houthi missiles near Mecca; CENTCOM head visits Hormuz" }
+    { "date": "Oct 25", "event": "Trump rules out Sunday strike — 'make a deal or finish them off'; Iran says 'never left negotiating table' but Mehr denies reopening proposal; Qatari mediators arrive Tehran; ~492 vessels waiting outside strait (JMIC); Saudi intercepts Houthi missiles near Mecca; CENTCOM head visits Hormuz" },
+    { "date": "Oct 26", "event": "IRGC declares Hormuz 'closed' (Tasnim); UKMTO reports vessel on fire near Al-Faw; Houthis attack Riyadh airport hours after reopening; Saudi coalition destroys 4 Houthi missile launchers in Sanaa; Egypt parliament approves troop deployment to Saudi Arabia; Pezeshkian heads to Moscow for Putin/Qatar meetings; PGSA blacklist reaches 123 vessels; Brent falls 1.89% to $114.51 on diplomacy hopes" }
   ]
 }
