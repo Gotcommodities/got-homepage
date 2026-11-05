@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Uranium | GOT Commodities</title>
+<meta name="description" content="Live uranium price tracking. Kazakhstan produces 43% of global supply. Nuclear renaissance and SMR development are driving a structural supply deficit through the 2030s.">
+<meta name="keywords" content="uranium price, uranium U3O8, uranium spot, Kazakhstan uranium, Kazatomprom, nuclear energy, SMR, uranium supply deficit, GOT Commodities">
+<meta property="og:title" content="Uranium Terminal | GOT Commodities">
+<meta property="og:description" content="Live uranium price tracking and nuclear fuel supply chain intelligence.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.gotcommodities.com/uranium">
+<meta name="twitter:card" content="summary_large_image">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--amber:#FFB800;--red:#FF3B3B;--green:#00E676;--cyan:#00E5FF;--magenta:#FF00E5;--dim:#5A5A6A;--bg:#0A0A0F;--card:#111118;--border:#1E1E2A}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'JetBrains Mono','Fira Code','Courier New',monospace;background:var(--bg);color:#E0E0E0;line-height:1.6;min-height:100vh}
+.container{max-width:900px;margin:0 auto;padding:16px}
+.header{border-bottom:1px solid var(--border);padding:20px 0;margin-bottom:24px}
+.header-top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.brand{font-size:11px;color:var(--dim);letter-spacing:2px;text-transform:uppercase}
+.brand a{color:var(--amber);text-decoration:none}.brand a:hover{text-decoration:underline}
+.live-tag{display:inline-flex;align-items:center;gap:6px;font-size:10px;color:var(--green);letter-spacing:1px;text-transform:uppercase}
+.live-dot{width:6px;height:6px;background:var(--green);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.commodity-title{font-size:32px;font-weight:700;color:var(--amber);margin-top:12px;line-height:1.2}
+.commodity-subtitle{font-size:13px;color:var(--dim);margin-top:4px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:20px;margin-bottom:16px}
+.card-header{font-size:11px;color:var(--amber);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+.data-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px}
+.data-label{font-size:10px;color:var(--dim);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
+.data-value{font-size:20px;font-weight:600;color:#FFF}.data-value.amber{color:var(--amber)}
+.data-note{font-size:11px;color:var(--dim);margin-top:2px}
+.supply-bar-container{margin-bottom:12px}
+.supply-bar-label{display:flex;justify-content:space-between;font-size:12px;margin-bottom:4px}
+.supply-bar-label span:first-child{color:#E0E0E0}.supply-bar-label span:last-child{color:var(--amber)}
+.supply-bar{height:8px;background:var(--border);border-radius:4px;overflow:hidden}
+.supply-bar-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--amber),var(--red))}
+.section-num{font-size:28px;font-weight:700;color:var(--border);margin-bottom:4px}
+.section-title{font-size:16px;font-weight:600;color:var(--amber);margin-bottom:12px}
+.link-list{list-style:none}.link-list li{padding:8px 0;border-bottom:1px solid var(--border)}.link-list li:last-child{border-bottom:none}
+.link-list a{color:var(--cyan);text-decoration:none;font-size:13px}.link-list a:hover{text-decoration:underline}
+.link-desc{font-size:11px;color:var(--dim);margin-top:2px}
+.prose{font-size:13px;color:#C0C0C0;line-height:1.8}.prose p{margin-bottom:12px}.prose strong{color:#FFF}
+.tag{display:inline-block;padding:2px 8px;border-radius:3px;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase}
+.tag-strong{background:rgba(0,230,118,.15);color:var(--green);border:1px solid var(--green)}
+.proxy-tag{display:inline-block;padding:1px 6px;border-radius:3px;font-size:9px;font-weight:600;letter-spacing:1px;color:var(--amber);border:1px solid var(--amber);margin-left:8px}
+.widget-wrapper{margin-bottom:16px;border-radius:6px;overflow:hidden}
+.data-table{width:100%;border-collapse:collapse;font-size:12px}
+.data-table th{text-align:left;padding:8px;border-bottom:1px solid var(--amber);color:var(--amber);font-size:10px;letter-spacing:1px;text-transform:uppercase}
+.data-table td{padding:8px;border-bottom:1px solid var(--border);color:#C0C0C0}
+.footer{border-top:1px solid var(--border);padding:20px 0;margin-top:24px;text-align:center}
+.footer-brand{font-size:12px;color:var(--amber);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}
+.footer-disclaimer{font-size:10px;color:var(--dim);max-width:600px;margin:0 auto;line-height:1.6}
+.footer a{color:var(--cyan);text-decoration:none}.footer a:hover{text-decoration:underline}
+@media(max-width:600px){.commodity-title{font-size:24px}.data-value{font-size:16px}.data-grid{grid-template-columns:1fr 1fr}}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["WebPage", "Article"],
+  "name": "Uranium Terminal — Live U₃O₈ Price Tracker & Nuclear Fuel Supply Analysis",
+  "headline": "Uranium Terminal: Live Spot Prices with Nuclear Renaissance & Supply Deficit Analysis",
+  "description": "Live uranium price tracking. Kazakhstan produces 43% of global supply. Nuclear renaissance and SMR development are driving a structural supply deficit through the 2030s.",
+  "url": "https://www.gotcommodities.com/uranium",
+  "keywords": "uranium price, uranium U3O8, uranium spot, Kazakhstan uranium, Kazatomprom, nuclear energy, SMR, uranium supply deficit, GOT Commodities",
+  "inLanguage": "en",
+  "isAccessibleForFree": true,
+  "dateModified": "2026-11-04",
+  "about": {
+    "@type": "Thing",
+    "name": "Uranium",
+    "sameAs": "https://www.wikidata.org/wiki/Q1098"
+  },
+  "mentions": [
+    {
+      "@type": "Place",
+      "name": "Kazakhstan",
+      "sameAs": "https://www.wikidata.org/wiki/Q232"
+    },
+    {
+      "@type": "Organization",
+      "name": "Cameco",
+      "sameAs": "https://www.wikidata.org/wiki/Q1024671"
+    },
+    {
+      "@type": "Thing",
+      "name": "Nuclear power",
+      "sameAs": "https://www.wikidata.org/wiki/Q12739"
+    }
+  ],
+  "author": {
+    "@type": "Organization",
+    "name": "GOT Commodities",
+    "url": "https://www.gotcommodities.com",
+    "logo": "https://www.gotcommodities.com/favicon.ico"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "GOT Commodities",
+    "url": "https://www.gotcommodities.com"
+  },
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [".header h1", ".header .subtitle", ".section:first-of-type p"]
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.gotcommodities.com/uranium"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the current uranium price?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Uranium (U₃O₈) spot prices trade around $80 per pound as of late 2026, tracked by TradeTech and UxC. Long-term contract prices sit near $68/lb. Prices have surged from $20/lb in 2020 due to the global nuclear renaissance and persistent supply deficits."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is there a uranium supply deficit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Global uranium mine production of roughly 60,000 tonnes per year falls short of reactor demand of approximately 80,000 tonnes. The gap is filled by drawdowns of government and commercial inventories, enrichment underfeeding, and recycled material — all finite secondary sources that are being depleted. Years of low prices after Fukushima shut down mines that take 10-15 years to restart."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will small modular reactors increase uranium demand?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. SMRs from companies like NuScale, X-energy, TerraPower, and Rolls-Royce are expected to begin commercial deployment in the late 2020s. While individual SMRs use less fuel than large reactors, their modularity means wider deployment across more sites. Some designs require HALEU (high-assay low-enriched uranium) at 5-20% enrichment, creating new supply chain requirements."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="container">
+
+  <header class="header">
+    <div class="header-top">
+      <div class="brand"><a href="https://www.gotcommodities.com">GOT Commodities</a> · Intelligence Terminal</div>
+      <div class="live-tag"><span class="live-dot"></span> LIVE</div>
+    </div>
+    <h1 class="commodity-title">Uranium</h1>
+    <div class="commodity-subtitle">U₃O₈ Spot / Nuclear Fuel · The Clean Energy Metal</div>
+
+    <div class="price-hero-block" style="margin:20px 0 4px;">
+      <div id="live-price" style="font-size:2.5rem;color:#FFF;font-weight:700;">Loading...</div>
+      <div style="display:flex;align-items:center;justify-content:center;gap:12px;margin-top:4px;">
+        <span id="live-tag" style="font-size:.7rem;padding:2px 8px;border:1px solid var(--amber);border-radius:3px;color:var(--amber);text-transform:uppercase;letter-spacing:1px;">—</span>
+        <span id="live-day" style="font-size:.9rem;font-weight:600;color:var(--dim);">—</span>
+        <span id="live-monthly" style="font-size:.75rem;color:var(--dim);">—</span>
+      </div>
+      <div id="live-source" style="font-size:.65rem;color:var(--dim);margin-top:8px;">Loading from GOT Daily Desk...</div>
+      <div id="live-date" style="font-size:.6rem;color:var(--dim);margin-top:2px;">—</div>
+    </div>
+  </header>
+
+  <!-- TRADINGVIEW WIDGET -->
+  <div class="card">
+    <div class="card-header">Live Price Indicator <span class="proxy-tag">PROXY</span></div>
+    <div class="widget-wrapper">
+      <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+        {"symbol":"NYSE:CCJ","width":"100%","height":"360","locale":"en","dateRange":"12M","colorTheme":"dark","isTransparent":true,"autosize":false,"largeChartUrl":""}
+        </script>
+      </div>
+    </div>
+    <div class="link-desc">Cameco Corporation (NYSE: CCJ) — world's largest publicly traded uranium producer, operating McArthur River and Cigar Lake mines in Saskatchewan</div>
+  </div>
+
+  <!-- KEY DATA -->
+  <div class="card">
+    <div class="card-header">Key Data</div>
+    <div class="data-grid">
+      <div class="data-item">
+        <div class="data-label">U₃O₈ Spot</div>
+        <div class="data-value amber">~$90/lb</div>
+        <div class="data-note">TradeTech / UxC spot</div>
+      </div>
+      <div class="data-item">
+        <div class="data-label">Long-Term Contract</div>
+        <div class="data-value">~$72/lb</div>
+        <div class="data-note">Utility term price</div>
+      </div>
+      <div class="data-item">
+        <div class="data-label">Status</div>
+        <div class="data-value"><span class="tag tag-strong">STRONG</span></div>
+        <div class="data-note">Nuclear renaissance underway</div>
+      </div>
+      <div class="data-item">
+        <div class="data-label">Global Production</div>
+        <div class="data-value">~60,000 t</div>
+        <div class="data-note">2025 est. (as U₃O₈)</div>
+      </div>
+      <div class="data-item">
+        <div class="data-label">Reactor Demand</div>
+        <div class="data-value">~80,000 t/yr</div>
+        <div class="data-note">440+ reactors globally</div>
+      </div>
+      <div class="data-item">
+        <div class="data-label">Supply Deficit</div>
+        <div class="data-value">~20,000 t/yr</div>
+        <div class="data-note">Covered by secondary supply</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHY IT MATTERS -->
+  <div class="card">
+    <div class="card-header">Why Uranium Matters</div>
+    <div class="prose">
+      <p>Uranium is in the early stages of a <strong>structural bull market</strong> driven by the global nuclear renaissance. After a decade of depressed prices following the 2011 Fukushima disaster, uranium has surged from $20/lb in 2020 to over $80/lb as governments worldwide recognize nuclear power as essential for meeting net-zero carbon targets. Over 60 new reactors are under construction globally, with China alone planning to build 150 reactors by 2035.</p>
+      <p><strong>Kazakhstan dominates global mine production through Kazatomprom</strong>, producing approximately 43% of the world's uranium via in-situ leaching. Canada (Cameco's Athabasca Basin mines) and Australia (Olympic Dam, Ranger) round out the top three. The market faces a persistent <strong>primary supply deficit of roughly 20,000 tonnes per year</strong>, currently filled by drawdowns of commercial inventories, government stockpiles, and enrichment underfeeding — all finite secondary sources.</p>
+      <p>The emergence of <strong>small modular reactors (SMRs)</strong> adds a new demand vector. NuScale, X-energy, TerraPower, and Rolls-Royce are advancing designs that could see first commercial deployments by the late 2020s. Meanwhile, tech giants including Microsoft, Google, and Amazon have signed nuclear power purchase agreements for data centres, validating long-term uranium demand. The Sprott Physical Uranium Trust and other financial vehicles have added a speculative demand layer, removing physical pounds from the spot market.</p>
+    </div>
+  </div>
+
+  <!-- SUPPLY CHAIN -->
+  <div class="card">
+    <div class="card-header">Mine Production Concentration</div>
+    <div class="supply-bar-container">
+      <div class="supply-bar-label"><span>Kazakhstan</span><span>~43%</span></div>
+      <div class="supply-bar"><div class="supply-bar-fill" style="width:43%"></div></div>
+    </div>
+    <div class="supply-bar-container">
+      <div class="supply-bar-label"><span>Canada</span><span>~15%</span></div>
+      <div class="supply-bar"><div class="supply-bar-fill" style="width:15%"></div></div>
+    </div>
+    <div class="supply-bar-container">
+      <div class="supply-bar-label"><span>Namibia</span><span>~11%</span></div>
+      <div class="supply-bar"><div class="supply-bar-fill" style="width:11%"></div></div>
+    </div>
+    <div class="supply-bar-container">
+      <div class="supply-bar-label"><span>Australia</span><span>~8%</span></div>
+      <div class="supply-bar"><div class="supply-bar-fill" style="width:8%"></div></div>
+    </div>
+    <div class="supply-bar-container">
+      <div class="supply-bar-label"><span>Uzbekistan</span><span>~7%</span></div>
+      <div class="supply-bar"><div class="supply-bar-fill" style="width:7%"></div></div>
+    </div>
+    <div class="supply-bar-container">
+      <div class="supply-bar-label"><span>Rest of World</span><span>~16%</span></div>
+      <div class="supply-bar"><div class="supply-bar-fill" style="width:16%"></div></div>
+    </div>
+
+    <table class="data-table" style="margin-top:16px">
+      <thead>
+        <tr><th>End Use</th><th>Share</th><th>Application</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Nuclear power generation</td><td>~90%</td><td>Light-water reactors (PWR/BWR)</td></tr>
+        <tr><td>Naval propulsion</td><td>~4%</td><td>Submarines, aircraft carriers (HEU)</td></tr>
+        <tr><td>Research reactors</td><td>~3%</td><td>Medical isotopes, neutron research</td></tr>
+        <tr><td>Emerging SMR demand</td><td>~2%</td><td>Small modular reactors (2028+)</td></tr>
+        <tr><td>Other</td><td>~1%</td><td>Industrial radiography, space power</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  <!-- CURATED LINKS -->
+  <div class="card">
+    <div class="section-num">01</div>
+    <div class="section-title">Market Prices</div>
+    <ul class="link-list">
+      <li><a href="https://tradingeconomics.com/commodity/uranium" target="_blank" rel="noopener">Trading Economics — Uranium</a><div class="link-desc">Uranium spot price charts, historical data, and forecasts</div></li>
+      <li><a href="https://www.cameco.com/invest/markets/uranium-price" target="_blank" rel="noopener">Cameco — Uranium Spot Price</a><div class="link-desc">Weekly UxC and TradeTech uranium price indicators</div></li>
+      <li><a href="https://www.numerco.com/NuclearFuel/UraniumSpotPrice.php" target="_blank" rel="noopener">Numerco — U₃O₈ Spot</a><div class="link-desc">Daily uranium spot price tracking with historical charts</div></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="section-num">02</div>
+    <div class="section-title">Top Producers</div>
+    <ul class="link-list">
+      <li><a href="https://www.kazatomprom.kz/en" target="_blank" rel="noopener">Kazatomprom</a><div class="link-desc">Kazakhstan · World's largest uranium producer (43% of global supply)</div></li>
+      <li><a href="https://www.cameco.com/" target="_blank" rel="noopener">Cameco Corporation</a><div class="link-desc">Canada · McArthur River and Cigar Lake mines in the Athabasca Basin</div></li>
+      <li><a href="https://www.orano.group/en" target="_blank" rel="noopener">Orano (ex-Areva)</a><div class="link-desc">France · Uranium mining in Niger and Kazakhstan, enrichment and fuel fabrication</div></li>
+      <li><a href="https://www.bhp.com/" target="_blank" rel="noopener">BHP — Olympic Dam</a><div class="link-desc">Australia · Olympic Dam copper-uranium mine in South Australia</div></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="section-num">03</div>
+    <div class="section-title">Expert Analysis</div>
+    <ul class="link-list">
+      <li><a href="https://world-nuclear.org/information-library/nuclear-fuel-cycle/mining-of-uranium/world-uranium-mining-production" target="_blank" rel="noopener">World Nuclear Association — Uranium Mining</a><div class="link-desc">Comprehensive data on global uranium production, resources, and supply outlook</div></li>
+      <li><a href="https://www.sprott.com/investment-strategies/physical-commodity-funds/uranium/" target="_blank" rel="noopener">Sprott Physical Uranium Trust</a><div class="link-desc">Largest physical uranium fund — tracks spot market dynamics and inventory levels</div></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="section-num">04</div>
+    <div class="section-title">News</div>
+    <ul class="link-list">
+      <li><a href="https://www.mining.com/?s=uranium" target="_blank" rel="noopener">Mining.com — Uranium News</a><div class="link-desc">Latest uranium mining developments, project approvals, and policy updates</div></li>
+      <li><a href="https://www.reuters.com/business/energy/" target="_blank" rel="noopener">Reuters Energy</a><div class="link-desc">Global energy market news including nuclear and uranium</div></li>
+      <li><a href="https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-uranium.pdf" target="_blank" rel="noopener">USGS — Uranium Mineral Commodity Summary 2026</a><div class="link-desc">US government data: production, imports, prices, reserves</div></li>
+    </ul>
+  </div>
+
+
+  <footer class="footer">
+    <div class="footer-brand">GOT Commodities</div>
+    <div class="footer-disclaimer">
+      Data sourced from TradeTech, UxC, World Nuclear Association, Cameco, and USGS. Prices are indicative and may not reflect real-time trading. This page is for informational purposes only and does not constitute investment advice.<br>
+      <a href="https://www.gotcommodities.com">gotcommodities.com</a>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  var COMMODITY_ID = 'uranium';
+  var DATA_URL = 'https://gotcommodities.github.io/got-homepage/data.json';
+
+  function updatePrice(){
+    fetch(DATA_URL, {cache:'no-cache'})
+      .then(function(r){ return r.json(); })
+      .then(function(data){
+        var item = null;
+        for(var i=0; i<data.desk.length; i++){
+          if(data.desk[i].id === COMMODITY_ID){ item = data.desk[i]; break; }
+        }
+        if(!item) return;
+
+        var heroEl = document.getElementById('live-price');
+        if(heroEl) heroEl.textContent = item.v + (item.u.charAt(0)==='/' ? item.u : ' ' + item.u);
+
+        var tagEl = document.getElementById('live-tag');
+        if(tagEl){
+          tagEl.textContent = item.tag;
+          var tagColors = {
+            'Strong':'var(--green)','Surging':'var(--magenta)','Firm':'var(--green)',
+            'Critical':'var(--red)','Restricted':'var(--magenta)','Crisis':'var(--red)',
+            'Weak':'var(--red)','Soft':'var(--amber)','Correcting':'var(--amber)',
+            'Volatile':'var(--amber)','Stabilising':'var(--cyan)'
+          };
+          tagEl.style.color = tagColors[item.tag] || 'var(--amber)';
+          tagEl.style.borderColor = tagColors[item.tag] || 'var(--amber)';
+        }
+
+        var mEl = document.getElementById('live-monthly');
+        if(mEl) mEl.textContent = item.m;
+
+        var dayEl = document.getElementById('live-day');
+        if(dayEl && item.day !== null){
+          var sign = item.day >= 0 ? '+' : '';
+          dayEl.textContent = sign + item.day + '%%';
+          dayEl.style.color = item.day >= 0 ? 'var(--green)' : 'var(--red)';
+        } else if(dayEl && item.day === null){
+          dayEl.textContent = '—';
+          dayEl.style.color = 'var(--dim)';
+        }
+
+        var srcEl = document.getElementById('live-source');
+        if(srcEl) srcEl.textContent = 'Source: ' + item.src + ' · via GOT Daily Desk';
+
+        var dateEl = document.getElementById('live-date');
+        if(dateEl && data.edition) dateEl.textContent = data.edition.sessionCovered || data.edition.date;
+      })
+      .catch(function(e){ console.log('GOT live price fetch error:', e); });
+  }
+
+  updatePrice();
+  setInterval(updatePrice, 1800000);
+})();
+</script>
+
+</body>
+</html>
