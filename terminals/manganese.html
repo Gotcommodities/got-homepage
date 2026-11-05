@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manganese | GOT Commodities</title>
+<meta name="description" content="Live manganese price tracking. South Africa holds 80% of global reserves. Essential for steel production and emerging as a key EV battery cathode material in manganese-rich chemistries.">
+<meta name="keywords" content="manganese price, manganese ore, electrolytic manganese, EMM, South Africa manganese, steel manganese, manganese battery, LMFP, GOT Commodities">
+<meta property="og:title" content="Manganese Terminal | GOT Commodities">
+<meta property="og:description" content="Live manganese price tracking and steel/EV battery supply chain intelligence.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.gotcommodities.com/manganese">
+<meta name="twitter:card" content="summary_large_image">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--amber:#FFB800;--red:#FF3B3B;--green:#00E676;--cyan:#00E5FF;--magenta:#FF00E5;--dim:#5A5A6A;--bg:#0A0A0F;--card:#111118;--border:#1E1E2A}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'JetBrains Mono','Fira Code','Courier New',monospace;background:var(--bg);color:#E0E0E0;line-height:1.6;min-height:100vh}
+.container{max-width:900px;margin:0 auto;padding:16px}
+.header{border-bottom:1px solid var(--border);padding:20px 0;margin-bottom:24px}
+.header-top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.brand{font-size:11px;color:var(--dim);letter-spacing:2px;text-transform:uppercase}
+.brand a{color:var(--amber);text-decoration:none}.brand a:hover{text-decoration:underline}
+.live-tag{display:inline-flex;align-items:center;gap:6px;font-size:10px;color:var(--green);letter-spacing:1px;text-transform:uppercase}
+.live-dot{width:6px;height:6px;background:var(--green);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.commodity-title{font-size:32px;font-weight:700;color:var(--amber);margin-top:12px;line-height:1.2}
+.commodity-subtitle{font-size:13px;color:var(--dim);margin-top:4px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:20px;margin-bottom:16px}
+.card-header{font-size:11px;color:var(--amber);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+.data-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px}
+.data-label{font-size:10px;color:var(--dim);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
+.data-value{font-size:20px;font-weight:600;color:#FFF}.data-value.amber{color:var(--amber)}
+.data-note{font-size:11px;color:var(--dim);margin-top:2px}
+.supply-bar-container{margin-bottom:12px}
+.supply-bar-label{display:flex;justify-content:space-between;font-size:12px;margin-bottom:4px}
+.supply-bar-label span:first-child{color:#E0E0E0}.supply-bar-label span:last-child{color:var(--amber)}
+.supply-bar{height:8px;background:var(--border);border-radius:4px;overflow:hidden}
+.supply-bar-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--amber),var(--red))}
+.section-num{font-size:28px;font-weight:700;color:var(--border);margin-bottom:4px}
+.section-title{font-size:16px;font-weight:600;color:var(--amber);margin-bottom:12px}
+.link-list{list-style:none}.link-list li{padding:8px 0;border-bottom:1px solid var(--border)}.link-list li:last-child{border-bottom:none}
+.link-list a{color:var(--cyan);text-decoration:none;font-size:13px}.link-list a:hover{text-decoration:underline}
+.link-desc{font-size:11px;color:var(--dim);margin-top:2px}
+.prose{font-size:13px;color:#C0C0C0;line-height:1.8}.prose p{margin-bottom:12px}.prose strong{color:#FFF}
+.tag{display:inline-block;padding:2px 8px;border-radius:3px;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase}
+.tag-firm{background:rgba(0,230,118,.15);color:var(--green);border:1px solid var(--green)}
+.proxy-tag{display:inline-block;padding:1px 6px;border-radius:3px;font-size:9px;font-weight:600;letter-spacing:1px;color:var(--amber);border:1px solid var(--amber);margin-left:8px}
+.widget-wrapper{margin-bottom:16px;border-radius:6px;overflow:hidden}
+.data-table{width:100%;border-collapse:collapse;font-size:12px}
+.data-table th{text-align:left;padding:8px;border-bottom:1px solid var(--amber);color:var(--amber);font-size:10px;letter-spacing:1px;text-transform:uppercase}
+.data-table td{padding:8px;border-bottom:1px solid var(--border);color:#C0C0C0}
+.footer{border-top:1px solid var(--border);padding:20px 0;margin-top:24px;text-align:center}
+.footer-brand{font-size:12px;color:var(--amber);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}
+.footer-disclaimer{font-size:10px;color:var(--dim);max-width:600px;margin:0 auto;line-height:1.6}
+.footer a{color:var(--cyan);text-decoration:none}.footer a:hover{text-decoration:underline}
+@media(max-width:600px){.commodity-title{font-size:24px}.data-value{font-size:16px}.data-grid{grid-template-columns:1fr 1fr}}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["WebPage", "Article"],
+  "name": "Manganese Terminal — Live Price Tracker & Steel/EV Battery Supply Analysis",
+  "headline": "Manganese Terminal: Live Prices with Steel Demand & Battery Cathode Evolution Analysis",
+  "description": "Live manganese price tracking. South Africa holds 80% of global reserves. Essential for steel production and emerging as a key EV battery cathode material in manganese-rich chemistries.",
+  "url": "https://www.gotcommodities.com/manganese",
+  "keywords": "manganese price, manganese ore, electrolytic manganese, EMM, South Africa manganese, steel manganese, manganese battery, LMFP, GOT Commodities",
+  "inLanguage": "en",
+  "isAccessibleForFree": true,
+  "dateModified": "2026-11-04",
+  "about": {
+    "@type": "Thing",
+    "name": "Manganese",
+    "sameAs": "https://www.wikidata.org/wiki/Q731"
+  },
+  "mentions": [
+    {
+      "@type": "Place",
+      "name": "South Africa",
+      "sameAs": "https://www.wikidata.org/wiki/Q258"
+    },
+    {
+      "@type": "Organization",
+      "name": "South32",
+      "sameAs": "https://www.wikidata.org/wiki/Q19876567"
+    },
+    {
+      "@type": "Thing",
+      "name": "Steel",
+      "sameAs": "https://www.wikidata.org/wiki/Q11427"
+    }
+  ],
+  "author": {
+    "@type": "Organization",
+    "name": "GOT Commodities",
+    "url": "https://www.gotcommodities.com",
+    "logo": "https://www.gotcommodities.com/favicon.ico"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "GOT Commodities",
+    "url": "https://www.gotcommodities.com"
+  },
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [".header h1", ".header .subtitle", ".section:first-of-type p"]
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.gotcommodities.com/manganese"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why is manganese essential for steel production?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Manganese serves as a deoxidizer and desulfurizer in steelmaking, removing impurities that would make steel brittle. It also improves hardness, tensile strength, and wear resistance. Approximately 7 kg of manganese is used per tonne of steel, and there is no viable substitute at scale. About 90% of all manganese produced goes into steel and ferroalloys."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How will EV batteries affect manganese demand?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Manganese-rich battery chemistries like LMFP (lithium manganese iron phosphate) and high-manganese NMC are emerging as lower-cost alternatives to cobalt-heavy and nickel-heavy cathodes. Tesla, CATL, and BYD are investing in these chemistries. If widely adopted, EV batteries could add 1-2 million tonnes of annual manganese demand by 2035, though this is still small relative to the 20+ million tonnes consumed by steelmakers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does South Africa dominate manganese reserves?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Kalahari Manganese Field in South Africa's Northern Cape province contains approximately 80% of the world's known manganese reserves — a geological concentration unmatched by most other industrial metals. The region hosts massive deposits of high-grade manganese ore, though infrastructure constraints (rail and port capacity) limit how quickly production can expand."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="container">
+
+  <header class="header">
+    <div class="header-top">
+      <div class="brand"><a href="https://www.gotcommodities.com">GOT Commodities</a> · Intelligence Terminal</div>
+      <div class="live-tag"><span class="live-dot"></span> LIVE</div>
+    </div>
+    <h1 class="commodity-title">Manganese</h1>
+    <div class="commodity-subtitle">Mn Ore (44% Mn) / EMM · The Steel Hardener</div>
+
+    <div class="price-hero-block" style="margin:20px 0 4px;">
+      <div id="live-price" style="font-size:2.5rem;color:#FFF;font-weight:700;">Loading...</div>
+      <div style="display:flex;align-items:center;justify-content:center;gap:12px;margin-top:4px;">
+        <span id="live-tag" style="font-size:.7rem;padding:2px 8px;border:1px solid var(--amber);border-radius:3px;color:var(--amber);text-transform:uppercase;letter-spacing:1px;">—</span>
+        <span id="live-day" style="font-size:.9rem;font-weight:600;color:var(--dim);">—</span>
+        <span id="live-monthly" style="font-size:.75rem;color:var(--dim);">—</span>
+      </div>
+      <div id="live-source" style="font-size:.65rem;color:var(--dim);margin-top:8px;">Loading from GOT Daily Desk...</div>
+      <div id="live-date" style="font-size:.6rem;color:var(--dim);margin-top:2px;">—</div>
+    </div>
+  </header>
+
+  <!-- TRADINGVIEW WIDGET -->
+  <div class="card">
+    <div class="card-header">Live Price Indicator <span class="proxy-tag">PROXY</span></div>
+    <div class="widget-wrapper">
+      <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+        {"symbol":"AMEX:PICK","width":"100%","height":"360","locale":"en","dateRange":"12M","colorTheme":"dark","isTransparent":true,"autosize":false,"largeChartUrl":""}
+        </script>
+      </div>
+    </div>
+    <div class="link-desc">iShares MSCI Global Metals & Mining Producers ETF (AMEX: PICK) — includes South32 and other manganese producers. No pure-play manganese ETF exists on US exchanges.</div>
+  </div>
+
+  <!-- KEY DATA -->
+  <div class="card">
+    <div class="card-header">Key Data</div>
+    <div class="data-grid">
+      <div class="data-item">
+        <div class="data-label">Mn Ore (44%)</div>
+        <div class="data-value amber">~$5.50/dmtu</div>
+        <div class="data-note">CIF China port price</div>
+      </div>
+      <div class="data-item">
+        <div class="data-label">EMM (99.7%)</div>
+        <div class="data-value">~$1,600/t</div>
+        <div class="data-note">Electrolytic manganese metal</div>
+      </div>
+      <div class="data-item">
+        <div class="data-label">Status</div>
+        <div class="data-value"><span class="tag tag-firm">FIRM</span></div>
+        <div class="data-note">Steel demand supportive</div>
+      </div>
+      <div class="data-item">
+        <div class="data-label">Global Mine Output</div>
+        <div class="data-value">~22 Mt</div>
+        <div class="data-note">2025 est. (ore content)</div>
+      </div>
+      <div class="data-item">
+        <div class="data-label">South Africa Reserves</div>
+        <div class="data-value">~80%</div>
+        <div class="data-note">Kalahari Manganese Field</div>
+      </div>
+      <div class="data-item">
+        <div class="data-label">Steel Intensity</div>
+        <div class="data-value">~7 kg/t</div>
+        <div class="data-note">Manganese per tonne of steel</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHY IT MATTERS -->
+  <div class="card">
+    <div class="card-header">Why Manganese Matters</div>
+    <div class="prose">
+      <p>Manganese is the <strong>forgotten critical metal</strong> — the fourth most used metal in the world by volume, present in virtually all steel (roughly 90% of manganese goes into steelmaking), yet rarely discussed in commodity markets. Every tonne of steel requires approximately 7 kg of manganese as a deoxidizer and alloying agent. Without it, steel becomes brittle and unworkable. There is no substitute at scale.</p>
+      <p><strong>South Africa holds approximately 80% of the world's manganese reserves</strong> in the Kalahari Manganese Field, the single largest known deposit. Gabon (Eramet's Moanda mine), Australia, and Ghana round out the top producers. China is the dominant consumer and processor, converting ore into electrolytic manganese metal (EMM), manganese sulfate, and ferroalloys. The supply chain is long and fragmented — ore is mined in Africa, shipped to China, processed, and re-exported globally.</p>
+      <p>The emerging demand story is <strong>EV batteries</strong>. Manganese-rich cathode chemistries — including LMFP (lithium manganese iron phosphate) and high-manganese NMC — are gaining traction as automakers seek to reduce dependence on cobalt and nickel. Tesla, CATL, and BYD have all invested in manganese-rich battery development. This could add 1-2 million tonnes of annual demand by 2035, on top of the 20+ million tonnes consumed by steelmakers. The battery-grade manganese supply chain barely exists outside China, creating a future bottleneck.</p>
+    </div>
+  </div>
+
+  <!-- SUPPLY CHAIN -->
+  <div class="card">
+    <div class="card-header">Mine Production Concentration</div>
+    <div class="supply-bar-container">
+      <div class="supply-bar-label"><span>South Africa</span><span>~37%</span></div>
+      <div class="supply-bar"><div class="supply-bar-fill" style="width:37%"></div></div>
+    </div>
+    <div class="supply-bar-container">
+      <div class="supply-bar-label"><span>Gabon</span><span>~18%</span></div>
+      <div class="supply-bar"><div class="supply-bar-fill" style="width:18%"></div></div>
+    </div>
+    <div class="supply-bar-container">
+      <div class="supply-bar-label"><span>Australia</span><span>~12%</span></div>
+      <div class="supply-bar"><div class="supply-bar-fill" style="width:12%"></div></div>
+    </div>
+    <div class="supply-bar-container">
+      <div class="supply-bar-label"><span>China</span><span>~10%</span></div>
+      <div class="supply-bar"><div class="supply-bar-fill" style="width:10%"></div></div>
+    </div>
+    <div class="supply-bar-container">
+      <div class="supply-bar-label"><span>Ghana</span><span>~6%</span></div>
+      <div class="supply-bar"><div class="supply-bar-fill" style="width:6%"></div></div>
+    </div>
+    <div class="supply-bar-container">
+      <div class="supply-bar-label"><span>Rest of World</span><span>~17%</span></div>
+      <div class="supply-bar"><div class="supply-bar-fill" style="width:17%"></div></div>
+    </div>
+
+    <table class="data-table" style="margin-top:16px">
+      <thead>
+        <tr><th>End Use</th><th>Share</th><th>Application</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Steel / ferroalloys</td><td>~90%</td><td>Carbon steel, stainless steel, HSLA</td></tr>
+        <tr><td>Batteries (emerging)</td><td>~3%</td><td>LMFP, NMC cathodes, manganese sulfate</td></tr>
+        <tr><td>Chemicals</td><td>~3%</td><td>MnO₂ for alkaline batteries, water treatment</td></tr>
+        <tr><td>Aluminium alloys</td><td>~2%</td><td>Beverage cans (3xxx series aluminium)</td></tr>
+        <tr><td>Other</td><td>~2%</td><td>Pigments, ceramics, animal feed</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  <!-- CURATED LINKS -->
+  <div class="card">
+    <div class="section-num">01</div>
+    <div class="section-title">Market Prices</div>
+    <ul class="link-list">
+      <li><a href="https://tradingeconomics.com/commodity/manganese" target="_blank" rel="noopener">Trading Economics — Manganese</a><div class="link-desc">Manganese ore price charts, forecasts, and historical data</div></li>
+      <li><a href="https://www.metal.com/Manganese%20Ore" target="_blank" rel="noopener">Shanghai Metals Market — Manganese Ore</a><div class="link-desc">Chinese port manganese ore prices and market commentary</div></li>
+      <li><a href="https://www.fastmarkets.com/metals-and-mining/manganese/" target="_blank" rel="noopener">Fastmarkets — Manganese</a><div class="link-desc">Manganese ore, EMM, and ferroalloy price assessments</div></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="section-num">02</div>
+    <div class="section-title">Top Producers</div>
+    <ul class="link-list">
+      <li><a href="https://www.south32.net/" target="_blank" rel="noopener">South32</a><div class="link-desc">Australia · Major manganese producer (GEMCO mine, Australia + South Africa operations)</div></li>
+      <li><a href="https://www.eramet.com/en/mining-and-metals/manganese" target="_blank" rel="noopener">Eramet — Manganese</a><div class="link-desc">France · Moanda mine in Gabon — one of the world's largest manganese operations</div></li>
+      <li><a href="https://www.angloamerican.com/" target="_blank" rel="noopener">Anglo American</a><div class="link-desc">South Africa · Samancor manganese joint venture in the Kalahari field</div></li>
+      <li><a href="https://www.jupitermines.com/" target="_blank" rel="noopener">Jupiter Mines</a><div class="link-desc">Australia · Tshipi Borwa mine in South Africa's Kalahari Manganese Field</div></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="section-num">03</div>
+    <div class="section-title">Expert Analysis & News</div>
+    <ul class="link-list">
+      <li><a href="https://www.mining.com/?s=manganese" target="_blank" rel="noopener">Mining.com — Manganese News</a><div class="link-desc">Latest manganese mining and market developments</div></li>
+      <li><a href="https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-manganese.pdf" target="_blank" rel="noopener">USGS — Manganese Mineral Commodity Summary 2026</a><div class="link-desc">US government data: production, imports, prices, reserves</div></li>
+      <li><a href="https://www.iea.org/reports/critical-minerals-market-review" target="_blank" rel="noopener">IEA — Critical Minerals Review</a><div class="link-desc">Manganese's role in the energy transition and battery supply chains</div></li>
+    </ul>
+  </div>
+
+
+  <footer class="footer">
+    <div class="footer-brand">GOT Commodities</div>
+    <div class="footer-disclaimer">
+      Data sourced from Fastmarkets, Shanghai Metals Market, USGS, and IEA. Prices are indicative and may not reflect real-time trading. This page is for informational purposes only and does not constitute investment advice.<br>
+      <a href="https://www.gotcommodities.com">gotcommodities.com</a>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  var COMMODITY_ID = 'manganese';
+  var DATA_URL = 'https://gotcommodities.github.io/got-homepage/data.json';
+
+  function updatePrice(){
+    fetch(DATA_URL, {cache:'no-cache'})
+      .then(function(r){ return r.json(); })
+      .then(function(data){
+        var item = null;
+        for(var i=0; i<data.desk.length; i++){
+          if(data.desk[i].id === COMMODITY_ID){ item = data.desk[i]; break; }
+        }
+        if(!item) return;
+
+        var heroEl = document.getElementById('live-price');
+        if(heroEl) heroEl.textContent = item.v + (item.u.charAt(0)==='/' ? item.u : ' ' + item.u);
+
+        var tagEl = document.getElementById('live-tag');
+        if(tagEl){
+          tagEl.textContent = item.tag;
+          var tagColors = {
+            'Strong':'var(--green)','Surging':'var(--magenta)','Firm':'var(--green)',
+            'Critical':'var(--red)','Restricted':'var(--magenta)','Crisis':'var(--red)',
+            'Weak':'var(--red)','Soft':'var(--amber)','Correcting':'var(--amber)',
+            'Volatile':'var(--amber)','Stabilising':'var(--cyan)'
+          };
+          tagEl.style.color = tagColors[item.tag] || 'var(--amber)';
+          tagEl.style.borderColor = tagColors[item.tag] || 'var(--amber)';
+        }
+
+        var mEl = document.getElementById('live-monthly');
+        if(mEl) mEl.textContent = item.m;
+
+        var dayEl = document.getElementById('live-day');
+        if(dayEl && item.day !== null){
+          var sign = item.day >= 0 ? '+' : '';
+          dayEl.textContent = sign + item.day + '%%';
+          dayEl.style.color = item.day >= 0 ? 'var(--green)' : 'var(--red)';
+        } else if(dayEl && item.day === null){
+          dayEl.textContent = '—';
+          dayEl.style.color = 'var(--dim)';
+        }
+
+        var srcEl = document.getElementById('live-source');
+        if(srcEl) srcEl.textContent = 'Source: ' + item.src + ' · via GOT Daily Desk';
+
+        var dateEl = document.getElementById('live-date');
+        if(dateEl && data.edition) dateEl.textContent = data.edition.sessionCovered || data.edition.date;
+      })
+      .catch(function(e){ console.log('GOT live price fetch error:', e); });
+  }
+
+  updatePrice();
+  setInterval(updatePrice, 1800000);
+})();
+</script>
+
+</body>
+</html>

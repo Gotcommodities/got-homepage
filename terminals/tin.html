@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tin | GOT Commodities</title>
+<meta name="description" content="Live tin price tracking. Essential for electronics solder in every semiconductor and circuit board. Myanmar and Indonesia supply disruptions create chronic volatility.">
+<meta name="keywords" content="tin price, LME tin, tin solder, semiconductor tin, Myanmar tin, Indonesia tin, tin supply chain, electronics solder, GOT Commodities">
+<meta property="og:title" content="Tin Terminal | GOT Commodities">
+<meta property="og:description" content="Live tin price tracking and electronics supply chain intelligence.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.gotcommodities.com/tin">
+<meta name="twitter:card" content="summary_large_image">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--amber:#FFB800;--red:#FF3B3B;--green:#00E676;--cyan:#00E5FF;--magenta:#FF00E5;--dim:#5A5A6A;--bg:#0A0A0F;--card:#111118;--border:#1E1E2A}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'JetBrains Mono','Fira Code','Courier New',monospace;background:var(--bg);color:#E0E0E0;line-height:1.6;min-height:100vh}
+.container{max-width:900px;margin:0 auto;padding:16px}
+.header{border-bottom:1px solid var(--border);padding:20px 0;margin-bottom:24px}
+.header-top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.brand{font-size:11px;color:var(--dim);letter-spacing:2px;text-transform:uppercase}
+.brand a{color:var(--amber);text-decoration:none}.brand a:hover{text-decoration:underline}
+.live-tag{display:inline-flex;align-items:center;gap:6px;font-size:10px;color:var(--green);letter-spacing:1px;text-transform:uppercase}
+.live-dot{width:6px;height:6px;background:var(--green);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.commodity-title{font-size:32px;font-weight:700;color:var(--amber);margin-top:12px;line-height:1.2}
+.commodity-subtitle{font-size:13px;color:var(--dim);margin-top:4px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:20px;margin-bottom:16px}
+.card-header{font-size:11px;color:var(--amber);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+.data-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px}
+.data-label{font-size:10px;color:var(--dim);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
+.data-value{font-size:20px;font-weight:600;color:#FFF}.data-value.amber{color:var(--amber)}
+.data-note{font-size:11px;color:var(--dim);margin-top:2px}
+.supply-bar-container{margin-bottom:12px}
+.supply-bar-label{display:flex;justify-content:space-between;font-size:12px;margin-bottom:4px}
+.supply-bar-label span:first-child{color:#E0E0E0}.supply-bar-label span:last-child{color:var(--amber)}
+.supply-bar{height:8px;background:var(--border);border-radius:4px;overflow:hidden}
+.supply-bar-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--amber),var(--red))}
+.section-num{font-size:28px;font-weight:700;color:var(--border);margin-bottom:4px}
+.section-title{font-size:16px;font-weight:600;color:var(--amber);margin-bottom:12px}
+.link-list{list-style:none}.link-list li{padding:8px 0;border-bottom:1px solid var(--border)}.link-list li:last-child{border-bottom:none}
+.link-list a{color:var(--cyan);text-decoration:none;font-size:13px}.link-list a:hover{text-decoration:underline}
+.link-desc{font-size:11px;color:var(--dim);margin-top:2px}
+.prose{font-size:13px;color:#C0C0C0;line-height:1.8}.prose p{margin-bottom:12px}.prose strong{color:#FFF}
+.tag{display:inline-block;padding:2px 8px;border-radius:3px;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase}
+.tag-volatile{background:rgba(255,184,0,.15);color:var(--amber);border:1px solid var(--amber)}
+.proxy-tag{display:inline-block;padding:1px 6px;border-radius:3px;font-size:9px;font-weight:600;letter-spacing:1px;color:var(--amber);border:1px solid var(--amber);margin-left:8px}
+.widget-wrapper{margin-bottom:16px;border-radius:6px;overflow:hidden}
+.data-table{width:100%;border-collapse:collapse;font-size:12px}
+.data-table th{text-align:left;padding:8px;border-bottom:1px solid var(--amber);color:var(--amber);font-size:10px;letter-spacing:1px;text-transform:uppercase}
+.data-table td{padding:8px;border-bottom:1px solid var(--border);color:#C0C0C0}
+.footer{border-top:1px solid var(--border);padding:20px 0;margin-top:24px;text-align:center}
+.footer-brand{font-size:12px;color:var(--amber);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}
+.footer-disclaimer{font-size:10px;color:var(--dim);max-width:600px;margin:0 auto;line-height:1.6}
+.footer a{color:var(--cyan);text-decoration:none}.footer a:hover{text-decoration:underline}
+@media(max-width:600px){.commodity-title{font-size:24px}.data-value{font-size:16px}.data-grid{grid-template-columns:1fr 1fr}}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["WebPage", "Article"],
+  "name": "Tin Terminal — Live LME Price Tracker & Electronics Solder Supply Analysis",
+  "headline": "Tin Terminal: Live LME Prices with Electronics Demand & Myanmar/Indonesia Supply Risk Analysis",
+  "description": "Live tin price tracking. Essential for electronics solder in every semiconductor and circuit board. Myanmar and Indonesia supply disruptions create chronic volatility.",
+  "url": "https://www.gotcommodities.com/tin",
+  "keywords": "tin price, LME tin, tin solder, semiconductor tin, Myanmar tin, Indonesia tin, tin supply chain, electronics solder, GOT Commodities",
+  "inLanguage": "en",
+  "isAccessibleForFree": true,
+  "dateModified": "2026-11-04",
+  "about": {
+    "@type": "Thing",
+    "name": "Tin",
+    "sameAs": "https://www.wikidata.org/wiki/Q1096"
+  },
+  "mentions": [
+    {
+      "@type": "Place",
+      "name": "Myanmar",
+      "sameAs": "https://www.wikidata.org/wiki/Q836"
+    },
+    {
+      "@type": "Place",
+      "name": "Indonesia",
+      "sameAs": "https://www.wikidata.org/wiki/Q252"
+    },
+    {
+      "@type": "Thing",
+      "name": "Semiconductor",
+      "sameAs": "https://www.wikidata.org/wiki/Q11456"
+    }
+  ],
+  "author": {
+    "@type": "Organization",
+    "name": "GOT Commodities",
+    "url": "https://www.gotcommodities.com",
+    "logo": "https://www.gotcommodities.com/favicon.ico"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "GOT Commodities",
+    "url": "https://www.gotcommodities.com"
+  },
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [".header h1", ".header .subtitle", ".section:first-of-type p"]
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.gotcommodities.com/tin"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the current tin price?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "LME tin trades around $30,000 per tonne on the 3-month contract. Tin has been one of the most volatile LME metals, ranging from $20,000 to $50,000 per tonne in recent years due to supply disruptions from Myanmar and Indonesia."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is tin important for semiconductors?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every semiconductor chip and circuit board uses tin-based solder to bond electronic components. Tin solder accounts for approximately 48% of global tin consumption. As semiconductor demand grows 8-10% annually driven by AI, EVs, and IoT, tin consumption grows with it. There is no viable substitute for tin in electronics soldering at production scale."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What causes tin price volatility?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tin supply is concentrated in politically unstable regions. Myanmar's Wa State mines (10% of global supply) face periodic shutdowns. Indonesia restricts exports unpredictably. LME warehouse stocks often fall below 5,000 tonnes. The combination of concentrated supply, low inventories, and growing demand from electronics makes tin the most volatile LME base metal."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="container">
+
+  <header class="header">
+    <div class="header-top">
+      <div class="brand"><a href="https://www.gotcommodities.com">GOT Commodities</a> · Intelligence Terminal</div>
+      <div class="live-tag"><span class="live-dot"></span> LIVE</div>
+    </div>
+    <h1 class="commodity-title">Tin</h1>
+    <div class="commodity-subtitle">LME Sn / Refined · The Solder Metal</div>
+
+    <div class="price-hero-block" style="margin:20px 0 4px;">
+      <div id="live-price" style="font-size:2.5rem;color:#FFF;font-weight:700;">Loading...</div>
+      <div style="display:flex;align-items:center;justify-content:center;gap:12px;margin-top:4px;">
+        <span id="live-tag" style="font-size:.7rem;padding:2px 8px;border:1px solid var(--amber);border-radius:3px;color:var(--amber);text-transform:uppercase;letter-spacing:1px;">—</span>
+        <span id="live-day" style="font-size:.9rem;font-weight:600;color:var(--dim);">—</span>
+        <span id="live-monthly" style="font-size:.75rem;color:var(--dim);">—</span>
+      </div>
+      <div id="live-source" style="font-size:.65rem;color:var(--dim);margin-top:8px;">Loading from GOT Daily Desk...</div>
+      <div id="live-date" style="font-size:.6rem;color:var(--dim);margin-top:2px;">—</div>
+    </div>
+  </header>
+
+  <!-- TRADINGVIEW WIDGET -->
+  <div class="card">
+    <div class="card-header">Live Price Indicator <span class="proxy-tag">PROXY</span></div>
+    <div class="widget-wrapper">
+      <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+        {"symbol":"AMEX:PICK","width":"100%","height":"360","locale":"en","dateRange":"12M","colorTheme":"dark","isTransparent":true,"autosize":false,"largeChartUrl":""}
+        </script>
+      </div>
+    </div>
+    <div class="link-desc">iShares MSCI Global Metals & Mining Producers ETF (AMEX: PICK) — broad mining proxy; no pure-play tin ETF exists on US exchanges</div>
+  </div>
+
+  <!-- KEY DATA -->
+  <div class="card">
+    <div class="card-header">Key Data</div>
+    <div class="data-grid">
+      <div class="data-item">
+        <div class="data-label">LME Tin</div>
+        <div class="data-value amber">~$30,000/t</div>
+        <div class="data-note">3-month contract</div>
+      </div>
+      <div class="data-item">
+        <div class="data-label">Refined Output</div>
+        <div class="data-value">~370,000 t</div>
+        <div class="data-note">2025 est. global</div>
+      </div>
+      <div class="data-item">
+        <div class="data-label">Status</div>
+        <div class="data-value"><span class="tag tag-volatile">VOLATILE</span></div>
+        <div class="data-note">Supply disruptions ongoing</div>
+      </div>
+      <div class="data-item">
+        <div class="data-label">Solder Demand</div>
+        <div class="data-value">~48%</div>
+        <div class="data-note">of total consumption</div>
+      </div>
+      <div class="data-item">
+        <div class="data-label">Myanmar Risk</div>
+        <div class="data-value">High</div>
+        <div class="data-note">Wa State mine suspensions</div>
+      </div>
+      <div class="data-item">
+        <div class="data-label">Semiconductor Link</div>
+        <div class="data-value">Direct</div>
+        <div class="data-note">Every chip uses tin solder</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHY IT MATTERS -->
+  <div class="card">
+    <div class="card-header">Why Tin Matters</div>
+    <div class="prose">
+      <p>Tin is the <strong>invisible backbone of the digital economy</strong>. Every semiconductor, circuit board, and electronic connection relies on tin-based solder — the material that bonds components together. With global semiconductor demand growing 8-10% annually driven by AI, EVs, and IoT devices, tin consumption is rising in lockstep. Unlike most base metals, tin has no viable substitute in electronics soldering at scale.</p>
+      <p>Supply is concentrated and fragile. <strong>China, Indonesia, and Myanmar</strong> account for approximately 70% of global mine production. Myanmar's Wa State — which produces roughly 10% of global tin — has experienced repeated mine shutdowns due to ethnic militia conflicts and Chinese political pressure. Indonesia, the world's largest exporter, periodically restricts exports and faces depleting onshore reserves. These supply disruptions create chronic price volatility — tin has been the most volatile LME metal in recent years.</p>
+      <p>The market is structurally tight. <strong>Above-ground tin inventories</strong> sit at historically low levels, and LME warehouse stocks have fallen below 5,000 tonnes multiple times. New mine development is limited — tin deposits are small and geographically scattered, making large-scale investment unattractive. The combination of growing electronics demand, constrained supply, and low inventories suggests tin will remain one of the <strong>tightest and most volatile</strong> base metal markets through the decade.</p>
+    </div>
+  </div>
+
+  <!-- SUPPLY CHAIN -->
+  <div class="card">
+    <div class="card-header">Mine Production Concentration</div>
+    <div class="supply-bar-container">
+      <div class="supply-bar-label"><span>China</span><span>~28%</span></div>
+      <div class="supply-bar"><div class="supply-bar-fill" style="width:28%"></div></div>
+    </div>
+    <div class="supply-bar-container">
+      <div class="supply-bar-label"><span>Indonesia</span><span>~20%</span></div>
+      <div class="supply-bar"><div class="supply-bar-fill" style="width:20%"></div></div>
+    </div>
+    <div class="supply-bar-container">
+      <div class="supply-bar-label"><span>Myanmar</span><span>~12%</span></div>
+      <div class="supply-bar"><div class="supply-bar-fill" style="width:12%"></div></div>
+    </div>
+    <div class="supply-bar-container">
+      <div class="supply-bar-label"><span>Peru</span><span>~8%</span></div>
+      <div class="supply-bar"><div class="supply-bar-fill" style="width:8%"></div></div>
+    </div>
+    <div class="supply-bar-container">
+      <div class="supply-bar-label"><span>DR Congo</span><span>~7%</span></div>
+      <div class="supply-bar"><div class="supply-bar-fill" style="width:7%"></div></div>
+    </div>
+    <div class="supply-bar-container">
+      <div class="supply-bar-label"><span>Rest of World</span><span>~25%</span></div>
+      <div class="supply-bar"><div class="supply-bar-fill" style="width:25%"></div></div>
+    </div>
+
+    <table class="data-table" style="margin-top:16px">
+      <thead>
+        <tr><th>End Use</th><th>Share</th><th>Application</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Solder</td><td>~48%</td><td>Electronics assembly, semiconductor packaging</td></tr>
+        <tr><td>Tinplate</td><td>~14%</td><td>Food cans, beverage containers, packaging</td></tr>
+        <tr><td>Chemicals</td><td>~14%</td><td>PVC stabilizers, catalysts, tin compounds</td></tr>
+        <tr><td>Lead-acid batteries</td><td>~6%</td><td>Tin-lead alloys for battery plates</td></tr>
+        <tr><td>Float glass</td><td>~5%</td><td>Molten tin bath for flat glass production</td></tr>
+        <tr><td>Other</td><td>~13%</td><td>Alloys (bronze, pewter), coatings</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  <!-- CURATED LINKS -->
+  <div class="card">
+    <div class="section-num">01</div>
+    <div class="section-title">Market Prices</div>
+    <ul class="link-list">
+      <li><a href="https://www.lme.com/Metals/Non-ferrous/Tin" target="_blank" rel="noopener">LME — Tin</a><div class="link-desc">Official London Metal Exchange tin prices and warehouse stocks</div></li>
+      <li><a href="https://tradingeconomics.com/commodity/tin" target="_blank" rel="noopener">Trading Economics — Tin</a><div class="link-desc">Tin price charts, forecasts, and historical data</div></li>
+      <li><a href="https://www.fastmarkets.com/metals-and-mining/tin/" target="_blank" rel="noopener">Fastmarkets — Tin</a><div class="link-desc">Refined tin and tin concentrate price assessments</div></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="section-num">02</div>
+    <div class="section-title">Top Producers</div>
+    <ul class="link-list">
+      <li><a href="https://www.yunnan-tin.com/" target="_blank" rel="noopener">Yunnan Tin (YTC)</a><div class="link-desc">China · World's largest tin producer, Gejiu mines in Yunnan province</div></li>
+      <li><a href="https://www.pt-timah.com/" target="_blank" rel="noopener">PT Timah</a><div class="link-desc">Indonesia · State-owned tin miner, Bangka and Belitung islands</div></li>
+      <li><a href="https://www.mfrm.es/en/" target="_blank" rel="noopener">Minsur</a><div class="link-desc">Peru · San Rafael mine — Latin America's largest tin producer</div></li>
+      <li><a href="https://www.alphaminresources.com/" target="_blank" rel="noopener">Alphamin Resources</a><div class="link-desc">DRC · Bisie mine — one of the world's highest-grade tin deposits</div></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="section-num">03</div>
+    <div class="section-title">Expert Analysis & News</div>
+    <ul class="link-list">
+      <li><a href="https://www.internationaltin.org/" target="_blank" rel="noopener">International Tin Association</a><div class="link-desc">Industry body: market data, sustainability initiatives, demand outlook</div></li>
+      <li><a href="https://www.mining.com/?s=tin" target="_blank" rel="noopener">Mining.com — Tin News</a><div class="link-desc">Latest tin mining developments, supply disruptions, and market updates</div></li>
+      <li><a href="https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-tin.pdf" target="_blank" rel="noopener">USGS — Tin Mineral Commodity Summary 2026</a><div class="link-desc">US government data: production, imports, prices, reserves</div></li>
+    </ul>
+  </div>
+
+
+  <footer class="footer">
+    <div class="footer-brand">GOT Commodities</div>
+    <div class="footer-disclaimer">
+      Data sourced from LME, International Tin Association, and USGS. Prices are indicative and may not reflect real-time trading. This page is for informational purposes only and does not constitute investment advice.<br>
+      <a href="https://www.gotcommodities.com">gotcommodities.com</a>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  var COMMODITY_ID = 'tin';
+  var DATA_URL = 'https://gotcommodities.github.io/got-homepage/data.json';
+
+  function updatePrice(){
+    fetch(DATA_URL, {cache:'no-cache'})
+      .then(function(r){ return r.json(); })
+      .then(function(data){
+        var item = null;
+        for(var i=0; i<data.desk.length; i++){
+          if(data.desk[i].id === COMMODITY_ID){ item = data.desk[i]; break; }
+        }
+        if(!item) return;
+
+        var heroEl = document.getElementById('live-price');
+        if(heroEl) heroEl.textContent = item.v + (item.u.charAt(0)==='/' ? item.u : ' ' + item.u);
+
+        var tagEl = document.getElementById('live-tag');
+        if(tagEl){
+          tagEl.textContent = item.tag;
+          var tagColors = {
+            'Strong':'var(--green)','Surging':'var(--magenta)','Firm':'var(--green)',
+            'Critical':'var(--red)','Restricted':'var(--magenta)','Crisis':'var(--red)',
+            'Weak':'var(--red)','Soft':'var(--amber)','Correcting':'var(--amber)',
+            'Volatile':'var(--amber)','Stabilising':'var(--cyan)'
+          };
+          tagEl.style.color = tagColors[item.tag] || 'var(--amber)';
+          tagEl.style.borderColor = tagColors[item.tag] || 'var(--amber)';
+        }
+
+        var mEl = document.getElementById('live-monthly');
+        if(mEl) mEl.textContent = item.m;
+
+        var dayEl = document.getElementById('live-day');
+        if(dayEl && item.day !== null){
+          var sign = item.day >= 0 ? '+' : '';
+          dayEl.textContent = sign + item.day + '%%';
+          dayEl.style.color = item.day >= 0 ? 'var(--green)' : 'var(--red)';
+        } else if(dayEl && item.day === null){
+          dayEl.textContent = '—';
+          dayEl.style.color = 'var(--dim)';
+        }
+
+        var srcEl = document.getElementById('live-source');
+        if(srcEl) srcEl.textContent = 'Source: ' + item.src + ' · via GOT Daily Desk';
+
+        var dateEl = document.getElementById('live-date');
+        if(dateEl && data.edition) dateEl.textContent = data.edition.sessionCovered || data.edition.date;
+      })
+      .catch(function(e){ console.log('GOT live price fetch error:', e); });
+  }
+
+  updatePrice();
+  setInterval(updatePrice, 1800000);
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Helium | GOT Commodities</title>
+<meta name="description" content="Live helium market tracking. A non-renewable resource critical for MRI machines, semiconductor fabs, NASA, and quantum computing. US Federal Helium Reserve depletion is reshaping global supply.">
+<meta name="keywords" content="helium price, helium shortage, helium supply, MRI helium, semiconductor helium, NASA helium, helium reserve, Air Products helium, GOT Commodities">
+<meta property="og:title" content="Helium Terminal | GOT Commodities">
+<meta property="og:description" content="Live helium market tracking and high-tech supply chain intelligence.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.gotcommodities.com/helium">
+<meta name="twitter:card" content="summary_large_image">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--amber:#FFB800;--red:#FF3B3B;--green:#00E676;--cyan:#00E5FF;--magenta:#FF00E5;--dim:#5A5A6A;--bg:#0A0A0F;--card:#111118;--border:#1E1E2A}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'JetBrains Mono','Fira Code','Courier New',monospace;background:var(--bg);color:#E0E0E0;line-height:1.6;min-height:100vh}
+.container{max-width:900px;margin:0 auto;padding:16px}
+.header{border-bottom:1px solid var(--border);padding:20px 0;margin-bottom:24px}
+.header-top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.brand{font-size:11px;color:var(--dim);letter-spacing:2px;text-transform:uppercase}
+.brand a{color:var(--amber);text-decoration:none}.brand a:hover{text-decoration:underline}
+.live-tag{display:inline-flex;align-items:center;gap:6px;font-size:10px;color:var(--green);letter-spacing:1px;text-transform:uppercase}
+.live-dot{width:6px;height:6px;background:var(--green);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.commodity-title{font-size:32px;font-weight:700;color:var(--amber);margin-top:12px;line-height:1.2}
+.commodity-subtitle{font-size:13px;color:var(--dim);margin-top:4px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:20px;margin-bottom:16px}
+.card-header{font-size:11px;color:var(--amber);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+.data-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px}
+.data-label{font-size:10px;color:var(--dim);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
+.data-value{font-size:20px;font-weight:600;color:#FFF}.data-value.amber{color:var(--amber)}
+.data-note{font-size:11px;color:var(--dim);margin-top:2px}
+.supply-bar-container{margin-bottom:12px}
+.supply-bar-label{display:flex;justify-content:space-between;font-size:12px;margin-bottom:4px}
+.supply-bar-label span:first-child{color:#E0E0E0}.supply-bar-label span:last-child{color:var(--amber)}
+.supply-bar{height:8px;background:var(--border);border-radius:4px;overflow:hidden}
+.supply-bar-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--amber),var(--red))}
+.section-num{font-size:28px;font-weight:700;color:var(--border);margin-bottom:4px}
+.section-title{font-size:16px;font-weight:600;color:var(--amber);margin-bottom:12px}
+.link-list{list-style:none}.link-list li{padding:8px 0;border-bottom:1px solid var(--border)}.link-list li:last-child{border-bottom:none}
+.link-list a{color:var(--cyan);text-decoration:none;font-size:13px}.link-list a:hover{text-decoration:underline}
+.link-desc{font-size:11px;color:var(--dim);margin-top:2px}
+.prose{font-size:13px;color:#C0C0C0;line-height:1.8}.prose p{margin-bottom:12px}.prose strong{color:#FFF}
+.tag{display:inline-block;padding:2px 8px;border-radius:3px;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase}
+.tag-critical{background:rgba(255,59,59,.15);color:var(--red);border:1px solid var(--red)}
+.proxy-tag{display:inline-block;padding:1px 6px;border-radius:3px;font-size:9px;font-weight:600;letter-spacing:1px;color:var(--amber);border:1px solid var(--amber);margin-left:8px}
+.widget-wrapper{margin-bottom:16px;border-radius:6px;overflow:hidden}
+.data-table{width:100%;border-collapse:collapse;font-size:12px}
+.data-table th{text-align:left;padding:8px;border-bottom:1px solid var(--amber);color:var(--amber);font-size:10px;letter-spacing:1px;text-transform:uppercase}
+.data-table td{padding:8px;border-bottom:1px solid var(--border);color:#C0C0C0}
+.footer{border-top:1px solid var(--border);padding:20px 0;margin-top:24px;text-align:center}
+.footer-brand{font-size:12px;color:var(--amber);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}
+.footer-disclaimer{font-size:10px;color:var(--dim);max-width:600px;margin:0 auto;line-height:1.6}
+.footer a{color:var(--cyan);text-decoration:none}.footer a:hover{text-decoration:underline}
+@media(max-width:600px){.commodity-title{font-size:24px}.data-value{font-size:16px}.data-grid{grid-template-columns:1fr 1fr}}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["WebPage", "Article"],
+  "name": "Helium Terminal — Live Market Tracker & High-Tech Supply Analysis",
+  "headline": "Helium Terminal: Market Tracking with MRI, Semiconductor & Space Industry Supply Analysis",
+  "description": "Live helium market tracking. A non-renewable resource critical for MRI machines, semiconductor fabs, NASA, and quantum computing. US Federal Helium Reserve depletion is reshaping global supply.",
+  "url": "https://www.gotcommodities.com/helium",
+  "keywords": "helium price, helium shortage, helium supply, MRI helium, semiconductor helium, NASA helium, helium reserve, Air Products helium, GOT Commodities",
+  "inLanguage": "en",
+  "isAccessibleForFree": true,
+  "dateModified": "2026-11-04",
+  "about": {
+    "@type": "Thing",
+    "name": "Helium",
+    "sameAs": "https://www.wikidata.org/wiki/Q560"
+  },
+  "mentions": [
+    {
+      "@type": "Place",
+      "name": "Qatar",
+      "sameAs": "https://www.wikidata.org/wiki/Q846"
+    },
+    {
+      "@type": "Organization",
+      "name": "Air Products",
+      "sameAs": "https://www.wikidata.org/wiki/Q467349"
+    },
+    {
+      "@type": "Thing",
+      "name": "Magnetic resonance imaging",
+      "sameAs": "https://www.wikidata.org/wiki/Q161238"
+    }
+  ],
+  "author": {
+    "@type": "Organization",
+    "name": "GOT Commodities",
+    "url": "https://www.gotcommodities.com",
+    "logo": "https://www.gotcommodities.com/favicon.ico"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "GOT Commodities",
+    "url": "https://www.gotcommodities.com"
+  },
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [".header h1", ".header .subtitle", ".section:first-of-type p"]
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.gotcommodities.com/helium"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why is helium considered irreplaceable?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Helium has the lowest boiling point of any element (-269°C / 4.2K), making it the only gas capable of cooling MRI superconducting magnets and other cryogenic equipment. It is chemically inert, non-toxic, and non-flammable, making it essential for semiconductor cleanroom purging and rocket fuel system pressurization. No other gas or technology can substitute for these applications."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the world running out of helium?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Helium is non-renewable — it comes from radioactive decay trapped in natural gas reservoirs and escapes into space once released. The US Federal Helium Reserve is largely depleted. However, new sources in Qatar, Algeria, Tanzania, and Russia are being developed. The concern is not immediate depletion but rather structural supply fragility — plant outages cause shortages because there are few major production sites and no strategic buffer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What caused the recent helium shortages?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The helium market has experienced four major shortages since 2006 (dubbed Helium 1.0 through 4.0). The latest was triggered by the Russia-Ukraine war (Gazprom's Amur plant delayed), Qatar plant maintenance, and BLM reserve auctions ending. Each shortage disrupted MRI manufacturing, semiconductor production, and research laboratories. The small number of major production sites makes the market vulnerable to any single plant outage."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="container">
+
+  <header class="header">
+    <div class="header-top">
+      <div class="brand"><a href="https://www.gotcommodities.com">GOT Commodities</a> · Intelligence Terminal</div>
+      <div class="live-tag"><span class="live-dot"></span> LIVE</div>
+    </div>
+    <h1 class="commodity-title">Helium</h1>
+    <div class="commodity-subtitle">He Grade A / Crude · The Irreplaceable Gas</div>
+
+    <div class="price-hero-block" style="margin:20px 0 4px;">
+      <div id="live-price" style="font-size:2.5rem;color:#FFF;font-weight:700;">Loading...</div>
+      <div style="display:flex;align-items:center;justify-content:center;gap:12px;margin-top:4px;">
+        <span id="live-tag" style="font-size:.7rem;padding:2px 8px;border:1px solid var(--amber);border-radius:3px;color:var(--amber);text-transform:uppercase;letter-spacing:1px;">—</span>
+        <span id="live-day" style="font-size:.9rem;font-weight:600;color:var(--dim);">—</span>
+        <span id="live-monthly" style="font-size:.75rem;color:var(--dim);">—</span>
+      </div>
+      <div id="live-source" style="font-size:.65rem;color:var(--dim);margin-top:8px;">Loading from GOT Daily Desk...</div>
+      <div id="live-date" style="font-size:.6rem;color:var(--dim);margin-top:2px;">—</div>
+    </div>
+  </header>
+
+  <!-- TRADINGVIEW WIDGET -->
+  <div class="card">
+    <div class="card-header">Live Price Indicator <span class="proxy-tag">PROXY</span></div>
+    <div class="widget-wrapper">
+      <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+        {"symbol":"NYSE:APD","width":"100%","height":"360","locale":"en","dateRange":"12M","colorTheme":"dark","isTransparent":true,"autosize":false,"largeChartUrl":""}
+        </script>
+      </div>
+    </div>
+    <div class="link-desc">Air Products and Chemicals (NYSE: APD) — world's largest helium supplier, operating plants and distribution networks across the globe</div>
+  </div>
+
+  <!-- KEY DATA -->
+  <div class="card">
+    <div class="card-header">Key Data</div>
+    <div class="data-grid">
+      <div class="data-item">
+        <div class="data-label">Grade A (Bulk)</div>
+        <div class="data-value amber">~$390/Mcf</div>
+        <div class="data-note">Thousand cubic feet, record highs</div>
+      </div>
+      <div class="data-item">
+        <div class="data-label">Bulk Liquid</div>
+        <div class="data-value">~$102k/MT</div>
+        <div class="data-note">Regional pricing, US delivery</div>
+      </div>
+      <div class="data-item">
+        <div class="data-label">Status</div>
+        <div class="data-value"><span class="tag tag-critical">CRITICAL</span></div>
+        <div class="data-note">Iran-Qatar disruptions 2026</div>
+      </div>
+      <div class="data-item">
+        <div class="data-label">Global Production</div>
+        <div class="data-value">~180 Mm³/yr</div>
+        <div class="data-note">Million cubic metres (2024 est.)</div>
+      </div>
+      <div class="data-item">
+        <div class="data-label">US + Qatar Share</div>
+        <div class="data-value">~81%</div>
+        <div class="data-note">Extreme concentration risk</div>
+      </div>
+      <div class="data-item">
+        <div class="data-label">Non-Substitutable</div>
+        <div class="data-value">Yes</div>
+        <div class="data-note">MRI, semicon, rockets — no alternative</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHY IT MATTERS -->
+  <div class="card">
+    <div class="card-header">Why Helium Matters</div>
+    <div class="prose">
+      <p>Helium is the <strong>only commodity on Earth that is truly non-renewable and non-substitutable</strong> for its critical applications. Once released into the atmosphere, helium is too light to be recaptured — it escapes into space. There is no synthetic way to produce it economically; commercial helium comes from radioactive decay trapped in natural gas reservoirs over millions of years. And for its most important uses — cooling MRI superconducting magnets, purging semiconductor fabrication cleanrooms, testing rocket engines, and enabling quantum computing — there is no alternative gas or technology.</p>
+      <p>The <strong>US Federal Helium Reserve</strong> near Amarillo, Texas, once held the world's largest helium stockpile (over 30 billion cubic feet at peak). After decades of sales mandated by the Helium Privatization Act of 1996, the reserve is now largely depleted, and the Bureau of Land Management completed its divestiture. This has shifted supply toward private producers and new international sources. <strong>Qatar</strong> (RasGas/QatarEnergy) is now the world's largest helium supplier, followed by Algeria, Russia, and the US.</p>
+      <p>The helium market has experienced <strong>four major shortages since 2006</strong> (Helium 1.0 through 4.0), each caused by plant outages or geopolitical disruptions. The latest shortage was triggered by the Russia-Ukraine war (Gazprom's Amur plant offline) and Qatar plant maintenance. Demand growth from <strong>semiconductor fabrication, space launch cadence, and MRI installations</strong> in developing countries is running ahead of new supply capacity. The planned Amur Gas Processing Plant in Russia and new LNG-linked helium plants in Qatar are the only major capacity additions, making the market structurally vulnerable to outages.</p>
+    </div>
+  </div>
+
+  <!-- SUPPLY CHAIN -->
+  <div class="card">
+    <div class="card-header">Production Concentration</div>
+    <div class="supply-bar-container">
+      <div class="supply-bar-label"><span>Qatar</span><span>~28%</span></div>
+      <div class="supply-bar"><div class="supply-bar-fill" style="width:28%"></div></div>
+    </div>
+    <div class="supply-bar-container">
+      <div class="supply-bar-label"><span>United States</span><span>~27%</span></div>
+      <div class="supply-bar"><div class="supply-bar-fill" style="width:27%"></div></div>
+    </div>
+    <div class="supply-bar-container">
+      <div class="supply-bar-label"><span>Algeria</span><span>~14%</span></div>
+      <div class="supply-bar"><div class="supply-bar-fill" style="width:14%"></div></div>
+    </div>
+    <div class="supply-bar-container">
+      <div class="supply-bar-label"><span>Australia</span><span>~9%</span></div>
+      <div class="supply-bar"><div class="supply-bar-fill" style="width:9%"></div></div>
+    </div>
+    <div class="supply-bar-container">
+      <div class="supply-bar-label"><span>Russia</span><span>~8%</span></div>
+      <div class="supply-bar"><div class="supply-bar-fill" style="width:8%"></div></div>
+    </div>
+    <div class="supply-bar-container">
+      <div class="supply-bar-label"><span>Rest of World</span><span>~14%</span></div>
+      <div class="supply-bar"><div class="supply-bar-fill" style="width:14%"></div></div>
+    </div>
+
+    <table class="data-table" style="margin-top:16px">
+      <thead>
+        <tr><th>End Use</th><th>Share</th><th>Application</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Cryogenics / MRI</td><td>~30%</td><td>Superconducting magnet cooling (liquid He)</td></tr>
+        <tr><td>Semiconductor fab</td><td>~16%</td><td>Cleanroom purging, wafer cooling, carrier gas</td></tr>
+        <tr><td>Welding / shielding</td><td>~14%</td><td>TIG/MIG welding, inert atmosphere</td></tr>
+        <tr><td>Pressurizing / purging</td><td>~12%</td><td>Rocket fuel systems (NASA, SpaceX, ULA)</td></tr>
+        <tr><td>Leak detection</td><td>~10%</td><td>Industrial and aerospace He leak testing</td></tr>
+        <tr><td>Breathing / diving</td><td>~6%</td><td>Deep-sea diving gas mixtures (heliox)</td></tr>
+        <tr><td>Other</td><td>~12%</td><td>Balloons, fiber optics, NMR spectroscopy</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  <!-- CURATED LINKS -->
+  <div class="card">
+    <div class="section-num">01</div>
+    <div class="section-title">Market & Pricing</div>
+    <ul class="link-list">
+      <li><a href="https://www.gasworld.com/helium" target="_blank" rel="noopener">gasworld — Helium</a><div class="link-desc">Helium market reports, pricing trends, and supply outlook</div></li>
+      <li><a href="https://www.kornbluthheliumconsulting.com/" target="_blank" rel="noopener">Kornbluth Helium Consulting</a><div class="link-desc">Independent helium market analysis and supply-demand forecasts</div></li>
+      <li><a href="https://tradingeconomics.com/commodity/helium" target="_blank" rel="noopener">Trading Economics — Helium</a><div class="link-desc">Helium price charts and market data</div></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="section-num">02</div>
+    <div class="section-title">Top Suppliers</div>
+    <ul class="link-list">
+      <li><a href="https://www.airproducts.com/" target="_blank" rel="noopener">Air Products (APD)</a><div class="link-desc">USA · World's largest helium supplier, global distribution network</div></li>
+      <li><a href="https://www.linde.com/" target="_blank" rel="noopener">Linde plc</a><div class="link-desc">Global · Major helium producer and distributor (ex-Praxair)</div></li>
+      <li><a href="https://www.qatarenergy.qa/" target="_blank" rel="noopener">QatarEnergy</a><div class="link-desc">Qatar · World's largest single-source helium producer (RasGas)</div></li>
+      <li><a href="https://www.airgas.com/" target="_blank" rel="noopener">Air Liquide / Airgas</a><div class="link-desc">France · Major helium distributor serving healthcare and tech sectors</div></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="section-num">03</div>
+    <div class="section-title">Expert Analysis & News</div>
+    <ul class="link-list">
+      <li><a href="https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-helium.pdf" target="_blank" rel="noopener">USGS — Helium Mineral Commodity Summary 2026</a><div class="link-desc">US government data on helium production, consumption, and reserves</div></li>
+      <li><a href="https://www.gasworld.com/helium-shortage" target="_blank" rel="noopener">gasworld — Helium Shortage Tracker</a><div class="link-desc">Timeline and analysis of Helium 1.0-4.0 supply disruptions</div></li>
+    </ul>
+  </div>
+
+
+  <footer class="footer">
+    <div class="footer-brand">GOT Commodities</div>
+    <div class="footer-disclaimer">
+      Data sourced from USGS, gasworld, Air Products, and Kornbluth Helium Consulting. Prices are indicative and may not reflect real-time trading. This page is for informational purposes only and does not constitute investment advice.<br>
+      <a href="https://www.gotcommodities.com">gotcommodities.com</a>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  var COMMODITY_ID = 'helium';
+  var DATA_URL = 'https://gotcommodities.github.io/got-homepage/data.json';
+
+  function updatePrice(){
+    fetch(DATA_URL, {cache:'no-cache'})
+      .then(function(r){ return r.json(); })
+      .then(function(data){
+        var item = null;
+        for(var i=0; i<data.desk.length; i++){
+          if(data.desk[i].id === COMMODITY_ID){ item = data.desk[i]; break; }
+        }
+        if(!item) return;
+
+        var heroEl = document.getElementById('live-price');
+        if(heroEl) heroEl.textContent = item.v + (item.u.charAt(0)==='/' ? item.u : ' ' + item.u);
+
+        var tagEl = document.getElementById('live-tag');
+        if(tagEl){
+          tagEl.textContent = item.tag;
+          var tagColors = {
+            'Strong':'var(--green)','Surging':'var(--magenta)','Firm':'var(--green)',
+            'Critical':'var(--red)','Restricted':'var(--magenta)','Crisis':'var(--red)',
+            'Weak':'var(--red)','Soft':'var(--amber)','Correcting':'var(--amber)',
+            'Volatile':'var(--amber)','Stabilising':'var(--cyan)'
+          };
+          tagEl.style.color = tagColors[item.tag] || 'var(--amber)';
+          tagEl.style.borderColor = tagColors[item.tag] || 'var(--amber)';
+        }
+
+        var mEl = document.getElementById('live-monthly');
+        if(mEl) mEl.textContent = item.m;
+
+        var dayEl = document.getElementById('live-day');
+        if(dayEl && item.day !== null){
+          var sign = item.day >= 0 ? '+' : '';
+          dayEl.textContent = sign + item.day + '%%';
+          dayEl.style.color = item.day >= 0 ? 'var(--green)' : 'var(--red)';
+        } else if(dayEl && item.day === null){
+          dayEl.textContent = '—';
+          dayEl.style.color = 'var(--dim)';
+        }
+
+        var srcEl = document.getElementById('live-source');
+        if(srcEl) srcEl.textContent = 'Source: ' + item.src + ' · via GOT Daily Desk';
+
+        var dateEl = document.getElementById('live-date');
+        if(dateEl && data.edition) dateEl.textContent = data.edition.sessionCovered || data.edition.date;
+      })
+      .catch(function(e){ console.log('GOT live price fetch error:', e); });
+  }
+
+  updatePrice();
+  setInterval(updatePrice, 1800000);
+})();
+</script>
+
+</body>
+</html>
