@@ -1,47 +1,47 @@
 {
   "edition": {
-    "date": "Saturday, November 21, 2026",
-    "statusDate": "SAT 21 NOV 2026 · 07:30 IST",
-    "sessionCovered": "Fri, Nov 20 close (Brent $90.33 -1.8% · gold $3,560 10th decline — 14-month low · BTC ~$58,200 crash -8.8% · Nasdaq enters correction · silver -6.6% · Fed 99% · tanker hit in Hormuz · Nov 27 deadline 6 days · G20 starts)",
+    "date": "Monday, November 23, 2026",
+    "statusDate": "MON 23 NOV 2026 · 07:30 IST",
+    "sessionCovered": "Fri, Nov 20 close + weekend (corrected: Brent $92.57 +0.65% late reversal · gold $3,532 10th decline — 14-month low · BTC weekend recovery ~$60,900 · Black Sea: 6 vessels struck, 2 sunk · Nov 27 deadline 4 days · VIX 7-month high · 10Y 4.95%)",
     "fomc": "Next: 9–10 Dec (25bp hike ~99%; multiple Fed officials flagged urgency; Waller suggested large hike may be needed; labour data the swing factor for 50bp)",
-    "stripNote": "Sat 21 Nov. Friday's session was dominated by one of the year's sharpest risk-off sell-offs. The Dow and S&P 500 entered correction territory; the Nasdaq plunged into its third correction of 2026, wiping out its gains for the year. AI stocks led the decline despite Anthropic's (ANT) strong Thursday debut. Gold fell for a tenth consecutive session to $3,560, a 14-month low, as Fed rate-hike odds hit 99% and the dollar surged. Silver crashed 6.6% to $41.50. Brent crude slid 1.8% to $90.33; WTI fell to $81.50 — oil heading for a third straight weekly decline as Middle East exports recover despite continued Hormuz attacks. A tanker was hit by a projectile in the Strait on Friday, the seventh strike in a week — JMIC rates the threat as severe. Combined traffic 65% below pre-conflict levels. Copper dropped 2.5% to $5.47/lb; platinum fell 3.9% to $1,295; palladium dropped 2.3% to $895. Coal held at $150. Bitcoin plunged below $60,000 to ~$58,200, down 8.8%; Ethereum crashed to $1,597. Corn hit a 4-month low at 434½¢; wheat dipped to 574¼¢; soybeans rose 1.1% to 1,220¾¢. Cocoa rebounded 2.4% to $5,294. LME base metals weaker: nickel ~$15,400, zinc ~$3,490, tin ~$42,050. November 27 gallium/germanium/antimony deadline now 6 days away — no extension announced. G20 summit in Rio de Janeiro this weekend.",
-    "scoreboardCaption": "Fri 20 Nov close (exchange-traded commodities). Ranked best to worst.",
-    "commodleHint": "AI-driven algorithmic trading triggered _____ selling across equities, gold and crypto on Friday as the Nasdaq entered its third correction of 2026 and the Dow joined the S&P 500 in correction territory",
-    "commodleAnswer": "PANIC"
+    "stripNote": "Mon 23 Nov. Friday's session featured a dramatic late reversal in crude oil — Brent surged in the final hour on renewed Iran escalation concerns, settling at $92.57 per barrel (+0.65%) after trading as low as $89.80; WTI settled at $83.98. The previous edition captured prices before this reversal. Gold fell for a tenth consecutive session to $3,532, a 14-month low, as Fed rate-hike odds for December held at 99% and the dollar held near 19-month highs. Silver declined 4.1% to $41.50. The equity correction deepened — the VIX reached a 7-month high; Anthropic (ANT) fell 9% to $88.30 in its second session. The 10-year Treasury yield fell to 4.95% on flight-to-safety buying. Copper fell to $5.52/lb ($12,160/t LME); platinum $1,295; palladium $895. Coal held at $150. Over the weekend, Bitcoin staged a sharp recovery from $58,200 to approximately $60,900 after hitting a low near $55,640 on Saturday; Ethereum recovered to $1,718. Ukrainian naval drones struck six commercial vessels in the Black Sea, sinking two — a major maritime escalation alongside the ongoing Hormuz threat (JMIC threat: severe; traffic 65% below pre-conflict levels). The November 27 gallium/germanium/antimony deadline is now 4 days away — the G20 Finance Ministers meeting in Atlanta ended without consensus on critical minerals, leaving no major diplomatic venue before the deadline. LME base metals: nickel $15,310, zinc $3,503, tin $41,160. Corn at 4-month low 434½¢; wheat 574¼¢; soybeans 1,220¾¢. LNG JKM rose to $30/MMBtu.",
+    "scoreboardCaption": "Fri 20 Nov close; crypto as of Sun 22 Nov. Ranked best to worst.",
+    "commodleHint": "Brent _____ was the standout on Friday, reversing sharply higher in the final hour to settle at $92.57 per barrel as Iran escalation concerns trumped recovering Middle East export flows",
+    "commodleAnswer": "CRUDE"
   },
   "overview": [
-    "Friday's session saw one of the year's sharpest risk-off sell-offs sweep across global markets. The Dow and S&P 500 entered correction territory while the Nasdaq plunged into its third correction of 2026, wiping out its gains for the year — a brutal semiconductor sell-off led by AMD and Micron dragged AI stocks lower despite Anthropic's (ANT) strong Thursday debut. Gold fell for a tenth consecutive session to approximately $3,560 per ounce, a 14-month low, as Fed rate-hike odds for December hit 99% and the dollar surged to its strongest level in 19 months. Silver crashed 6.6% to $41.50. Brent crude slid 1.8% to $90.33 per barrel despite a fresh tanker attack in the Strait of Hormuz — recovering Middle East export flows offset the geopolitical premium, pushing oil toward its third straight weekly decline. WTI fell to $81.50. Copper dropped 2.5% to $5.47 per pound. Platinum fell 3.9% to $1,295; palladium dropped 2.3% to $895. Newcastle coal held at $150. Corn hit a 4-month low at 434½ cents; wheat dipped to 574¼ cents; soybeans bucked the trend, rising 1.1% to 1,220¾ cents as bargain buying emerged.",
-    "Bitcoin plunged below $60,000 to approximately $58,200, falling 8.8% as the equity rout spread to crypto. Ethereum crashed 11.4% to $1,597; spot Bitcoin ETF outflows have now exceeded $2.5 billion in 2026. The Strait of Hormuz saw its most active week of attacks since mid-October — a tanker was hit by a projectile near Khasab, Oman on Friday, the seventh strike in the region in a week. Combined Hormuz traffic stands at about 65% below pre-conflict levels. JMIC rates the threat as severe with further deliberate attacks highly likely. Despite the sustained attacks, oil prices were heading for a third straight weekly decline as Middle East crude exports returned toward pre-war levels. Cocoa rebounded 2.4% to $5,294 on West African supply concerns. LME base metals were broadly weaker: nickel fell to approximately $15,400, zinc dropped to $3,490, and tin declined to $42,050. The November 27 deadline for China's export-control suspension on gallium, germanium and antimony is now 6 days away with no extension announced — the G20 summit in Rio de Janeiro this weekend provides a last venue for bilateral discussions before the deadline."
+    "Friday's session featured dramatic late reversals that the previous edition's prices did not fully capture. Brent crude surged in the final hour on renewed Iran escalation concerns, settling at $92.57 per barrel — up 0.65% — after trading as low as $89.80 intraday. WTI settled at $83.98. The oil reversal was the standout exception in an otherwise brutal risk-off session. Gold fell for a tenth consecutive session to approximately $3,532 per ounce, a 14-month low, as Fed rate-hike odds for December held at 99% and the dollar remained near 19-month highs. Silver declined 4.1% to $41.50. The equity correction deepened: the Dow and S&P 500 remained in correction territory, the Nasdaq sat in its third correction of 2026, and the VIX reached a 7-month high. Anthropic (ANT) fell 9% to $88.30 in its second trading session. The 10-year Treasury yield fell to 4.95% as flight-to-safety bond buying offset rate-hike expectations. Copper fell 2.9% to $5.52 per pound ($12,160 per tonne LME). Platinum declined 3.4% to $1,295; palladium fell 2.1% to $895. Newcastle coal held at $150. Corn remained at a 4-month low of 434½ cents; wheat at 574¼ cents; soybeans at 1,220¾ cents.",
+    "Over the weekend, Bitcoin staged a sharp recovery from Friday's crash — rebounding from an intraday low near $55,640 on Saturday to approximately $60,900 by Sunday evening, up roughly 2% over the latest 24 hours. Ethereum recovered to $1,718 from $1,597. In the Black Sea, Ukrainian naval drones struck six commercial vessels over the weekend in one of the most significant maritime escalations of 2026, sinking two and disrupting grain and oil export routes from Russian and Ukrainian ports. Combined with continued Hormuz attacks — where JMIC rates the threat as severe and traffic remains 65% below pre-conflict levels — global maritime trade now faces a dual-theatre shipping threat. The November 27 deadline for China's export-control suspension on gallium, germanium and antimony is now 4 days away with no extension announced. The G20 Finance Ministers meeting in Atlanta (October 31–November 1) ended without consensus on critical minerals, leaving no major diplomatic venue before the deadline. LME base metals were weaker on Friday: nickel settled at $15,310 per tonne, zinc at $3,503, and tin at $41,160. LNG JKM rose to $30 per MMBtu as winter demand supports. Cocoa held at $5,294 on West African supply concerns. Lithium carbonate stabilised near ¥90,000 per tonne in China."
   ],
   "watchItems": [
     {
-      "title": "November 27 gallium, germanium and antimony deadline now 6 days away — no extension announced",
-      "text": "The November 27 deadline for China's US-specific export-control suspension on gallium, germanium and antimony is now 6 days away. Neither the trilateral summit nor any subsequent diplomatic channel has produced progress on critical minerals. China produces approximately 99% of global gallium, 60–80% of germanium, and close to half of mined antimony. Gallium holds near $2,100 per kilogram outside China versus approximately $460 domestically — a roughly 4.5x premium. The G20 summit in Rio de Janeiro this weekend provides a final major diplomatic venue for bilateral discussions. If the bans resume next week, Western semiconductor and defence supply chains face renewed disruption. Alcoa's Wagerup gallium refinery has taken FID but is not yet producing."
+      "title": "November 27 gallium, germanium and antimony deadline now 4 days away — no extension announced",
+      "text": "The November 27 deadline for China's US-specific export-control suspension on gallium, germanium and antimony is now 4 days away. The G20 Finance Ministers meeting in Atlanta (October 31–November 1) ended without consensus on critical minerals, leaving no major diplomatic venue before the deadline. China produces approximately 99% of global gallium, 60–80% of germanium, and close to half of mined antimony. Gallium holds near $2,100 per kilogram outside China versus approximately $460 domestically — a roughly 4.5x premium. Alcoa's Wagerup gallium refinery has taken FID but is not yet producing. If the bans resume on Thursday, Western semiconductor and defence supply chains face renewed disruption."
     },
     {
-      "title": "G20 summit in Rio de Janeiro — last major diplomatic venue before November 27 deadline",
-      "text": "The G20 summit convenes in Rio de Janeiro this weekend (November 21–22), providing a critical venue for bilateral sidelines on Hormuz, trade policy and critical minerals. The trilateral summit in Shenzhen earlier this week produced a symbolic peace declaration but no concrete deliverables. With the November 27 gallium deadline 6 days away, any progress at the G20 on critical minerals could shift the trajectory. On Hormuz, the gap between recovering Middle East export flows and surging tanker attacks presents a complex diplomatic challenge. Any Hormuz ceasefire framework would have immediate implications for energy, sulfur and helium markets."
+      "title": "Dual maritime threat — Black Sea drone strikes sink 2 vessels; Hormuz attacks continue; global shipping under pressure",
+      "text": "Ukrainian naval drones struck six commercial vessels in the Black Sea over the weekend, sinking two in one of the most significant maritime escalations of 2026. Grain and oil export routes from Russian and Ukrainian ports are disrupted. Combined with the Strait of Hormuz threat — where a tanker was hit on Friday (the seventh strike in a week), JMIC rates the threat as severe, and traffic remains 65% below pre-conflict levels — global maritime trade now faces a dual-theatre shipping threat. The Hormuz paradox persists: despite surging attacks, Middle East crude exports have returned toward pre-war levels. The Black Sea disruption has more direct implications for grain exports — Russia and Ukraine together account for roughly 25% of global wheat exports."
     },
     {
-      "title": "Hormuz escalation — most active week since mid-October; 7 strikes on 6 vessels; traffic 65% below pre-conflict",
-      "text": "The Strait of Hormuz saw its most active week of attacks since mid-October. A tanker was hit by a projectile near Khasab, Oman on Friday — the seventh strike in the region in a week according to Orbital Risk Intelligence. Four tankers were hit within 13 nautical miles of Khasab over three days, with two seafarers missing and 13 injured. Combined Hormuz traffic is about 65% below pre-conflict levels. JMIC rates the threat as severe. The paradox is that oil prices are falling despite the attacks — Middle East crude exports have returned toward pre-war levels, suggesting the southern corridor is functioning despite the operational risks. The US is widening its blockade of Iranian ship-to-ship oil transfers."
+      "title": "Oil reverses on Friday — Brent settles at $92.57 as Iran concerns trump recovering Middle East exports",
+      "text": "Brent crude reversed sharply higher in the final hour of Friday's session, settling at $92.57 per barrel — up 0.65% — after trading as low as $89.80. The previous edition captured prices before this reversal. Reports of renewed Iranian military activity near the Strait triggered late buying. WTI settled at $83.98. The reversal underscores the fragility of the oil price: recovering Middle East export flows have been pushing prices lower, but any escalation signal can reverse the trend instantly. Combined with the Black Sea maritime disruption over the weekend, the energy supply picture is becoming more complex heading into the November 27 deadline."
     },
     {
-      "title": "Market correction deepens — Dow, S&P enter correction; Nasdaq's third of 2026; crypto below $60K",
-      "text": "Friday's sell-off pushed the Dow and S&P 500 into correction territory for the first time since the onset of the Hormuz crisis, while the Nasdaq entered its third correction of 2026. AI stocks led the decline despite Anthropic's strong Thursday IPO debut. Gold's tenth consecutive daily decline and Bitcoin's plunge below $60,000 suggest the risk-off positioning is broadening beyond equities. Fed rate-hike odds at 99% for December, the dollar at 19-month highs and Treasury yields near 5.10% are creating a hostile environment for all risk assets. The key question is whether the G20 summit or any shift in the Fed narrative can arrest the sell-off before it deepens further."
+      "title": "Bitcoin stages weekend recovery — rebounds from $55,640 low to $60,900 as dip buyers emerge",
+      "text": "Bitcoin staged a sharp weekend recovery from Friday's 8.8% crash, bouncing from an intraday low near $55,640 on Saturday to approximately $60,900 by Sunday evening. Ethereum recovered from $1,597 to $1,718. The recovery came as dip buyers emerged across crypto markets. However, the Fear and Greed Index remains in Extreme Fear territory. Spot Bitcoin ETF outflows have exceeded $2.5 billion in 2026. The key question is whether the recovery holds into Monday's trading session, with equities still in correction territory, the VIX at a 7-month high, and December rate-hike odds at 99%. A sustained reclaim of $60,000 would signal the worst of the crypto sell-off may have passed."
     }
   ],
   "desk": [
     {
       "id": "gold",
       "name": "Gold",
-      "v": "$3,560",
+      "v": "$3,532",
       "u": "/oz",
-      "day": -2.41,
-      "m": "10th consecutive decline · 14-month low · down ~8% on the week — worst in 8 months · 10Y yield ~5.10% · dollar at 19-month high · Dec hike odds 99%",
+      "day": -2.50,
+      "m": "10th consecutive decline · 14-month low · down ~8% on the week — worst in 8 months · 10Y yield fell to 4.95% · dollar at 19-month high · Dec hike odds 99%",
       "tag": "Weak",
-      "sum": "Gold fell for a tenth consecutive session on Friday, dropping approximately 2.4% to $3,560 per ounce — a 14-month low and the longest losing streak in over a year. The relentless selling accelerated as CME FedWatch showed December rate-hike odds hitting 99%, the dollar surged to its strongest level in 19 months, and the 10-year Treasury yield pushed toward 5.10%. The intraday low of $3,513 marks the weakest level since September 2025. The sell-off is part of a broader risk-off liquidation that sent the Dow and S&P 500 into correction territory. Gold is down approximately 8% on the week — its worst weekly performance in eight months. Key support at $3,500.",
-      "src": "Kitco · Trading Economics · FinanceFeeds",
+      "sum": "Gold fell for a tenth consecutive session on Friday, dropping approximately 2.5% to $3,532 per ounce — a 14-month low and the longest losing streak in over a year. The relentless selling continued as CME FedWatch showed December rate-hike odds at 99% and the dollar held near its strongest level in 19 months. The 10-year Treasury yield fell to 4.95% as flight-to-safety bond buying emerged amid the equity correction, though that was insufficient to support gold against the dominant rate-hike narrative. The sell-off is part of a broader risk-off liquidation that has pushed the Dow and S&P 500 into correction territory. Gold is down approximately 8% on the week — its worst weekly performance in eight months. Key support at $3,500.",
+      "src": "ABC News · Trading Economics · Kitco",
       "srcUrl": "https://www.gotcommodities.com/gold"
     },
     {
@@ -49,35 +49,35 @@
       "name": "Silver",
       "v": "$41.50",
       "u": "/oz",
-      "day": -6.62,
-      "m": "Crashed · gold-silver ratio ~86 · down ~28% over past month · first dip below $42 since early 2026 · industrial exposure amplified sell-off",
+      "day": -4.10,
+      "m": "Sharp decline · gold-silver ratio ~85 · down ~25% over past month · first dip below $42 since early 2026 · industrial exposure amplified sell-off",
       "tag": "Weak",
-      "sum": "Silver crashed 6.6% to $41.50 per ounce on Friday, one of the worst-performing commodities of the session. The intraday low reached $40.99 — the first dip below $41 in months. Silver's dual precious-industrial profile made it especially vulnerable as both yield-driven precious metal selling and risk-off industrial demand concerns compounded. The gold-silver ratio widened to approximately 86. Silver is down roughly 28% over the past month, with the sell-off accelerating as December rate-hike odds hit 99% and the Nasdaq entered correction territory. The break below $42 opens support at $40–$41.",
-      "src": "Kitco · Trading Economics · Fortune",
+      "sum": "Silver fell 4.1% to $41.50 per ounce on Friday, one of the worst-performing commodities of the session. The intraday low reached $40.99 — the first dip below $41 in months. Silver's dual precious-industrial profile made it especially vulnerable as both yield-driven precious metal selling and risk-off industrial demand concerns compounded. The gold-silver ratio narrowed slightly to approximately 85. Silver has declined roughly 25% over the past month, with the sell-off accelerating as December rate-hike odds hit 99% and the Nasdaq entered correction territory. The break below $42 opens support at $40–$41.",
+      "src": "ABC News · Kitco · Trading Economics",
       "srcUrl": "https://www.gotcommodities.com/silver"
     },
     {
       "id": "oil",
       "name": "Oil",
-      "v": "$90.33",
+      "v": "$92.57",
       "u": "Brent /bbl",
-      "day": -1.82,
-      "m": "WTI $81.50 · third straight weekly decline · ME exports recovering to pre-war levels · tanker hit in Hormuz Fri · intraday high $92.22 · supply surplus fears",
-      "tag": "Soft",
-      "sum": "Brent crude fell 1.8% to $90.33 per barrel on Friday despite a fresh tanker attack in the Strait of Hormuz — recovering Middle East export flows offset the geopolitical premium. The US maritime agency warned that Hormuz shipments had returned to roughly pre-war levels, adding to supply pressure. WTI fell to approximately $81.50. Oil is heading for a third straight weekly decline, down roughly 6% on the week. The intraday range was wide: Brent touched $92.22 before sellers took control. The paradox of falling oil prices amid surging Hormuz attacks reflects the market's view that crude export flows are normalising despite the operational risks.",
-      "src": "Trading Economics · Reuters · 5paisa",
+      "day": 0.65,
+      "m": "WTI $83.98 · dramatic late-session reversal on Iran concerns · intraday low $89.80 · Black Sea: 6 vessels struck · dual shipping threat · ME exports recovering",
+      "tag": "Mixed",
+      "sum": "Brent crude reversed sharply higher in the final hour of Friday's session, settling at $92.57 per barrel — up 0.65% — after trading as low as $89.80 intraday. Reports of renewed Iranian military activity near the Strait of Hormuz triggered late buying that overwhelmed the earlier sell-off. WTI settled at approximately $83.98. The reversal underscores the fragility of oil prices: recovering Middle East export flows have been pushing crude lower, but any escalation signal can reverse the trend instantly. Over the weekend, Ukrainian naval drones struck six commercial vessels in the Black Sea, sinking two — adding a second theatre of maritime disruption to the energy supply picture. The dual shipping threat could support prices heading into the November 27 deadline.",
+      "src": "ABC News · Trading Economics · Reuters",
       "srcUrl": "https://www.gotcommodities.com/oil"
     },
     {
       "id": "copper",
       "name": "Copper",
-      "v": "$5.47",
+      "v": "$5.52",
       "u": "/lb",
-      "day": -2.50,
-      "m": "LME ~$12,060/t · continued losses · dollar at 19-month high · DRC logistics disruption ongoing · Chinese physical premiums at records",
+      "day": -2.90,
+      "m": "LME ~$12,160/t · continued losses · dollar near 19-month high · DRC logistics disruption ongoing · Chinese physical premiums at records",
       "tag": "Weak",
-      "sum": "Copper fell 2.5% to $5.47 per pound (approximately $12,060 per tonne LME) on Friday, extending losses in the broader risk-off sell-off. The dollar at 19-month highs remains the dominant headwind. Chinese physical premiums have hit record levels even as LME prices decline, signalling divergence between financial and physical markets. The DRC bridge collapse continues to disrupt logistics. AI data-centre, EV and electrification demand remain structural long-term drivers, but the hostile macro environment caps near-term upside. Key support at $5.40 per pound ($11,900 per tonne).",
-      "src": "LME · SMM · Trading Economics",
+      "sum": "Copper fell 2.9% to $5.52 per pound (approximately $12,160 per tonne LME official settlement) on Friday, extending losses in the broader risk-off sell-off. The dollar near 19-month highs remains the dominant headwind. Chinese physical premiums have hit record levels even as LME prices decline, signalling divergence between financial and physical markets. The DRC bridge collapse continues to disrupt logistics. AI data-centre, EV and electrification demand remain structural long-term drivers, but the hostile macro environment caps near-term upside. Key support at $5.40 per pound ($11,900 per tonne).",
+      "src": "LME · Westmetall · SMM",
       "srcUrl": "https://www.gotcommodities.com/copper"
     },
     {
@@ -88,7 +88,7 @@
       "day": 0.0,
       "m": "Up ~40% YTD · held steady again · winter demand · LNG supply crisis continues · no Hormuz deal · Indonesia coal ~$145",
       "tag": "Firm",
-      "sum": "Newcastle coal held at $150 per tonne on Friday, continuing to buck broader commodity weakness as winter demand and the Hormuz-driven LNG supply crisis sustain the thermal fuel bid. Coal is up approximately 40% year to date. The G20 summit this weekend provides another venue for Hormuz discussions but expectations are low. QatarEnergy's force majeure continues through at least end-December 2026. Indonesian coal trades near $145 as mining demand builds. The energy supply crisis and coal-to-gas substitution dynamics remain supportive through winter.",
+      "sum": "Newcastle coal held at $150 per tonne on Friday, continuing to buck broader commodity weakness as winter demand and the Hormuz-driven LNG supply crisis sustain the thermal fuel bid. Coal is up approximately 40% year to date. The G20 Finance Ministers meeting in Atlanta ended without consensus on the Hormuz situation. QatarEnergy's force majeure continues through at least end-December 2026. Indonesian coal trades near $145 as mining demand builds. The energy supply crisis and coal-to-gas substitution dynamics remain supportive through winter.",
       "src": "Trading Economics · ICE · IEA",
       "srcUrl": "https://www.gotcommodities.com/coal"
     },
@@ -97,10 +97,10 @@
       "name": "Platinum",
       "v": "$1,295",
       "u": "/oz",
-      "day": -3.86,
-      "m": "Sharp decline · sold off with broader precious metals · EV shift weighing · South African supply constrained · yields headwind",
+      "day": -3.40,
+      "m": "Sharp decline · sold off with broader precious metals · EV shift weighing · South African supply constrained · yields headwind easing slightly",
       "tag": "Weak",
-      "sum": "Platinum fell 3.9% to $1,295 per ounce on Friday, caught in the broad precious metals sell-off. The EV transition continues to pressure automotive catalyst demand. South African mine supply remains constrained by ongoing power issues. With the dollar at a 19-month high, December rate-hike odds at 99% and Treasury yields near 5.10%, the macro environment is increasingly hostile. Platinum has now lost approximately 7.5% over two sessions. Hydrogen electrolysis demand provides a structural long-term floor but cannot offset near-term selling pressure.",
+      "sum": "Platinum fell 3.4% to $1,295 per ounce on Friday, caught in the broad precious metals sell-off. The EV transition continues to pressure automotive catalyst demand. South African mine supply remains constrained by ongoing power issues. With the dollar near a 19-month high and December rate-hike odds at 99%, the macro environment is hostile, though the 10-year yield falling to 4.95% on flight-to-safety buying provides a marginal offset. Hydrogen electrolysis demand provides a structural long-term floor but cannot offset near-term selling pressure.",
       "src": "Trading Economics · WPIC",
       "srcUrl": "https://www.gotcommodities.com/platinum"
     },
@@ -109,10 +109,10 @@
       "name": "Palladium",
       "v": "$895",
       "u": "/oz",
-      "day": -2.29,
+      "day": -2.10,
       "m": "Deep below $900 · down ~35% YoY · EV transition headwind dominant · weakest sustained level since 2018",
       "tag": "Weak",
-      "sum": "Palladium fell 2.3% to $895 per ounce on Friday, dropping below $900 for the first time since 2018. The structural headwind from the EV transition — battery EVs require no catalytic converter — continues to dominate. With the dollar at 19-month highs, yields near 5.10% and December rate-hike odds at 99%, the macro environment remains hostile. Tight South African mine supply offers limited support. The break below $900 is technically significant and opens the next support zone around $870–$880.",
+      "sum": "Palladium fell 2.1% to $895 per ounce on Friday, remaining below the psychologically significant $900 level for the first time since 2018. The structural headwind from the EV transition — battery EVs require no catalytic converter — continues to dominate. With the dollar near 19-month highs, yields at 4.95% and December rate-hike odds at 99%, the macro environment remains hostile. Tight South African mine supply offers limited support. The break below $900 is technically significant and opens the next support zone around $870–$880.",
       "src": "Trading Economics · Monex",
       "srcUrl": "https://www.gotcommodities.com/palladium"
     },
@@ -122,9 +122,9 @@
       "v": "10M est",
       "u": "b/d crude flow",
       "day": null,
-      "m": "Tanker hit by projectile Fri · 7 strikes on 6 vessels in past week · traffic 65% below pre-conflict · JMIC threat: SEVERE · 3 US carriers in Gulf · exports recovering despite attacks",
+      "m": "Tanker hit by projectile Fri · 7 strikes on 6 vessels in past week · traffic 65% below pre-conflict · JMIC threat: SEVERE · 3 US carriers in Gulf · Black Sea adds 2nd theatre",
       "tag": "Critical",
-      "sum": "The Strait of Hormuz saw its most active week of attacks since mid-October. A tanker was hit by a projectile near Khasab, Oman on Friday at 1500 UTC — the seventh strike in the region in a week. Four tankers were hit within 13 nautical miles of Khasab over three days, with two seafarers missing and 13 injured. JMIC rates the threat as severe with further deliberate attacks highly likely. Combined Hormuz traffic is about 65% below pre-conflict levels. The paradox: despite surging attacks, Middle East crude exports have returned toward pre-war levels according to the US maritime agency, pushing oil prices lower. The US is widening its blockade of Iranian ship-to-ship transfers. Three US carrier strike groups remain in the Gulf.",
+      "sum": "The Strait of Hormuz saw its most active week of attacks since mid-October. A tanker was hit by a projectile near Khasab, Oman on Friday — the seventh strike in the region in a week. Four tankers were hit within 13 nautical miles of Khasab over three days, with two seafarers missing and 13 injured. JMIC rates the threat as severe with further deliberate attacks highly likely. Combined Hormuz traffic is about 65% below pre-conflict levels. The paradox persists: despite surging attacks, Middle East crude exports have returned toward pre-war levels, though oil reversed higher late on Friday on renewed Iran concerns. The US is widening its blockade of Iranian ship-to-ship transfers. Three US carrier strike groups remain in the Gulf. Meanwhile, Ukrainian naval drones struck six vessels in the Black Sea over the weekend, sinking two — global maritime trade now faces a dual-theatre shipping threat.",
       "src": "gCaptain · UKMTO · JMIC · Al Jazeera",
       "srcUrl": "https://www.gotcommodities.com/hormuzterminal"
     },
@@ -134,9 +134,9 @@
       "v": "434½¢",
       "u": "/bu",
       "day": -1.02,
-      "m": "Hit 4-month low · down 11¢ on the week · dollar strength persists · South American planting favourable",
+      "m": "At 4-month low · down 11¢ on the week · dollar strength persists · Black Sea attacks disrupt grain routes · South American planting favourable",
       "tag": "Soft",
-      "sum": "December corn fell 4½ cents to 434½ cents per bushel on Friday, hitting a 4-month low as dollar strength continued to weigh on US export competitiveness. Corn is down 11 cents on the week. The broader risk-off sell-off added to pressure across agricultural commodities. South American planting continues under generally favourable conditions. The USDA's tighter balance sheet from the November WASDE report provides a structural floor. The November 27 critical minerals deadline adds geopolitical uncertainty. Key support at 430 cents.",
+      "sum": "December corn held at a 4-month low of 434½ cents per bushel as of Friday's close, down 11 cents on the week as dollar strength continued to weigh on US export competitiveness. The broader risk-off sell-off added to pressure across agricultural commodities. Over the weekend, Ukrainian naval drones struck six commercial vessels in the Black Sea, sinking two — disrupting grain export routes from Russian and Ukrainian ports. This could support US corn export competitiveness if Black Sea disruption persists. South American planting continues under generally favourable conditions. The USDA's tighter balance sheet from the November WASDE report provides a structural floor. Key support at 430 cents.",
       "src": "CME · Pro Farmer · Trading Economics",
       "srcUrl": "https://www.gotcommodities.com/corn"
     },
@@ -146,9 +146,9 @@
       "v": "574¼¢",
       "u": "/bu",
       "day": -0.69,
-      "m": "Continued decline · down 19¢ on the week · SovEcon Russia estimate supports floor · export demand picking up at lower levels",
+      "m": "Continued decline · down 19¢ on the week · Black Sea attacks disrupt grain exports · SovEcon Russia estimate supports floor",
       "tag": "Soft",
-      "sum": "December SRW wheat fell 4 cents to 574¼ cents per bushel on Friday, extending the week's decline. Wheat is down 19 cents on the week. HRW wheat fell 1¼ cents to 624½ cents. The sell-off was broad-based amid the risk-off environment. SovEcon's Russian wheat export estimate of 36 million tonnes — below the USDA's forecast — provides a structural floor. Export demand continues to pick up at the depressed price levels. The dollar near 19-month highs remains a headwind for US competitiveness.",
+      "sum": "December SRW wheat held at 574¼ cents per bushel as of Friday's close, down 19 cents on the week. HRW wheat at 624½ cents. The sell-off was broad-based amid the risk-off environment. Over the weekend, Ukrainian naval drones struck six commercial vessels in the Black Sea, sinking two — a significant disruption to grain export routes. Russia and Ukraine together account for roughly 25% of global wheat exports, so sustained Black Sea disruption could provide a floor or push prices higher. SovEcon's Russian wheat export estimate of 36 million tonnes — below the USDA's forecast — provides additional structural support. The dollar near 19-month highs remains a headwind for US competitiveness.",
       "src": "CME · Pro Farmer · Trading Economics",
       "srcUrl": "https://www.gotcommodities.com/wheat"
     },
@@ -158,33 +158,33 @@
       "v": "1,220¾¢",
       "u": "/bu",
       "day": 1.10,
-      "m": "January front-month ~$12.21 · rebounded · down 10¾¢ on the week · summit no Busan progress · South American supply competitive",
+      "m": "January front-month ~$12.21 · rebounded Fri · down 10¾¢ on the week · Black Sea disruption may support · South American supply competitive",
       "tag": "Mixed",
-      "sum": "January soybeans rose 13¼ cents to 1,220¾ cents per bushel on Friday, one of the few commodities to end the session higher as bargain buying emerged after the week's heavy selling. Soybeans are still down 10¾ cents on the week. The trilateral summit produced no visible progress on the Busan truce soybean commitments. South American supplies remain more competitive at current exchange rates. The G20 summit this weekend provides another venue for trade discussions. The dollar near 19-month highs remains a headwind for US exports.",
+      "sum": "January soybeans held at 1,220¾ cents per bushel as of Friday's close, one of the few commodities to end the session higher as bargain buying emerged after the week's heavy selling. Soybeans are still down 10¾ cents on the week. The weekend's Black Sea maritime escalation — with Ukrainian drones striking six vessels and sinking two — could support US soybean export competitiveness if disruption persists. South American supplies remain more competitive at current exchange rates. No progress has been visible on the Busan truce soybean commitments through any diplomatic channel. The dollar near 19-month highs remains a headwind for US exports.",
       "src": "CME · Pro Farmer · Trading Economics",
       "srcUrl": "https://www.gotcommodities.com/soybean"
     },
     {
       "id": "crypto",
       "name": "Cryptocurrencies",
-      "v": "$58,200",
+      "v": "$60,900",
       "u": "BTC",
-      "day": -8.78,
-      "m": "ETH $1,597 · plunged below $60K · Nasdaq enters correction · spot ETF outflows >$2.5B in 2026 · Fear & Greed deep Extreme Fear",
-      "tag": "Weak",
-      "sum": "Bitcoin plunged below $60,000 to approximately $58,200 on Friday, falling 8.8% as the broader equity sell-off spread to crypto. The Nasdaq entering its third correction of 2026 triggered widespread risk-off positioning. Ethereum crashed 11.4% to $1,597. Spot Bitcoin ETF outflows have now exceeded $2.5 billion in 2026, with IBIT down 5.9% and ETHA down 9.2% on the day. The Fear and Greed Index remains deep in Extreme Fear territory. Key levels to watch: BTC reclaiming $60,000 and ETH recovering above $1,800. The macro headwinds from the FOMC remain dominant, with December rate-hike odds at 99%.",
-      "src": "CoinDesk · Motley Fool · Fortune · CoinGecko",
+      "day": 1.95,
+      "m": "ETH $1,718 · weekend recovery from $55,640 low · reclaimed $60K · spot ETF outflows >$2.5B in 2026 · Fear & Greed still Extreme Fear",
+      "tag": "Mixed",
+      "sum": "Bitcoin staged a sharp weekend recovery, rebounding from an intraday low near $55,640 on Saturday to approximately $60,900 by Sunday evening — up roughly 2% over the latest 24 hours. Ethereum recovered from $1,597 to $1,718. The recovery came as dip buyers emerged following Friday's 8.8% crash. Bitcoin's reclaim of $60,000 is a constructive signal, though the Fear and Greed Index remains in Extreme Fear territory. Spot Bitcoin ETF outflows have exceeded $2.5 billion in 2026. The key test comes Monday when equity markets reopen: the VIX at a 7-month high, the Nasdaq in correction, and December rate-hike odds at 99% present continued headwinds. A sustained hold above $60,000 would suggest the worst of the sell-off has passed.",
+      "src": "CoinDesk · Bitcoin.com · CoinGecko · IT Times",
       "srcUrl": "https://www.gotcommodities.com/cryptocurrencies"
     },
     {
       "id": "lng",
       "name": "LNG",
-      "v": "$29",
+      "v": "$30",
       "u": "/MMBtu JKM",
       "day": null,
-      "m": "JKM Dec contract ~$29 · TTF ~$29.50 · HH ~$3.35 · QatarEnergy FM continues · EU storage 70.8% — 20% below 5Y avg · oil slide easing LNG premium",
+      "m": "JKM Dec contract ~$30 · TTF ~$30 · HH ~$3.35 · QatarEnergy FM continues · EU storage ~70% — 20% below 5Y avg · oil reversal supports LNG",
       "tag": "Firm",
-      "sum": "The Asian LNG spot JKM December contract trades near $29 per MMBtu, up from the $27.50 rollover level as winter demand supports. TTF sits near $29.50 per MMBtu; Henry Hub near $3.35. EU gas storage at 70.8% is 20% below the five-year average heading into winter — the thinnest in a decade. QatarEnergy's force majeure extends through at least end-December 2026. Despite oil's slide on recovering Middle East exports, LNG fundamentals remain structurally tight with over 60 bcm of Qatari and UAE loadings lost between March and October. US LNG export feedgas hit a record 19.3 bcf per day.",
+      "sum": "The Asian LNG spot JKM December contract has risen to approximately $30 per MMBtu, up from $29, as winter demand intensifies. TTF sits near $30 per MMBtu; Henry Hub near $3.35. EU gas storage at approximately 70% is roughly 20% below the five-year average heading into winter — the thinnest in a decade. QatarEnergy's force majeure extends through at least end-December 2026. Friday's oil reversal to $92.57 supports the case for sustained LNG pricing strength. Over 60 bcm of Qatari and UAE loadings have been lost between March and October. US LNG export feedgas hit a record 19.3 bcf per day.",
       "src": "S&P Global Platts · Global LNG Hub · JOGMEC",
       "srcUrl": "https://tradingeconomics.com/commodity/lng"
     },
@@ -194,9 +194,9 @@
       "v": "$1,200",
       "u": "/t CFR SE Asia",
       "day": null,
-      "m": "FOB Kuwait ~$765 · 3 carriers in Gulf · tanker hit Fri · 7 strikes in a week · 6 days to Nov 27 deadline · oil slide easing some supply pressure",
+      "m": "FOB Kuwait ~$765 · 3 carriers in Gulf · tanker hit Fri · 7 strikes in a week · 4 days to Nov 27 deadline · oil reversal signals continued supply stress",
       "tag": "Critical",
-      "sum": "Sulfur remains elevated at approximately $1,200 per tonne CFR Southeast Asia. The Strait of Hormuz saw its most active week of attacks since mid-October, with a tanker hit on Friday — the seventh strike in a week. Despite the sustained attacks, Middle East crude exports are recovering toward pre-war levels, which may gradually ease sulfur supply logistics. FOB Kuwait holds near $765 (KPC). The November 27 export-control deadline is now 6 days away. The G20 summit this weekend provides another diplomatic venue but expectations for supply normalisation remain low.",
+      "sum": "Sulfur remains elevated at approximately $1,200 per tonne CFR Southeast Asia. The Strait of Hormuz saw its most active week of attacks since mid-October, with a tanker hit on Friday — the seventh strike in a week. Despite recovering crude export flows, sulfur supply logistics remain disrupted. FOB Kuwait holds near $765 (KPC). Friday's oil reversal to $92.57 on Iran concerns underscores the fragility of supply recovery. The November 27 export-control deadline is now 4 days away, adding to supply-chain uncertainty. The G20 Finance Ministers meeting in Atlanta ended without consensus, leaving no diplomatic venue before the deadline.",
       "src": "SMM · Argus Media",
       "srcUrl": "https://www.argusmedia.com/en/news/sulphur"
     },
@@ -206,9 +206,9 @@
       "v": "$358",
       "u": "/t MOP CFR Brazil",
       "day": null,
-      "m": "BPC India $383 CFR · China benchmark ~$348 · G20 this weekend · wheat & corn weakness weighing on fertiliser sentiment",
+      "m": "BPC India $383 CFR · China benchmark ~$348 · wheat & corn weakness weighing on fertiliser sentiment · Black Sea disruption adds logistics risk",
       "tag": "Steady",
-      "sum": "Muriate of potash (MOP) CFR Brazil holds at approximately $358 per tonne. BPC's India contract remains approximately $25 above China's 2026 benchmark at $383 per tonne CFR. Wheat and corn both declining on the week, with corn at a 4-month low, is modestly negative for near-term fertiliser demand sentiment. Belarus and Russia still account for about 40% of global supply despite Western sanctions. The G20 summit this weekend provides another venue for trade discussions.",
+      "sum": "Muriate of potash (MOP) CFR Brazil holds at approximately $358 per tonne. BPC's India contract remains approximately $25 above China's 2026 benchmark at $383 per tonne CFR. Wheat and corn both declining on the week, with corn at a 4-month low, is modestly negative for near-term fertiliser demand sentiment. Belarus and Russia still account for about 40% of global supply despite Western sanctions. The weekend's Black Sea maritime escalation — six vessels struck, two sunk — adds logistics risk to potash trade routes from the region.",
       "src": "World Bank · Argus Media",
       "srcUrl": "https://www.worldbank.org/en/research/commodity-markets"
     },
@@ -218,9 +218,9 @@
       "v": "¥93,500",
       "u": "/t #1 ingot China",
       "day": null,
-      "m": "6 days to Nov 27 deadline · Rotterdam $18,300–19,000/t · no progress from summit or any diplomatic channel · ban resumption increasingly priced in",
+      "m": "4 days to Nov 27 deadline · Rotterdam $18,300–19,000/t · no progress from any diplomatic channel · ban resumption increasingly priced in",
       "tag": "Firm",
-      "sum": "Chinese antimony (#1 ingot) holds near 93,500 yuan per tonne. Overseas antimony sits at approximately $18,300–19,000 per tonne in Rotterdam. The November 27 deadline is now 6 days away with no extension announced. Neither the trilateral summit nor any subsequent diplomatic channel has produced visible progress on critical minerals. Market participants are increasingly pricing in ban resumption. If the deadline passes without extension, overseas prices could spike further. China produces close to half of global mined antimony. The G20 this weekend is a last-chance venue for bilateral discussions.",
+      "sum": "Chinese antimony (#1 ingot) holds near 93,500 yuan per tonne. Overseas antimony sits at approximately $18,300–19,000 per tonne in Rotterdam. The November 27 deadline is now 4 days away with no extension announced. The G20 Finance Ministers meeting in Atlanta ended without consensus on critical minerals, leaving no major diplomatic venue before the deadline. Market participants are increasingly pricing in ban resumption. If the deadline passes without extension, overseas prices could spike further. China produces close to half of global mined antimony.",
       "src": "SMM · Fastmarkets",
       "srcUrl": "https://www.gotcommodities.com/terminals/antimony"
     },
@@ -230,9 +230,9 @@
       "v": "Ga $2,100/kg",
       "u": "ex-China",
       "day": null,
-      "m": "Up >130% since early 2025 · 6 days to Nov 27 deadline · China domestic Ga ~$460/kg · no progress from any diplomatic channel · ban resumption increasingly priced in",
+      "m": "Up >130% since early 2025 · 4 days to Nov 27 deadline · China domestic Ga ~$460/kg · no progress from any channel · ban resumption increasingly priced in",
       "tag": "Restricted",
-      "sum": "Gallium holds near $2,100 per kilogram outside China, with Chinese domestic gallium at approximately $460 per kilogram — a roughly 4.5x premium. The November 27 deadline is now 6 days away with no extension announced from any diplomatic channel. China produces approximately 99% of global gallium and 60–80% of germanium. The underlying licensing regimes remain in force during the suspension. Alcoa's Wagerup gallium refinery has taken FID but is not yet producing. The G20 this weekend provides a final diplomatic venue. Ban resumption is increasingly priced in.",
+      "sum": "Gallium holds near $2,100 per kilogram outside China, with Chinese domestic gallium at approximately $460 per kilogram — a roughly 4.5x premium. The November 27 deadline is now 4 days away with no extension announced. The G20 Finance Ministers meeting in Atlanta ended without consensus on critical minerals — no major diplomatic venue remains before the deadline. China produces approximately 99% of global gallium and 60–80% of germanium. The underlying licensing regimes remain in force during the suspension. Alcoa's Wagerup gallium refinery has taken FID but is not yet producing. Ban resumption is increasingly priced in.",
       "src": "Fastmarkets · Rare Earth Exchanges",
       "srcUrl": "https://www.gotcommodities.com/terminals/gallium"
     },
@@ -242,9 +242,9 @@
       "v": "$5.30",
       "u": "/lb V₂O₅",
       "day": null,
-      "m": "Steady at $5.30 · upstream tightness · VRFB adoption timeline uncertain · China-Russia-SA control 90%+ · Nov 27 deadline 6 days",
+      "m": "Steady at $5.30 · upstream tightness · VRFB adoption timeline uncertain · China-Russia-SA control 90%+ · Nov 27 deadline 4 days",
       "tag": "Steady",
-      "sum": "Vanadium pentoxide (V₂O₅) holds at approximately $5.30 per pound in Europe, supported by persistent upstream tightness. The November 27 deadline, now 6 days away, affects the broader critical minerals complex. The long-term bull case rests on vanadium redox flow batteries (VRFBs) for grid-scale energy storage, but large-scale adoption timing remains uncertain. China, Russia and South Africa control over 90% of supply. The G20 summit this weekend provides a final venue for critical mineral discussions.",
+      "sum": "Vanadium pentoxide (V₂O₅) holds at approximately $5.30 per pound in Europe, supported by persistent upstream tightness. The November 27 deadline, now 4 days away, affects the broader critical minerals complex. The G20 Finance Ministers meeting in Atlanta ended without consensus on critical minerals. The long-term bull case rests on vanadium redox flow batteries (VRFBs) for grid-scale energy storage, but large-scale adoption timing remains uncertain. China, Russia and South Africa control over 90% of supply.",
       "src": "Fastmarkets · SP Angel",
       "srcUrl": "https://www.gotcommodities.com/terminals/vanadium"
     },
@@ -256,8 +256,8 @@
       "day": 2.42,
       "m": "Rebounded 2.4% · up from $5,063 on Thu · West African supply concerns reasserted · El Niño risk · $5,000 holding as support",
       "tag": "Mixed",
-      "sum": "ICE cocoa rebounded 2.4% to $5,294 per tonne on Friday, bucking the broader commodity sell-off as West African supply concerns reasserted themselves. The bounce from $5,063 on Thursday confirms the $5,000 level as strong psychological support. Ivory Coast's Sodexam projection that 2026/27 output could drop 21–25% due to an exceptionally strong El Niño event continues to provide a medium-term bullish underpinning. Despite ICE warehouse inventories at a 2.5-year high of 3.8 million bags, the market remains focused on forward supply risks.",
-      "src": "Trading Economics · ICE · azcoffeeshops.com",
+      "sum": "ICE cocoa held at $5,294 per tonne as of Friday's close, having rebounded 2.4% and bucked the broader commodity sell-off as West African supply concerns reasserted themselves. The bounce from $5,063 on Thursday confirms the $5,000 level as strong psychological support. Ivory Coast's Sodexam projection that 2026/27 output could drop 21–25% due to an exceptionally strong El Niño event continues to provide a medium-term bullish underpinning. Despite ICE warehouse inventories at a 2.5-year high of 3.8 million bags, the market remains focused on forward supply risks.",
+      "src": "Trading Economics · ICE",
       "srcUrl": "https://www.gotcommodities.com/terminals/cocoa"
     },
     {
@@ -268,19 +268,19 @@
       "day": null,
       "m": "Continued decline from $33,525 · European demand concerns persist · Rotterdam $16–17/lb · DRC bridge disruption ongoing · NMC-to-LFP shift weighing",
       "tag": "Soft",
-      "sum": "Cobalt is estimated near $33,000 per tonne, continuing to decline as European demand concerns persist per Argus Media. Rotterdam standard-grade cobalt metal sits at $16–17 per pound. The DRC bridge collapse continues to have secondary effects on cobalt logistics, with alternative routes adding time and cost. The NMC-to-LFP battery chemistry shift weighs on the structural demand outlook. The dollar at 19-month highs adds to the headwinds for an already-weak market. The broader risk-off sell-off on Friday further dampened industrial metals sentiment.",
+      "sum": "Cobalt is estimated near $33,000 per tonne, continuing to decline as European demand concerns persist. Rotterdam standard-grade cobalt metal sits at $16–17 per pound. The DRC bridge collapse continues to have secondary effects on cobalt logistics, with alternative routes adding time and cost. The NMC-to-LFP battery chemistry shift weighs on the structural demand outlook. The dollar near 19-month highs adds to the headwinds for an already-weak market. The broader risk-off sell-off on Friday further dampened industrial metals sentiment.",
       "src": "Argus Media · Fastmarkets · Trading Economics",
       "srcUrl": "https://www.gotcommodities.com/terminals/cobalt"
     },
     {
       "id": "lithium",
       "name": "Lithium",
-      "v": "~¥88,000",
+      "v": "~¥90,000",
       "u": "/t Li₂CO₃ China",
       "day": null,
-      "m": "Continued decline · InfoLink reports 7.2% fall in Nov · structural oversupply persists · Goldman: 444k t global surplus by 2028",
+      "m": "Stabilising near ¥90,000 · InfoLink reported 7.2% fall in Nov · structural oversupply persists · Goldman: 444k t global surplus by 2028",
       "tag": "Weak",
-      "sum": "Chinese lithium carbonate continues to decline, estimated near ¥88,000 per tonne. InfoLink reported a 7.2% fall in lithium carbonate prices in early November, driven by expected mine supply recovery and weaker residential demand. Structural oversupply remains the dominant theme, with Goldman Sachs projecting a 444,000-tonne global surplus by 2028. The EU's plan to cap Chinese EV imports at 350,000 units per year adds a demand headwind. Supply ramp-ups in Australia and South America continue to outpace demand growth. The ¥85,000 zone represents next major support.",
+      "sum": "Chinese lithium carbonate is stabilising near ¥90,000 per tonne after the sharp sell-off earlier in November. InfoLink reported a 7.2% fall in lithium carbonate prices in early November, driven by expected mine supply recovery and weaker residential demand. Structural oversupply remains the dominant theme, with Goldman Sachs projecting a 444,000-tonne global surplus by 2028. The EU's plan to cap Chinese EV imports at 350,000 units per year adds a demand headwind. Supply ramp-ups in Australia and South America continue to outpace demand growth. The ¥85,000 zone represents next major support.",
       "src": "Trading Economics · InfoLink · SMM",
       "srcUrl": "https://www.gotcommodities.com/terminals/lithium"
     },
@@ -290,21 +290,21 @@
       "v": "$2,550",
       "u": "/t approx RSS3",
       "day": null,
-      "m": "$2.55/kg · SE Asia supply tight · fungal blight ongoing · oil slide pressures synthetic costs lower",
+      "m": "$2.55/kg · SE Asia supply tight · fungal blight ongoing · oil reversal pressures synthetic costs higher",
       "tag": "Firm",
-      "sum": "Natural rubber (RSS3) trades near $2,550 per tonne ($2.55/kg), range-bound. Southeast Asian supply remains tight, with Thailand, Indonesia and Malaysia — producing 70% of global latex — still affected by Pestalotiopsis fungal leaf blight. Friday's oil slide to $90.33 modestly reduces synthetic rubber production costs, tilting the balance slightly. Auto-sector demand remains solid, supported by replacement-tyre cycles. The dollar at 19-month highs remains a headwind for dollar-denominated commodities.",
+      "sum": "Natural rubber (RSS3) trades near $2,550 per tonne ($2.55/kg), range-bound. Southeast Asian supply remains tight, with Thailand, Indonesia and Malaysia — producing 70% of global latex — still affected by Pestalotiopsis fungal leaf blight. Friday's oil reversal to $92.57 modestly increases synthetic rubber production costs, tilting the balance slightly in favour of natural rubber. Auto-sector demand remains solid, supported by replacement-tyre cycles. The dollar near 19-month highs remains a headwind for dollar-denominated commodities.",
       "src": "Trading Economics · SunSirs",
       "srcUrl": "https://www.gotcommodities.com/terminals/rubber"
     },
     {
       "id": "uranium",
       "name": "Uranium",
-      "v": "$91.55",
+      "v": "$91",
       "u": "/lb U₃O₈ spot",
       "day": null,
       "m": "Spot held above $90 · term price $98/lb near record · IAEA: 78 reactors under construction · miners sliding 23% while prices hold · AI demand structural",
       "tag": "Surging",
-      "sum": "Uranium spot holds at $91.55 per pound U₃O₈ as of late October, with long-term contract prices at $98 per pound — approaching the $100 milestone. Despite spot prices holding above $90, uranium miners (URNM ETF) have slid approximately 23% year to date, reflecting rate sensitivity, contract-price lag and ETF-driven selling. The IAEA counts 78 reactors under construction worldwide. Kazatomprom's TQZ sulphuric acid plant delays continue to limit leaching capacity. AI data-centre power demand remains a structural driver, with Meta, Amazon and Microsoft having signed nuclear power agreements.",
+      "sum": "Uranium spot holds near $91 per pound U₃O₈, with long-term contract prices at $98 per pound — approaching the $100 milestone. Despite spot prices holding above $90, uranium miners (URNM ETF) have slid approximately 23% year to date, reflecting rate sensitivity, contract-price lag and ETF-driven selling. The IAEA counts 78 reactors under construction worldwide. Kazatomprom's TQZ sulphuric acid plant delays continue to limit leaching capacity. AI data-centre power demand remains a structural driver, with Meta, Amazon and Microsoft having signed nuclear power agreements.",
       "src": "FNArena · TradeTech · Cameco · Trading Economics",
       "srcUrl": "https://www.gotcommodities.com/terminals/uranium"
     },
@@ -314,9 +314,9 @@
       "v": "NdPr $71",
       "u": "/kg oxide",
       "day": null,
-      "m": "Down ~2.6% in Nov · ex-China NdPr slipping below $110/kg · Nov 27 deadline 6 days · prices fell sharply on Nov 20 sell-off",
+      "m": "Down ~2.6% in Nov · ex-China NdPr slipping below $110/kg · Nov 27 deadline 4 days · prices fell sharply on Nov 20 sell-off",
       "tag": "Soft",
-      "sum": "Neodymium-praseodymium (NdPr) oxide has declined approximately 2.6% in November to around $71 per kilogram domestically in China. SMM reported that prices fell sharply on November 20 amid broader market selling. Ex-China NdPr prices are slipping below the $110 per kilogram support level as oversupply builds. The November 27 US-specific deadline for gallium, germanium and antimony — now 6 days away — adds uncertainty to the broader critical minerals complex. Downstream magnetic material orders remain weak and buyers are cautious about high-priced inventory.",
+      "sum": "Neodymium-praseodymium (NdPr) oxide has declined approximately 2.6% in November to around $71 per kilogram domestically in China. SMM reported that prices fell sharply on November 20 amid broader market selling. Ex-China NdPr prices are slipping below the $110 per kilogram support level as oversupply builds. The November 27 US-specific deadline for gallium, germanium and antimony — now 4 days away — adds uncertainty to the broader critical minerals complex. The G20 Finance Ministers meeting in Atlanta ended without consensus. Downstream magnetic material orders remain weak and buyers are cautious about high-priced inventory.",
       "src": "SMM · Benchmark Minerals · S&P Global",
       "srcUrl": "https://www.gotcommodities.com/terminals/rare-earths"
     },
@@ -335,37 +335,37 @@
     {
       "id": "nickel",
       "name": "Nickel",
-      "v": "$15,400",
+      "v": "$15,310",
       "u": "/t LME",
-      "day": -1.69,
-      "m": "Continued losses · down from $15,665 · Indonesian RKAB uncertainty persists · global surplus continues · macro headwinds dominant",
+      "day": -0.90,
+      "m": "LME official settlement · down from $15,400 · Indonesian RKAB uncertainty persists · global surplus continues · macro headwinds dominant",
       "tag": "Soft",
-      "sum": "LME nickel fell approximately 1.7% to $15,400 per tonne on Friday, extending losses as the broader macro headwinds reasserted in the risk-off sell-off. Indonesian RKAB mining quota uncertainty persists — potential tightening provides a floor while the global nickel surplus from Indonesian NPI and HPAL expansions caps upside. The dollar at 19-month highs remains the primary headwind. The Dow and S&P 500 entering correction territory added to the negative sentiment across industrial metals. Key support at $15,000.",
-      "src": "LME · SMM · Trading Economics",
+      "sum": "LME nickel settled at $15,310 per tonne on Friday, declining approximately 0.9% as macro headwinds reasserted in the risk-off sell-off. Indonesian RKAB mining quota uncertainty persists — potential tightening provides a floor while the global nickel surplus from Indonesian NPI and HPAL expansions caps upside. The dollar near 19-month highs remains the primary headwind. The Dow and S&P 500 in correction territory and the VIX at a 7-month high added to the negative sentiment across industrial metals. Key support at $15,000.",
+      "src": "LME · Westmetall · SMM",
       "srcUrl": "https://www.gotcommodities.com/terminals/nickel"
     },
     {
       "id": "tin",
       "name": "Tin",
-      "v": "~$42,050",
+      "v": "$41,160",
       "u": "/t LME",
-      "day": -3.33,
-      "m": "Continued decline · LME backwardation wide · Myanmar ban constraining supply · macro sell-off dominant · cancelled warrants elevated",
+      "day": -2.10,
+      "m": "LME official settlement · continued decline · Myanmar ban constraining supply · macro sell-off dominant · LME backwardation wide",
       "tag": "Weak",
-      "sum": "LME tin fell approximately 3.3% to around $42,050 per tonne on Friday, continuing the sharp sell-off across base metals. Structural supply constraints persist from Myanmar's Wa State mining ban and Indonesian export licensing tightness. The LME backwardation remains wide, signalling tight near-term supply. However, macro pressure from the strong dollar, rising yields and the broader equity correction continues to overwhelm supply-side support. The November 27 deadline adds geopolitical uncertainty to the broader metals complex.",
-      "src": "LME · SMM · Trading Economics",
+      "sum": "LME tin settled at $41,160 per tonne on Friday, declining approximately 2.1% as the sell-off across base metals continued. Structural supply constraints persist from Myanmar's Wa State mining ban and Indonesian export licensing tightness. The LME backwardation remains wide, signalling tight near-term supply. However, macro pressure from the strong dollar, rising rate-hike expectations and the broader equity correction continues to overwhelm supply-side support. The November 27 deadline, now 4 days away, adds geopolitical uncertainty to the broader metals complex.",
+      "src": "LME · Westmetall · SMM",
       "srcUrl": "https://www.gotcommodities.com/terminals/tin"
     },
     {
       "id": "zinc",
       "name": "Zinc",
-      "v": "$3,490",
+      "v": "$3,503",
       "u": "/t LME",
-      "day": -2.02,
-      "m": "5-day losing streak extends · TCs deeply negative · structural deficit intact · Chinese smelter restarts · macro headwinds dominant",
+      "day": -1.70,
+      "m": "LME official settlement · 5-day losing streak extends · TCs deeply negative · structural deficit intact · macro headwinds dominant",
       "tag": "Soft",
-      "sum": "LME zinc fell approximately 2.0% to $3,490 per tonne on Friday, extending a five-day losing streak amid the broad risk-off sell-off. Treatment charges remain deeply negative, forcing continued smelter curtailments outside China. The structural supply deficit remains intact despite near-term macro pressure. Zinc is still up approximately 15% year-over-year. The dollar at 19-month highs remains the primary headwind. The Dow and S&P 500 entering correction territory added to the negative industrial metals sentiment.",
-      "src": "LME · SMM · Trading Economics",
+      "sum": "LME zinc settled at $3,503 per tonne on Friday, declining approximately 1.7% and extending a five-day losing streak amid the broad risk-off sell-off. Treatment charges remain deeply negative, forcing continued smelter curtailments outside China. The structural supply deficit remains intact despite near-term macro pressure. Zinc is still up approximately 15% year-over-year. The dollar near 19-month highs remains the primary headwind. The equity correction and VIX at a 7-month high added to the negative industrial metals sentiment.",
+      "src": "LME · Westmetall · SMM",
       "srcUrl": "https://www.gotcommodities.com/terminals/zinc"
     },
     {
@@ -374,9 +374,9 @@
       "v": "$2,750",
       "u": "/mtu APT Europe",
       "day": null,
-      "m": "Rotterdam APT $2,750 · China FOB $1,845 · Western ~3.5x China · 6 days to Nov 27 deadline · no progress from any diplomatic channel",
+      "m": "Rotterdam APT $2,750 · China FOB $1,845 · Western ~3.5x China · 4 days to Nov 27 deadline · no progress from any diplomatic channel",
       "tag": "Elevated",
-      "sum": "European tungsten APT holds at $2,750 per mtu in Rotterdam, while Chinese FOB sits at $1,845 per mtu — Western prices remain roughly 3.5 times Chinese domestic levels. The November 27 deadline is now 6 days away with no extension announced. The market continues to reflect the fragmentation created by China's export controls. The G20 summit this weekend provides a final venue for bilateral discussions. If the bans resume next week, the Western premium could widen further. The broader risk-off sell-off has not directly impacted tungsten pricing.",
+      "sum": "European tungsten APT holds at $2,750 per mtu in Rotterdam, while Chinese FOB sits at $1,845 per mtu — Western prices remain roughly 3.5 times Chinese domestic levels. The November 27 deadline is now 4 days away with no extension announced. The G20 Finance Ministers meeting in Atlanta ended without consensus on critical minerals, leaving no diplomatic venue before the deadline. The market continues to reflect the fragmentation created by China's export controls. If the bans resume on Thursday, the Western premium could widen further.",
       "src": "Fastmarkets · SMM",
       "srcUrl": "https://www.gotcommodities.com/terminals/tungsten"
     },
@@ -388,7 +388,7 @@
       "day": null,
       "m": "Up 358% YTD · Ras Laffan repair 3–5 years · 7 Hormuz strikes in past week · tanker hit Fri · exports recovering but attacks surging",
       "tag": "Critical",
-      "sum": "Grade-A helium trades near $390 per thousand cubic feet, at critical levels. The Strait of Hormuz saw its most active week of attacks since mid-October — a tanker was hit on Friday, the seventh strike in a week. Despite the sustained attacks, Middle East crude exports are recovering toward pre-war levels, though helium supply logistics from Qatar remain disrupted. QatarEnergy's Ras Laffan facility repairs remain estimated at 3–5 years. Qatar and the US together supply about 81% of global helium. Russia's export controls extend through 2027. The G20 provides another diplomatic window but expectations are low.",
+      "sum": "Grade-A helium trades near $390 per thousand cubic feet, at critical levels. The Strait of Hormuz saw its most active week of attacks since mid-October — a tanker was hit on Friday, the seventh strike in a week. Despite the sustained attacks, Middle East crude exports are recovering toward pre-war levels, though helium supply logistics from Qatar remain disrupted. QatarEnergy's Ras Laffan facility repairs remain estimated at 3–5 years. Qatar and the US together supply about 81% of global helium. Russia's export controls extend through 2027. The November 27 deadline is 4 days away with no diplomatic progress.",
       "src": "Gasworld · Kornbluth Helium Consulting · gCaptain",
       "srcUrl": "https://www.gotcommodities.com/terminals/helium"
     },
@@ -400,124 +400,124 @@
       "day": null,
       "m": "OCP 30% global · DAP $560/t · sulfur cost surge pressuring economics · corn & wheat weakness negative for fertiliser demand",
       "tag": "Firm",
-      "sum": "Phosphate rock trades near $120 per tonne FOB Morocco, with Morocco's OCP Group controlling about 30% of global trade. DAP prices sit near $560 per tonne CFR India. The sulfur price surge continues to pressure phosphate production economics. Corn hitting a 4-month low and wheat's continued decline are modestly negative for near-term fertiliser demand sentiment. The Hormuz crisis and Friday's fresh tanker attack further reduce the probability of Middle Eastern sulfur supply normalising, keeping the cost structure elevated.",
+      "sum": "Phosphate rock trades near $120 per tonne FOB Morocco, with Morocco's OCP Group controlling about 30% of global trade. DAP prices sit near $560 per tonne CFR India. The sulfur price surge continues to pressure phosphate production economics. Corn at a 4-month low and wheat's continued decline are modestly negative for near-term fertiliser demand sentiment. The Hormuz crisis and Friday's fresh tanker attack further reduce the probability of Middle Eastern sulfur supply normalising, keeping the cost structure elevated.",
       "src": "World Bank · OCP",
       "srcUrl": "https://www.gotcommodities.com/terminals/phosphate"
     }
   ],
   "tape": [
-    ["BRENT", "$90.33", -1.82],
-    ["WTI", "$81.50", -1.21],
-    ["GOLD", "$3,560", -2.41],
-    ["SILVER", "$41.50", -6.62],
-    ["COPPER", "$5.47/lb", -2.50],
+    ["BRENT", "$92.57", 0.65],
+    ["WTI", "$83.98", 0.72],
+    ["GOLD", "$3,532", -2.50],
+    ["SILVER", "$41.50", -4.10],
+    ["COPPER", "$5.52/lb", -2.90],
     ["COAL", "$150", 0.0],
-    ["PLAT", "$1,295", -3.86],
-    ["PALL", "$895", -2.29],
+    ["PLAT", "$1,295", -3.40],
+    ["PALL", "$895", -2.10],
     ["CORN", "434½¢", -1.02],
     ["WHEAT", "574¼¢", -0.69],
     ["SOY", "1,220¾¢", 1.10],
-    ["BTC", "$58,200", -8.78],
-    ["ETH", "$1,597", -11.38],
-    ["LNG", "$29/MMBtu", null],
+    ["BTC", "$60,900", 1.95],
+    ["ETH", "$1,718", 2.44],
+    ["LNG", "$30/MMBtu", null],
     ["COCOA", "$5,294", 2.42],
-    ["LITHIUM", "~¥88,000", null],
+    ["LITHIUM", "~¥90,000", null],
     ["ANTIMONY", "¥93,500", null],
     ["COBALT", "$33,000", null],
     ["GALLIUM", "$2,100/kg", null],
     ["RUBBER", "$2,550/t", null],
-    ["URANIUM", "$91.55/lb", null],
+    ["URANIUM", "$91/lb", null],
     ["RARE EARTHS", "NdPr $71/kg", null],
     ["MANGANESE", "$4.40/dmtu", null],
-    ["NICKEL", "$15,400/t", -1.69],
-    ["TIN", "~$42,050/t", -3.33],
-    ["ZINC", "$3,490/t", -2.02],
+    ["NICKEL", "$15,310/t", -0.90],
+    ["TIN", "$41,160/t", -2.10],
+    ["ZINC", "$3,503/t", -1.70],
     ["TUNGSTEN", "$2,750/mtu", null],
     ["HELIUM", "$390/Mcf", null],
     ["PHOSPHATE", "$120/t", null]
   ],
   "jumble": [
     [
-      "CIPAN",
-      "PANIC",
-      "AI-driven algorithmic trading triggered _____ selling on Friday as the Dow and S&P 500 entered correction territory and the Nasdaq wiped out its gains for the year",
-      "PANIC"
+      "DCURE",
+      "CRUDE",
+      "Brent _____ oil reversed sharply higher on Friday, settling at $92.57 per barrel as Iran escalation concerns trumped recovering Middle East export flows in a dramatic late-session turnaround",
+      "CRUDE"
     ],
     [
-      "EDILS",
-      "SLIDE",
-      "Oil prices continued to _____ despite Hormuz tanker attacks as recovering Middle East crude export flows offset the geopolitical premium, pushing Brent to $90.33",
-      "SLIDE"
+      "LLRAY",
+      "RALLY",
+      "Bitcoin staged a weekend _____ from an intraday low near $55,640 on Saturday to approximately $60,900 by Sunday evening as dip buyers emerged across crypto markets",
+      "RALLY"
     ],
     [
-      "HTTNE",
-      "TENTH",
-      "Gold fell for a _____ consecutive session on Friday to $3,560 per ounce — its longest losing streak in over a year and a 14-month low",
-      "TENTH"
+      "LCKOC",
+      "CLOCK",
+      "The _____ is ticking on the November 27 deadline for China's export-control suspension on gallium, germanium and antimony — now just 4 days away with no extension announced",
+      "CLOCK"
     ],
     [
-      "GULNEP",
-      "PLUNGE",
-      "Bitcoin took a _____ below $60,000 to approximately $58,200, falling 8.8% as the equity sell-off spread to crypto markets",
-      "PLUNGE"
+      "LCABK",
+      "BLACK",
+      "Ukrainian naval drones struck six commercial vessels in the _____ Sea over the weekend, sinking two and disrupting grain and oil export routes in a major maritime escalation",
+      "BLACK"
     ],
     [
-      "EVERES",
-      "SEVERE",
-      "The Joint Maritime Information Center rated the Strait of Hormuz threat level as _____, with further deliberate attacks highly likely after seven strikes in a week",
-      "SEVERE"
+      "DILEY",
+      "YIELD",
+      "The 10-year Treasury _____ fell to 4.95% as flight-to-safety bond buying offset rate-hike expectations amid the deepening equity correction and VIX at a 7-month high",
+      "YIELD"
     ],
     [
-      "KARENT",
-      "TANKER",
-      "A _____ was hit by a projectile near Khasab, Oman on Friday at 1500 UTC — the seventh strike in the Strait of Hormuz in a week",
-      "TANKER"
+      "KCACR",
+      "CRACK",
+      "Oil's late-session reversal widened the Brent–WTI _____ spread as Middle Eastern supply concerns pushed Brent to $92.57 while WTI settled at $83.98",
+      "CRACK"
     ]
   ],
   "quiz": [
     [
-      "Gold fell to approximately $3,560 per ounce on Friday, marking its tenth consecutive daily decline and hitting a 14-month low, as Fed rate-hike odds for December hit 99%.",
+      "Brent crude reversed sharply higher in the final hour of Friday's session, settling at $92.57 per barrel — up 0.65% — after trading as low as $89.80, as renewed Iran escalation concerns trumped recovering Middle East export flows.",
       true,
       null
     ],
     [
-      "Brent crude surged 3% to $95 per barrel on Friday after a tanker was hit by a projectile in the Strait of Hormuz, as the geopolitical risk premium spiked across energy markets.",
+      "Gold rose for the first time in eleven sessions on Friday, climbing 1.5% to $3,620 per ounce as flight-to-safety buying accelerated amid the deepening equity correction and pushed the 10-year Treasury yield lower.",
       false,
-      "Brent actually fell 1.8% to $90.33 despite the Hormuz incident, as recovering Middle East export flows offset the geopolitical premium. Oil is heading for its third straight weekly decline."
+      "Gold actually fell for a tenth consecutive session to approximately $3,532 per ounce, a 14-month low. Despite the equity sell-off and 10-year yield falling to 4.95%, gold continued to be pressured by the strong dollar and 99% December rate-hike odds."
     ],
     [
-      "Bitcoin plunged below $60,000 to approximately $58,200 on Friday as the broader equity sell-off, which sent the Nasdaq into its third correction of 2026, spread to crypto markets.",
+      "Bitcoin recovered over the weekend from an intraday low near $55,640 on Saturday to approximately $60,900 by Sunday evening, as dip buyers emerged following Friday's 8.8% crash below $60,000.",
       true,
       null
     ],
     [
-      "The Nasdaq rallied 2% on Friday, buoyed by Anthropic's strong Thursday IPO debut at $97, as AI optimism overcame broader market concerns and rate-hike fears.",
+      "The G20 summit in Rio de Janeiro on November 21–22 produced a breakthrough agreement on critical minerals, with China agreeing to extend its export-control suspension on gallium, germanium and antimony beyond the November 27 deadline.",
       false,
-      "The Nasdaq actually plunged into its third correction of 2026, led by a brutal semiconductor sell-off. ANT's strong debut failed to quell AI-sector nerves, and the sell-off wiped out the Nasdaq's gains for the year."
+      "The 2026 G20 is US-hosted, not in Rio de Janeiro. The G20 Finance Ministers meeting in Atlanta (October 31–November 1) ended without consensus on critical minerals. No extension has been announced with 4 days remaining before the November 27 deadline."
     ],
     [
-      "ICE cocoa closed at $5,294 per tonne on Friday, rising approximately 2.4% and bucking the broader commodity sell-off, as West African supply concerns reasserted themselves.",
+      "Ukrainian naval drones struck six commercial vessels in the Black Sea over the weekend, sinking two and disrupting grain and oil export routes in one of the most significant maritime escalations of 2026.",
       true,
       null
     ],
     [
-      "Silver rose 3% to $46 per ounce on Friday, outperforming gold as industrial demand for solar panels and electronics provided a floor amid the broader sell-off.",
+      "Newcastle thermal coal fell 5% to $142.50 per tonne on Friday as the broader commodity sell-off and declining oil prices eliminated the energy supply premium that had supported coal prices throughout 2026.",
       false,
-      "Silver actually crashed 6.6% to $41.50, one of the worst performers of the day. Its dual precious-industrial exposure amplified the sell-off rather than providing support."
+      "Newcastle coal actually held steady at $150 per tonne, continuing to buck broader commodity weakness. Winter demand and the Hormuz-driven LNG supply crisis sustain the thermal fuel bid. Coal is up approximately 40% year to date."
     ],
     [
-      "January soybeans rose 13¼ cents to 1,220¾ cents per bushel on Friday, one of the few commodities to end the session higher as bargain buying emerged after the week's heavy selling.",
+      "The 10-year Treasury yield fell to 4.95% on Friday as flight-to-safety bond buying offset rate-hike expectations, even as the VIX reached a 7-month high and equities remained in correction territory.",
       true,
       null
     ],
     [
-      "The November 27 deadline for China's export-control suspension on gallium, germanium and antimony expired on Friday with no extension, triggering an immediate resumption of export bans and sending gallium prices above $3,000 per kilogram.",
+      "Copper surged 4% to $5.80 per pound on Friday as Chinese stimulus hopes and AI data-centre demand drove a record day of buying on the LME, bucking the broader risk-off environment.",
       false,
-      "The deadline is still 6 days away (November 27). No extension has been announced, and market participants are increasingly pricing in ban resumption, but the deadline has not yet passed. Gallium holds near $2,100 per kilogram outside China."
+      "Copper actually fell approximately 2.9% to $5.52 per pound ($12,160 per tonne LME official settlement) on Friday, caught in the broad risk-off sell-off. The dollar near 19-month highs remains the dominant headwind for base metals."
     ]
   ],
   "commodle": {
-    "answer": "PANIC",
-    "hint": "AI-driven algorithmic trading triggered _____ selling across equities, gold and crypto on Friday as the Nasdaq entered its third correction of 2026 and the Dow joined the S&P 500 in correction territory"
+    "answer": "CRUDE",
+    "hint": "Brent _____ was the standout on Friday, reversing sharply higher in the final hour to settle at $92.57 per barrel as Iran escalation concerns trumped recovering Middle East export flows"
   }
 }
